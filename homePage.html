@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Sasha — iOS / SwiftUI Developer</title>
+  <meta name="description"
+    content="Sasha — iOS / SwiftUI developer building GloboSense, a video interpreting platform. Student of Wirtschaft & Informatik in Germany." />
+  <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+  <link rel="stylesheet" href="style.css" />
+<script src="i18n.js"></script>
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="page topbar">
+      <div class="brand">
+        <strong>Sasha</strong>
+        <span>iOS / SwiftUI • Xcode • Video apps</span>
+      </div>
+
+      <div class="lang-pill">
+        <button data-set-lang="en">EN</button>
+        <button data-set-lang="de">DE</button>
+        <button data-set-lang="ru">RU</button>
+        <button data-set-lang="uk">UK</button>
+      </div>
+
+      <nav aria-label="Primary">
+        <div class="nav">
+          <a href="homePage.html" class="active">🏠 <span data-i18n="nav.home"></span></a>
+          <a href="Experience.html" class="primary">💼 <span data-i18n="nav.experience"></span></a>
+          <a href="Education.html" class="primary">🎓 <span data-i18n="nav.education"></span></a>
+          <a href="Blender-projects.html">🧊 <span data-i18n="nav.blender"></span></a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page">
+      <section class="hero" aria-label="Introduction">
+        <div>
+          <h1>
+            <span data-i18n="hero.title_line1"></span><br />
+            <span data-i18n="hero.title_line2"></span>
+          </h1>
+          <p data-i18n="hero.description"></p>
+
+          <div class="meta" aria-label="Highlights">
+            <span class="chip">SwiftUI • Xcode</span>
+            <span class="chip">Realtime video (Daily.co / Twilio experience)</span>
+            <span class="chip">Firebase (Auth / Firestore / Storage / FCM)</span>
+            <span class="chip">Based in Löbau, Germany</span>
+          </div>
+
+          <div class="cta-row" aria-label="Primary actions">
+            <a class="cta" href="CV.pdf" download data-i18n="cta.download_cv"></a>
+            <a class="cta" href="Experience.html" data-i18n="cta.see_experience"></a>
+            <a class="cta" href="Education.html" data-i18n="cta.education"></a> 
+          </div>
+        </div>
+
+        <div class="portrait">
+          <img src="Photoes/me.png" alt="Portrait of Sasha" />
+        </div>
+      </section>
+
+      <section class="grid" aria-label="Profile sections">
+        <article class="card" aria-label="About me">
+          <h2>About me</h2>
+          <p>
+            I like building clean, practical products and iterating fast. I’ve worked hands-on across app UI, backend integration,
+            and realtime calling features.
+          </p>
+          <ul>
+            <li>Focus: iOS development, product MVPs, and scalability thinking</li>
+            <li>Also enjoy: Unity prototyping, 3D modeling in Blender</li>
+            <li>Languages: English, Ukrainian/Russian background (German learning)</li>
+          </ul>
+        </article>
+
+        <article class="card" aria-label="What I'm building">
+          <h2>What I’m building now</h2>
+          <p>
+            <strong>GloboSense</strong> — a platform for people who need a translator.
+            The goal is to make it easy to schedule or instantly call an interpreter, and support interpreter agencies too.
+          </p>
+          <ul>
+            <li>Video calls, chat, notifications</li>
+            <li>Scheduling + calendar-driven workflow</li>
+            <li>Future-proof architecture (easier to migrate away from a single vendor later)</li>
+          </ul>
+        </article>
+
+        <article class="card wide" aria-label="Skills">
+          <h2>Skills snapshot</h2>
+          <ul>
+            <li><strong>iOS:</strong> Swift, SwiftUI, UIKit basics, app architecture, performance debugging</li>
+            <li><strong>Backend:</strong> Node/Express, REST APIs, auth tokens (project-based)</li>
+            <li><strong>Cloud:</strong> Firebase (Auth, Firestore, Storage, Functions, FCM)</li>
+            <li><strong>Realtime:</strong> Video call SDK integration and troubleshooting</li>
+            <li><strong>Tools:</strong> Xcode, Git, VS Code</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="page footer-grid">
+      <div>
+        <p style="margin:0 0 6px 0;">That’s it folks 🙂</p>
+        <p style="margin:0;">&copy; 2024 Sasha. All rights reserved.</p>
+      </div>
+
+      <div>
+        <p style="margin:0 0 8px 0;">Contact</p>
+        <p style="margin:0 0 6px 0;">
+          Email: <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+        </p>
+        <p style="margin:0;">
+          Tel: <a href="tel:+491604077249">+49 160 4077249</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Auto-highlight active link by filename
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = (window.location.pathname.split("/").pop() || "homePage.html").toLowerCase();
+      document.querySelectorAll(".nav a").forEach(a => {
+        const href = (a.getAttribute("href") || "").toLowerCase();
+        if (href === current) a.classList.add("active");
+      });
+    });
+  </script>
+</body>
+
+</html>

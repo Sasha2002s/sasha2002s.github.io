@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Blender Projects — Sasha</title>
+  <meta name="description" content="Blender renders and 3D hobby projects by Sasha." />
+
+  <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Animations.css" />
+  <script src="i18n.js"></script>
+
+  <style>
+    /* Local gallery layout (kept here so you don't have to touch style.css) */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .gallery .card {
+      padding: 12px;
+    }
+
+    .gallery figure {
+      margin: 0;
+    }
+
+    .gallery figcaption {
+      margin-top: 8px;
+      font-size: 12px;
+      opacity: 0.75;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="page topbar">
+      <div class="brand">
+        <strong>Sasha</strong>
+        <span>iOS / SwiftUI • Xcode • Video apps</span>
+      </div>
+
+      <div class="lang-pill">
+        <button data-set-lang="en">EN</button>
+        <button data-set-lang="de">DE</button>
+        <button data-set-lang="ru">RU</button>
+        <button data-set-lang="uk">UK</button>
+      </div>
+
+      <nav aria-label="Primary">
+        <div class="nav">
+          <a href="homePage.html">🏠 Home</a>
+          <a href="Experience.html" class="primary">💼 Experience</a>
+          <a href="Education.html" class="primary">🎓 Education</a>
+          <a href="Blender-projects.html" class="active">🧊 Blender</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div>
+          <h1>My Blender Projects</h1>
+          <p>
+            3D modeling and rendering is my hobby — here are some of my favorite renders.
+          </p>
+
+          <div class="meta">
+            <span class="chip">Blender</span>
+            <span class="chip">Modeling</span>
+            <span class="chip">Materials & Lighting</span>
+            <span class="chip">Renders</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery -->
+      <section class="grid" aria-label="Blender gallery">
+        <article class="card wide">
+          <h2>Gallery</h2>
+          <p class="meta">Hover effects come from Animations.css</p>
+
+          <div class="gallery">
+            <figure class="card">
+              <img src="Photoes/7.png" class="blurryAnimation" alt="Blender render 7" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/gold one2.png" class="blurryAnimation" alt="Blender render gold" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/new2.png" class="blurryAnimation" alt="Blender render new" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Donat with cup.png" class="blurryAnimation" alt="Blender render donut with cup" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/C&D with.png" class="blurryAnimation" alt="Blender render C and D" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/En.png" class="blurryAnimation" alt="Blender render En" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/West.png" class="blurryAnimation" alt="Blender render West" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/AK-47(2).png" class="blurryAnimation" alt="Blender render AK-47" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Battle 2.png" class="blurryAnimation" alt="Blender render battle" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/TV 4k.png" class="blurryAnimation" alt="Blender render TV 4k" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Eve3.png" class="blurryAnimation" alt="Blender render Eve3" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Numpad2.0.png" class="blurryAnimation" alt="Blender render numpad" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Sarah.png" class="blurryAnimation" alt="Blender render Sarah" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Speakers.png" class="blurryAnimation" alt="Blender render speakers" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Wallpaper.2png.png" class="blurryAnimation" alt="Blender render wallpaper 2" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Another bottle.png" class="blurryAnimation" alt="Blender render another bottle" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Eva228.png" class="blurryAnimation" alt="Blender render Eva228" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Pistol 0.3.png" class="blurryAnimation" alt="Blender render pistol" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Wallpaper.png" class="blurryAnimation" alt="Blender render wallpaper" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Ice cream 1.png" class="blurryAnimation" alt="Blender render ice cream" />
+            </figure>
+            <figure class="card">
+              <img src="Photoes/Head 3.png" class="blurryAnimation" alt="Blender render head" />
+            </figure>
+          </div>
+        </article>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="page footer-grid">
+      <div>
+        <p style="margin:0 0 6px 0;">That’s it folks 🙂</p>
+        <p style="margin:0;">© 2026 Sasha</p>
+      </div>
+
+      <div>
+        <p style="margin:0 0 8px 0;">Contact</p>
+        <p style="margin:0 0 6px 0;">
+          Email: <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+        </p>
+        <p style="margin:0;">
+          Tel: <a href="tel:+491604077249">+49 160 4077249</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = (window.location.pathname.split("/").pop() || "homepage.html").toLowerCase();
+      document.querySelectorAll(".nav a").forEach(a => {
+        const href = (a.getAttribute("href") || "").toLowerCase();
+        if (href === current) a.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>

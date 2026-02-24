@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Experience — Sasha</title>
+  <meta name="description" content="Work experience of Sasha — iOS / SwiftUI developer." />
+
+  <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="i18n.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page topbar">
+      <div class="brand">
+        <strong>Sasha</strong>
+        <span>iOS / SwiftUI • Xcode • Video apps</span>
+      </div>
+
+      <div class="lang-pill">
+        <button data-set-lang="en">EN</button>
+        <button data-set-lang="de">DE</button>
+        <button data-set-lang="ru">RU</button>
+        <button data-set-lang="uk">UK</button>
+      </div>
+
+      <nav aria-label="Primary">
+        <div class="nav">
+          <a href="homePage.html">🏠 Home</a>
+          <a href="Experience.html" class="primary active">💼 Experience</a>
+          <a href="Education.html" class="primary">🎓 Education</a>
+          <a href="Blender-projects.html">🧊 Blender</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div>
+          <h1>My Work Experience</h1>
+          <p>
+            A focused overview of projects, roles, and technical contributions I’ve made so far.
+          </p>
+
+          <div class="meta">
+            <span class="chip">SwiftUI</span>
+            <span class="chip">Realtime Apps</span>
+            <span class="chip">Backend Integration</span>
+            <span class="chip">UI Architecture</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience grid -->
+      <section class="grid">
+
+        <article class="card wide">
+          <h2>GloboSense — iOS Developer</h2>
+          <p class="meta">2024 — Present · Remote</p>
+          <ul>
+            <li>Architected SwiftUI interface and navigation structure.</li>
+            <li>Integrated authentication, database logic, and realtime features.</li>
+            <li>Worked with video call SDKs and debugged live media pipelines.</li>
+            <li>Optimized state management and performance for scalability.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Independent Development</h2>
+          <p class="meta">Ongoing</p>
+          <ul>
+            <li>Built multiple prototype apps to test UI systems and architectures.</li>
+            <li>Experimented with backend logic and deployment flows.</li>
+            <li>Studied performance, memory usage, and realtime networking behavior.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Technical Focus</h2>
+          <ul>
+            <li>iOS architecture patterns</li>
+            <li>Realtime systems thinking</li>
+            <li>Scalable backend design awareness</li>
+            <li>Clean UI + UX structure</li>
+          </ul>
+        </article>
+
+        <article class="card wide">
+          <h2>Current Direction</h2>
+          <p>
+            I’m currently focused on becoming a strong product‑minded iOS engineer who understands both user experience and system architecture. I enjoy building fast, testing ideas quickly, and improving designs iteratively.
+          </p>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="page footer-grid">
+      <div>
+        <p style="margin:0 0 6px 0;">Thanks for reading</p>
+        <p style="margin:0;">© 2026 Sasha</p>
+      </div>
+
+      <div>
+        <p style="margin:0 0 8px 0;">Contact</p>
+        <p style="margin:0 0 6px 0;">
+          Email: <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+        </p>
+        <p style="margin:0;">
+          Tel: <a href="tel:+491604077249">+49 160 4077249</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = (window.location.pathname.split("/").pop() || "homepage.html").toLowerCase();
+      document.querySelectorAll(".nav a").forEach(a => {
+        const href = (a.getAttribute("href") || "").toLowerCase();
+        if (href === current) a.classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+/* Animatiooooons!!!! */
+
+/* Animated Texts*/
+
+.animated-text{
+    animation: autoRotateAnimation;
+    animation-timeline: view();
+  }
+  @keyframes autoRotateAnimation{
+    from{
+      transform: rotate(0deg)
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }
+.animationAppear{
+    animation: appearingAnimation both;
+    animation-timeline: view(70% 5%);
+  }
+  @keyframes appearingAnimation{
+    from{
+      opacity: 0;
+      transform: translateY(200px) scale(0.3);
+    }
+    to{
+      transform: translate(0) scale(1);
+    }
+  }
+.blurryAnimation{
+  animation:blurAnimation linear both;
+  animation-timeline: view();
+}
+  @keyframes blurAnimation {
+    0%{
+      filter: blur(40px)
+    }
+    20%,75%{
+      filter: blur(0)
+    }
+    100%{
+      filter: blur(40px);
+    }
+  }
+
+
+  
+  
+

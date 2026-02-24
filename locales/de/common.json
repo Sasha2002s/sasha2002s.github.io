@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Start",
+    "experience": "Erfahrung",
+    "education": "Ausbildung",
+    "blender": "Blender"
+  },
+  "hero": {
+    "title_line1": "Hi — ich bin Sasha.",
+    "title_line2": "Ich entwickle iOS-Apps mit SwiftUI.",
+    "description": "Ich bin Entwickler und studiere Wirtschaft & Informatik in Deutschland. Aktuell arbeite ich an GloboSense — einer Video-Dolmetsch-App, die Menschen mit echten Übersetzern verbindet (inkl. Gebärdensprachdolmetscher)."
+  },
+  "cta": {
+    "download_cv": "⬇️ CV herunterladen",
+    "see_experience": "💼 Erfahrung ansehen",
+    "education": "🎓 Ausbildung"
+  },
+  "section": {
+    "about_title": "Über mich",
+    "building_title": "Woran ich gerade arbeite",
+    "skills_title": "Skills-Überblick"
+  },
+  "footer": {
+    "thats_it": "Das war’s 🙂",
+    "contact": "Kontakt",
+    "email": "E-Mail",
+    "tel": "Tel."
+  }
+}

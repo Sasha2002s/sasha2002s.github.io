@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <title>Education — Sasha</title>
+  <meta name="description" content="Education and learning path of Sasha — iOS / SwiftUI developer." />
+
+  <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="i18n.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="page topbar">
+      <div class="brand">
+        <strong>Sasha</strong>
+        <span>iOS / SwiftUI • Xcode • Video apps</span>
+      </div>
+
+      <div class="lang-pill">
+        <button data-set-lang="en">EN</button>
+        <button data-set-lang="de">DE</button>
+        <button data-set-lang="ru">RU</button>
+        <button data-set-lang="uk">UK</button>
+      </div>
+
+      <nav aria-label="Primary">
+        <div class="nav">
+          <a href="homePage.html">🏠 Home</a>
+          <a href="Experience.html" class="primary">💼 Experience</a>
+          <a href="Education.html" class="primary active">🎓 Education</a>
+          <a href="Blender-projects.html">🧊 Blender</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page">
+
+      <!-- Hero -->
+      <section class="hero">
+        <div>
+          <h1>My Education</h1>
+          <p>
+            A short timeline of my studies and what I focused on.
+          </p>
+
+          <div class="meta">
+            <span class="chip">Business & Informatics</span>
+            <span class="chip">Computer Networks</span>
+            <span class="chip">Law (BGB basics)</span>
+            <span class="chip">Product building mindset</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education grid -->
+      <section class="grid">
+
+        <article class="card wide">
+          <h2>Hochschule Zittau/Görlitz (HSZG)</h2>
+          <p class="meta">Germany · 2023 — Present</p>
+          <p>
+            Study focus: <strong>Wirtschaft & Informatik</strong> (business + computer science).
+            I combine technical courses with business fundamentals.
+          </p>
+          <ul>
+            <li>Modules: Business Informatics, BWL/VWL basics, networking, and IT/security topics</li>
+            <li>Hands-on work: building GloboSense while studying</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>School / Secondary Education</h2>
+          <p class="meta">Lviv · 2015 — 2022</p>
+          <ul>
+            <li>General education with a focus on economics</li>
+            <li>Learned structured study habits and presentation skills</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>Self‑Learning</h2>
+          <p class="meta">Ongoing</p>
+          <ul>
+            <li>Swift & SwiftUI through projects and tutorials</li>
+            <li>Realtime video SDK integration and troubleshooting</li>
+            <li>Backend basics (Node/Express) for token servers and APIs</li>
+          </ul>
+        </article>
+
+        <article class="card wide">
+          <h2>What I’m improving right now</h2>
+          <p>
+            Deeper iOS architecture, clean UI systems, and building scalable features that can evolve over time.
+          </p>
+        </article>
+
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="page footer-grid">
+      <div>
+        <p style="margin:0 0 6px 0;">Thanks for reading</p>
+        <p style="margin:0;">© 2026 Sasha</p>
+      </div>
+
+      <div>
+        <p style="margin:0 0 8px 0;">Contact</p>
+        <p style="margin:0 0 6px 0;">
+          Email: <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+        </p>
+        <p style="margin:0;">
+          Tel: <a href="tel:+491604077249">+49 160 4077249</a>
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const current = (window.location.pathname.split("/").pop() || "homepage.html").toLowerCase();
+      document.querySelectorAll(".nav a").forEach(a => {
+        const href = (a.getAttribute("href") || "").toLowerCase();
+        if (href === current) a.classList.add("active");
+      });
+    });
+  </script>
+
+</body>
+</html>

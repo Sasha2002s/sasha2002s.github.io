@@ -1,0 +1,29 @@
+{
+  "nav": {
+    "home": "Home",
+    "experience": "Experience",
+    "education": "Education",
+    "blender": "Blender"
+  },
+  "hero": {
+    "title_line1": "Hi — I’m Sasha.",
+    "title_line2": "I build iOS apps with SwiftUI.",
+    "description": "I’m a developer and a Wirtschaft & Informatik student in Germany. Right now I’m working on GloboSense — a video interpreting app that helps people find human translators (including sign-language interpreters)."
+  },
+  "cta": {
+    "download_cv": "⬇️ Download CV",
+    "see_experience": "💼 See experience",
+    "education": "🎓 Education"
+  },
+  "section": {
+    "about_title": "About me",
+    "building_title": "What I’m building now",
+    "skills_title": "Skills snapshot"
+  },
+  "footer": {
+    "thats_it": "That’s it folks 🙂",
+    "contact": "Contact",
+    "email": "Email",
+    "tel": "Tel"
+  }
+}
