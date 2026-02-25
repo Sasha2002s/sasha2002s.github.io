@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Blender Projects — Sasha</title>
-  <meta name="description" content="Blender renders and 3D hobby projects by Sasha." />
+  <title data-i18n="blender.head.title">Blender Projects — Sasha</title>
+  <meta name="description" content="Blender renders and 3D hobby projects by Sasha." data-i18n="blender.head.description" />
 
   <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
   <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
@@ -45,6 +45,26 @@
       font-size: 12px;
       opacity: 0.75;
     }
+
+    /* Video gallery layout */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+
+    .video-card {
+      padding: 12px;
+    }
+
+    .video-grid video {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.10);
+      background: #000;
+    }
   </style>
 </head>
 
@@ -53,7 +73,7 @@
     <div class="page topbar">
       <div class="brand">
         <strong>Sasha</strong>
-        <span>iOS / SwiftUI • Xcode • Video apps</span>
+        <span data-i18n="common.brand.tagline">iOS / SwiftUI • Xcode • Video apps</span>
       </div>
 
       <div class="lang-pill">
@@ -65,10 +85,10 @@
 
       <nav aria-label="Primary">
         <div class="nav">
-          <a href="homePage.html">🏠 Home</a>
-          <a href="Experience.html" class="primary">💼 Experience</a>
-          <a href="Education.html" class="primary">🎓 Education</a>
-          <a href="Blender-projects.html" class="active">🧊 Blender</a>
+          <a href="index.html">🏠 <span data-i18n="common.nav.home">Home</span></a>
+          <a href="Experience.html" class="primary">💼 <span data-i18n="common.nav.experience">Experience</span></a>
+          <a href="Education.html" class="primary">🎓 <span data-i18n="common.nav.education">Education</span></a>
+          <a href="Blender-projects.html" class="active">🧊 <span data-i18n="common.nav.blender">Blender</span></a>
         </div>
       </nav>
     </div>
@@ -80,16 +100,16 @@
       <!-- Hero -->
       <section class="hero">
         <div>
-          <h1>My Blender Projects</h1>
-          <p>
+          <h1 data-i18n="blender.hero.title">My Blender Projects</h1>
+          <p data-i18n="blender.hero.subtitle">
             3D modeling and rendering is my hobby — here are some of my favorite renders.
           </p>
 
           <div class="meta">
-            <span class="chip">Blender</span>
-            <span class="chip">Modeling</span>
-            <span class="chip">Materials & Lighting</span>
-            <span class="chip">Renders</span>
+            <span class="chip" data-i18n="blender.hero.chips.blender">Blender</span>
+            <span class="chip" data-i18n="blender.hero.chips.modeling">Modeling</span>
+            <span class="chip" data-i18n="blender.hero.chips.materialsLighting">Materials & Lighting</span>
+            <span class="chip" data-i18n="blender.hero.chips.renders">Renders</span>
           </div>
         </div>
       </section>
@@ -97,8 +117,8 @@
       <!-- Gallery -->
       <section class="grid" aria-label="Blender gallery">
         <article class="card wide">
-          <h2>Gallery</h2>
-          <p class="meta">Hover effects come from Animations.css</p>
+          <h2 data-i18n="blender.sections.gallery.title">Gallery</h2>
+          <p class="meta" data-i18n="blender.sections.gallery.meta">Hover effects come from Animations.css</p>
 
           <div class="gallery">
             <figure class="card">
@@ -144,7 +164,7 @@
               <img src="Photoes/Speakers.png" class="blurryAnimation" alt="Blender render speakers" />
             </figure>
             <figure class="card">
-              <img src="Photoes/Wallpaper.2png.png" class="blurryAnimation" alt="Blender render wallpaper 2" />
+              <img src="Photoes/something.jpg" class="blurryAnimation" alt="Blender render wallpaper 2" />
             </figure>
             <figure class="card">
               <img src="Photoes/Another bottle.png" class="blurryAnimation" alt="Blender render another bottle" />
@@ -166,6 +186,25 @@
             </figure>
           </div>
         </article>
+
+        <article class="card wide">
+          <h2 data-i18n="blender.sections.animations.title">Animations</h2>
+          <p class="meta" data-i18n="blender.sections.animations.meta">Rendered animation previews</p>
+
+          <div class="video-grid">
+            <figure class="video-card">
+              <video src="Photoes/Eva in the spaceship.mp4" controls></video>
+            </figure>
+
+            <figure class="video-card">
+              <video src="Photoes/Videos/Eve 3.mp4" controls></video>
+            </figure>
+
+            <figure class="video-card">
+              <video src="Photoes/Videos/DonatCup.mp4" controls></video>
+            </figure>
+          </div>
+        </article>
       </section>
 
     </div>
@@ -174,17 +213,19 @@
   <footer>
     <div class="page footer-grid">
       <div>
-        <p style="margin:0 0 6px 0;">That’s it folks 🙂</p>
+        <p style="margin:0 0 6px 0;" data-i18n="blender.footer.thatIsIt">That’s it folks 🙂</p>
         <p style="margin:0;">© 2026 Sasha</p>
       </div>
 
       <div>
-        <p style="margin:0 0 8px 0;">Contact</p>
+        <p style="margin:0 0 8px 0;" data-i18n="common.footer.contact">Contact</p>
         <p style="margin:0 0 6px 0;">
-          Email: <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+          <span data-i18n="common.footer.email">Email</span>:
+          <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
         </p>
         <p style="margin:0;">
-          Tel: <a href="tel:+491604077249">+49 160 4077249</a>
+          <span data-i18n="common.footer.tel">Tel</span>:
+          <a href="tel:+491604077249">+49 160 4077249</a>
         </p>
       </div>
     </div>

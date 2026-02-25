@@ -1,29 +1,213 @@
 {
+  "meta": {
+    "title": "Sasha — iOS / SwiftUI Developer",
+    "description": "Sasha — iOS / SwiftUI developer building GloboSense, a video interpreting platform. Student of Wirtschaft & Informatik in Germany."
+  },
+
+  "brand": {
+    "name": "Sasha",
+    "tagline": "iOS / SwiftUI • Xcode • Video apps"
+  },
+
   "nav": {
     "home": "Home",
     "experience": "Experience",
     "education": "Education",
     "blender": "Blender"
   },
+
   "hero": {
     "title_line1": "Hi — I’m Sasha.",
     "title_line2": "I build iOS apps with SwiftUI.",
-    "description": "I’m a developer and a Wirtschaft & Informatik student in Germany. Right now I’m working on GloboSense — a video interpreting app that helps people find human translators (including sign-language interpreters)."
+    "description": "I’m a developer and a Wirtschaft & Informatik student in Germany. Right now I’m working on GloboSense — a video interpreting app that helps people find human translators (including sign-language interpreters).",
+    "chip1": "SwiftUI • Xcode",
+    "chip2": "Realtime video (Daily.co / Twilio)",
+    "chip3": "Firebase (Auth / Firestore / Storage / FCM)",
+    "chip4": "Based in Löbau, Germany",
+    "portrait_alt": "Portrait of Sasha"
   },
+
   "cta": {
     "download_cv": "⬇️ Download CV",
     "see_experience": "💼 See experience",
     "education": "🎓 Education"
   },
-  "section": {
-    "about_title": "About me",
-    "building_title": "What I’m building now",
-    "skills_title": "Skills snapshot"
+
+  "about": {
+    "title": "About me",
+    "text": "I like building clean, practical products and iterating fast. I’ve worked hands-on across app UI, backend integration, and realtime calling features.",
+    "li1": "Focus: iOS development, product MVPs, and scalability thinking",
+    "li2": "Also enjoy: Unity prototyping, 3D modeling in Blender",
+    "li3": "Languages: English, Ukrainian/Russian background (German learning)"
+  },
+
+  "building": {
+    "title": "What I’m building now",
+    "text": "GloboSense — a platform for people who need a translator. The goal is to make it easy to schedule or instantly call an interpreter, and support interpreter agencies too.",
+    "li1": "Video calls, chat, notifications",
+    "li2": "Scheduling + calendar-driven workflow",
+    "li3": "Future-proof architecture"
+  },
+
+  "skills": {
+    "title": "Skills snapshot",
+    "li1": "iOS: Swift, SwiftUI, UIKit basics, app architecture, performance debugging",
+    "li2": "Backend: Node/Express, REST APIs",
+    "li3": "Cloud: Firebase (Auth, Firestore, Storage, FCM)",
+    "li4": "Realtime: Video call SDK integration",
+    "li5": "Tools: Xcode, Git, VS Code"
+  },
+
+  "experience": {
+    "meta": {
+      "title": "Experience — Sasha",
+      "description": "Work experience of Sasha — iOS / SwiftUI developer."
+    },
+
+    "hero": {
+      "title": "My Work Experience",
+      "subtitle": "A focused overview of projects, roles, and technical contributions I’ve made so far.",
+      "chip1": "SwiftUI",
+      "chip2": "Realtime Apps",
+      "chip3": "Backend Integration",
+      "chip4": "UI Architecture"
+    },
+
+    "cards": {
+      "globosense": {
+        "title": "GloboSense — iOS Developer",
+        "meta": "2024 — Present · Remote",
+        "li1": "Architected SwiftUI interface and navigation structure.",
+        "li2": "Integrated authentication, database logic, and realtime features.",
+        "li3": "Worked with video call SDKs and debugged live media pipelines.",
+        "li4": "Optimized state management and performance for scalability."
+      },
+
+      "independent": {
+        "title": "Independent Development",
+        "meta": "Ongoing",
+        "li1": "Built multiple prototype apps to test UI systems and architectures.",
+        "li2": "Experimented with backend logic and deployment flows.",
+        "li3": "Studied performance, memory usage, and realtime networking behavior."
+      },
+
+      "focus": {
+        "title": "Technical Focus",
+        "li1": "iOS architecture patterns",
+        "li2": "Realtime systems thinking",
+        "li3": "Scalable backend design awareness",
+        "li4": "Clean UI + UX structure"
+      },
+
+      "direction": {
+        "title": "Current Direction",
+        "text": "I’m currently focused on becoming a strong product-minded iOS engineer who understands both user experience and system architecture. I enjoy building fast, testing ideas quickly, and improving designs iteratively."
+      }
+    }
+  },
+  
+  "common": {
+    "brand": {
+      "tagline": "iOS / SwiftUI • Xcode • Video apps"
+    },
+    "nav": {
+      "home": "Home",
+      "experience": "Experience",
+      "education": "Education",
+      "blender": "Blender"
+    },
+    "footer": {
+      "thanks": "Thanks for reading",
+      "contact": "Contact",
+      "email": "Email",
+      "tel": "Tel"
+    }
+  },
+  "education": {
+    "head": {
+      "title": "Education — Sasha",
+      "description": "Education and learning path of Sasha — iOS / SwiftUI developer."
+    },
+    "hero": {
+      "title": "My Education",
+      "subtitle": "A short timeline of my studies and what I focused on.",
+      "chips": {
+        "businessInformatics": "Business & Informatics",
+        "networks": "Computer Networks",
+        "law": "Law (BGB basics)",
+        "productMindset": "Product building mindset"
+      }
+    },
+    "cards": {
+      "hszg": {
+        "title": "Hochschule Zittau/Görlitz (HSZG)",
+        "meta": "Germany · 2023 — Present",
+        "text": "Study focus: Wirtschaft & Informatik (business + computer science). I combine technical courses with business fundamentals.",
+        "bullets": {
+          "modules": "Modules: Business Informatics, BWL/VWL basics, networking, and IT/security topics",
+          "handsOn": "Hands-on work: building GloboSense while studying"
+        }
+      },
+      "school": {
+        "title": "School / Secondary Education",
+        "meta": "Lviv · 2015 — 2022",
+        "bullets": {
+          "economics": "General education with a focus on economics",
+          "skills": "Learned structured study habits and presentation skills"
+        }
+      },
+      "selfLearning": {
+        "title": "Self-Learning",
+        "meta": "Ongoing",
+        "bullets": {
+          "swift": "Swift & SwiftUI through projects and tutorials",
+          "video": "Realtime video SDK integration and troubleshooting",
+          "backend": "Backend basics (Node/Express) for token servers and APIs"
+        }
+      },
+      "improving": {
+        "title": "What I’m improving right now",
+        "text": "Deeper iOS architecture, clean UI systems, and building scalable features that can evolve over time."
+      }
+    }
+  },
+"blender": {
+  "head": {
+    "title": "Blender Projects — Sasha",
+    "description": "Blender renders and 3D hobby projects by Sasha."
+  },
+  "hero": {
+    "title": "My Blender Projects",
+    "subtitle": "3D modeling and rendering is my hobby — here are some of my favorite renders.",
+    "chips": {
+      "blender": "Blender",
+      "modeling": "Modeling",
+      "materialsLighting": "Materials & Lighting",
+      "renders": "Renders"
+    }
+  },
+  "sections": {
+    "gallery": {
+      "title": "Gallery",
+      "meta": "Hover effects come from Animations.css"
+    },
+    "animations": {
+      "title": "Animations",
+      "meta": "Rendered animation previews"
+    }
   },
   "footer": {
-    "thats_it": "That’s it folks 🙂",
-    "contact": "Contact",
-    "email": "Email",
-    "tel": "Tel"
+    "thatIsIt": "That’s it folks 🙂"
   }
+},
+
+
+  "footer": {
+    "closing": "That’s it folks 🙂",
+    "copyright": "© 2026 Sasha. All rights reserved.",
+    "contact": "Contact",
+    "email_label": "Email:",
+    "tel_label": "Tel:"
+  }
+  
 }

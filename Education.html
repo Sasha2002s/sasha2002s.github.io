@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Education — Sasha</title>
-  <meta name="description" content="Education and learning path of Sasha — iOS / SwiftUI developer." />
+  <title data-i18n="education.head.title">Education — Sasha</title>
+  <meta
+    name="description"
+    content="Education and learning path of Sasha — iOS / SwiftUI developer."
+    data-i18n="education.head.description"
+  />
 
   <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
   <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
@@ -21,7 +25,7 @@
     <div class="page topbar">
       <div class="brand">
         <strong>Sasha</strong>
-        <span>iOS / SwiftUI • Xcode • Video apps</span>
+        <span data-i18n="common.brand.tagline">iOS / SwiftUI • Xcode • Video apps</span>
       </div>
 
       <div class="lang-pill">
@@ -33,10 +37,10 @@
 
       <nav aria-label="Primary">
         <div class="nav">
-          <a href="homePage.html">🏠 Home</a>
-          <a href="Experience.html" class="primary">💼 Experience</a>
-          <a href="Education.html" class="primary active">🎓 Education</a>
-          <a href="Blender-projects.html">🧊 Blender</a>
+          <a href="index.html">🏠 <span data-i18n="common.nav.home">Home</span></a>
+          <a href="Experience.html" class="primary">💼 <span data-i18n="common.nav.experience">Experience</span></a>
+          <a href="Education.html" class="primary active">🎓 <span data-i18n="common.nav.education">Education</span></a>
+          <a href="Blender-projects.html">🧊 <span data-i18n="common.nav.blender">Blender</span></a>
         </div>
       </nav>
     </div>
@@ -48,16 +52,14 @@
       <!-- Hero -->
       <section class="hero">
         <div>
-          <h1>My Education</h1>
-          <p>
-            A short timeline of my studies and what I focused on.
-          </p>
+          <h1 data-i18n="education.hero.title">My Education</h1>
+          <p data-i18n="education.hero.subtitle">A short timeline of my studies and what I focused on.</p>
 
           <div class="meta">
-            <span class="chip">Business & Informatics</span>
-            <span class="chip">Computer Networks</span>
-            <span class="chip">Law (BGB basics)</span>
-            <span class="chip">Product building mindset</span>
+            <span class="chip" data-i18n="education.hero.chips.businessInformatics">Business & Informatics</span>
+            <span class="chip" data-i18n="education.hero.chips.networks">Computer Networks</span>
+            <span class="chip" data-i18n="education.hero.chips.law">Law (BGB basics)</span>
+            <span class="chip" data-i18n="education.hero.chips.productMindset">Product building mindset</span>
           </div>
         </div>
       </section>
@@ -66,40 +68,47 @@
       <section class="grid">
 
         <article class="card wide">
-          <h2>Hochschule Zittau/Görlitz (HSZG)</h2>
-          <p class="meta">Germany · 2023 — Present</p>
-          <p>
+          <h2 data-i18n="education.cards.hszg.title">Hochschule Zittau/Görlitz (HSZG)</h2>
+          <p class="meta" data-i18n="education.cards.hszg.meta">Germany · 2023 — Present</p>
+
+          <!-- NOTE: i18next won't preserve <strong> inside this string unless your i18n.js supports HTML or i18next "trans" -->
+          <p data-i18n="education.cards.hszg.text">
             Study focus: <strong>Wirtschaft & Informatik</strong> (business + computer science).
             I combine technical courses with business fundamentals.
           </p>
+
           <ul>
-            <li>Modules: Business Informatics, BWL/VWL basics, networking, and IT/security topics</li>
-            <li>Hands-on work: building GloboSense while studying</li>
+            <li data-i18n="education.cards.hszg.bullets.modules">
+              Modules: Business Informatics, BWL/VWL basics, networking, and IT/security topics
+            </li>
+            <li data-i18n="education.cards.hszg.bullets.handsOn">
+              Hands-on work: building GloboSense while studying
+            </li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>School / Secondary Education</h2>
-          <p class="meta">Lviv · 2015 — 2022</p>
+          <h2 data-i18n="education.cards.school.title">School / Secondary Education</h2>
+          <p class="meta" data-i18n="education.cards.school.meta">Lviv · 2015 — 2022</p>
           <ul>
-            <li>General education with a focus on economics</li>
-            <li>Learned structured study habits and presentation skills</li>
+            <li data-i18n="education.cards.school.bullets.economics">General education with a focus on economics</li>
+            <li data-i18n="education.cards.school.bullets.skills">Learned structured study habits and presentation skills</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>Self‑Learning</h2>
-          <p class="meta">Ongoing</p>
+          <h2 data-i18n="education.cards.selfLearning.title">Self-Learning</h2>
+          <p class="meta" data-i18n="education.cards.selfLearning.meta">Ongoing</p>
           <ul>
-            <li>Swift & SwiftUI through projects and tutorials</li>
-            <li>Realtime video SDK integration and troubleshooting</li>
-            <li>Backend basics (Node/Express) for token servers and APIs</li>
+            <li data-i18n="education.cards.selfLearning.bullets.swift">Swift & SwiftUI through projects and tutorials</li>
+            <li data-i18n="education.cards.selfLearning.bullets.video">Realtime video SDK integration and troubleshooting</li>
+            <li data-i18n="education.cards.selfLearning.bullets.backend">Backend basics (Node/Express) for token servers and APIs</li>
           </ul>
         </article>
 
         <article class="card wide">
-          <h2>What I’m improving right now</h2>
-          <p>
+          <h2 data-i18n="education.cards.improving.title">What I’m improving right now</h2>
+          <p data-i18n="education.cards.improving.text">
             Deeper iOS architecture, clean UI systems, and building scalable features that can evolve over time.
           </p>
         </article>
@@ -112,17 +121,19 @@
   <footer>
     <div class="page footer-grid">
       <div>
-        <p style="margin:0 0 6px 0;">Thanks for reading</p>
+        <p style="margin:0 0 6px 0;" data-i18n="common.footer.thanks">Thanks for reading</p>
         <p style="margin:0;">© 2026 Sasha</p>
       </div>
 
       <div>
-        <p style="margin:0 0 8px 0;">Contact</p>
+        <p style="margin:0 0 8px 0;" data-i18n="common.footer.contact">Contact</p>
         <p style="margin:0 0 6px 0;">
-          Email: <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+          <span data-i18n="common.footer.email">Email</span>:
+          <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
         </p>
         <p style="margin:0;">
-          Tel: <a href="tel:+491604077249">+49 160 4077249</a>
+          <span data-i18n="common.footer.tel">Tel</span>:
+          <a href="tel:+491604077249">+49 160 4077249</a>
         </p>
       </div>
     </div>

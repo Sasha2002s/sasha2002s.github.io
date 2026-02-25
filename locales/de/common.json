@@ -1,29 +1,212 @@
+
+
 {
+  "meta": {
+    "title": "Sasha — iOS / SwiftUI Entwickler",
+    "description": "Sasha — iOS / SwiftUI Entwickler, der GloboSense entwickelt, eine Video-Dolmetschplattform. Student für Wirtschaft & Informatik in Deutschland."
+  },
+
+  "brand": {
+    "name": "Sasha",
+    "tagline": "iOS / SwiftUI • Xcode • Video‑Apps"
+  },
+
   "nav": {
-    "home": "Start",
+    "home": "Startseite",
     "experience": "Erfahrung",
     "education": "Ausbildung",
     "blender": "Blender"
   },
+
   "hero": {
     "title_line1": "Hi — ich bin Sasha.",
-    "title_line2": "Ich entwickle iOS-Apps mit SwiftUI.",
-    "description": "Ich bin Entwickler und studiere Wirtschaft & Informatik in Deutschland. Aktuell arbeite ich an GloboSense — einer Video-Dolmetsch-App, die Menschen mit echten Übersetzern verbindet (inkl. Gebärdensprachdolmetscher)."
+    "title_line2": "Ich entwickle iOS‑Apps mit SwiftUI.",
+    "description": "Ich bin Entwickler und Student für Wirtschaft & Informatik in Deutschland. Zurzeit arbeite ich an GloboSense — einer Video‑Dolmetsch‑App, die Menschen hilft, menschliche Übersetzer zu finden (einschließlich Gebärdensprachdolmetscher).",
+    "chip1": "SwiftUI • Xcode",
+    "chip2": "Echtzeit‑Video (Daily.co / Twilio)",
+    "chip3": "Firebase (Auth / Firestore / Storage / FCM)",
+    "chip4": "Standort: Löbau, Deutschland",
+    "portrait_alt": "Porträt von Sasha"
   },
+
   "cta": {
-    "download_cv": "⬇️ CV herunterladen",
+    "download_cv": "⬇️ Lebenslauf herunterladen",
     "see_experience": "💼 Erfahrung ansehen",
     "education": "🎓 Ausbildung"
   },
-  "section": {
-    "about_title": "Über mich",
-    "building_title": "Woran ich gerade arbeite",
-    "skills_title": "Skills-Überblick"
+
+  "about": {
+    "title": "Über mich",
+    "text": "Ich entwickle gern saubere, praktische Produkte und iteriere schnell. Ich habe praktisch an App‑UI, Backend‑Integration und Echtzeit‑Calling‑Features gearbeitet.",
+    "li1": "Fokus: iOS‑Entwicklung, MVP‑Produkte und Skalierbarkeitsdenken",
+    "li2": "Außerdem interessant: Unity‑Prototyping, 3D‑Modellierung in Blender",
+    "li3": "Sprachen: Englisch, ukrainisch/russischer Hintergrund (Deutsch in Arbeit)"
+  },
+
+  "building": {
+    "title": "Woran ich gerade arbeite",
+    "text": "GloboSense — eine Plattform für Menschen, die einen Übersetzer brauchen. Ziel ist es, das Planen oder sofortige Anrufen eines Dolmetschers einfach zu machen und auch Dolmetscheragenturen zu unterstützen.",
+    "li1": "Videoanrufe, Chat, Benachrichtigungen",
+    "li2": "Terminplanung + kalenderbasierter Workflow",
+    "li3": "Zukunftssichere Architektur"
+  },
+
+  "skills": {
+    "title": "Kompetenzübersicht",
+    "li1": "iOS: Swift, SwiftUI, UIKit‑Grundlagen, App‑Architektur, Performance‑Debugging",
+    "li2": "Backend: Node/Express, REST APIs",
+    "li3": "Cloud: Firebase (Auth, Firestore, Storage, FCM)",
+    "li4": "Echtzeit: Video‑SDK‑Integration",
+    "li5": "Tools: Xcode, Git, VS Code"
+  },
+
+  "experience": {
+    "meta": {
+      "title": "Erfahrung — Sasha",
+      "description": "Berufserfahrung von Sasha — iOS / SwiftUI Entwickler."
+    },
+
+    "hero": {
+      "title": "Meine Berufserfahrung",
+      "subtitle": "Ein kompakter Überblick über Projekte, Rollen und technische Beiträge, die ich bisher umgesetzt habe.",
+      "chip1": "SwiftUI",
+      "chip2": "Realtime‑Apps",
+      "chip3": "Backend‑Integration",
+      "chip4": "UI‑Architektur"
+    },
+
+    "cards": {
+      "globosense": {
+        "title": "GloboSense — iOS Entwickler",
+        "meta": "2024 — Heute · Remote",
+        "li1": "SwiftUI‑Interface und Navigationsstruktur entworfen.",
+        "li2": "Authentifizierung, Datenbanklogik und Echtzeitfunktionen integriert.",
+        "li3": "Mit Video‑SDKs gearbeitet und Live‑Media‑Pipelines debuggt.",
+        "li4": "State‑Management und Performance für Skalierbarkeit optimiert."
+      },
+
+      "independent": {
+        "title": "Eigenständige Entwicklung",
+        "meta": "Laufend",
+        "li1": "Mehrere Prototyp‑Apps entwickelt, um UI‑Systeme und Architekturen zu testen.",
+        "li2": "Backend‑Logik und Deployment‑Abläufe erprobt.",
+        "li3": "Performance, Speicherverbrauch und Echtzeit‑Netzwerkverhalten analysiert."
+      },
+
+      "focus": {
+        "title": "Technischer Fokus",
+        "li1": "iOS‑Architektur‑Patterns",
+        "li2": "Realtime‑Systemdenken",
+        "li3": "Bewusstsein für skalierbares Backend‑Design",
+        "li4": "Saubere UI‑ und UX‑Struktur"
+      },
+
+      "direction": {
+        "title": "Aktuelle Ausrichtung",
+        "text": "Ich konzentriere mich derzeit darauf, ein produktorientierter iOS‑Engineer zu werden, der sowohl Nutzererfahrung als auch Systemarchitektur versteht. Ich arbeite gern schnell, teste Ideen zügig und verbessere Designs iterativ."
+      }
+    }
+  },
+  "common": {
+    "brand": {
+      "tagline": "iOS / SwiftUI • Xcode • Video-Apps"
+    },
+    "nav": {
+      "home": "Startseite",
+      "experience": "Erfahrung",
+      "education": "Ausbildung",
+      "blender": "Blender"
+    },
+    "footer": {
+      "thanks": "Danke fürs Lesen",
+      "contact": "Kontakt",
+      "email": "E-Mail",
+      "tel": "Tel"
+    }
+  },
+  "education": {
+    "head": {
+      "title": "Ausbildung — Sasha",
+      "description": "Ausbildungs- und Lernweg von Sasha — iOS / SwiftUI Entwickler."
+    },
+    "hero": {
+      "title": "Meine Ausbildung",
+      "subtitle": "Eine kurze Übersicht über mein Studium und meine Schwerpunkte.",
+      "chips": {
+        "businessInformatics": "Wirtschaft & Informatik",
+        "networks": "Computernetzwerke",
+        "law": "Recht (BGB-Grundlagen)",
+        "productMindset": "Produktentwicklungs-Mindset"
+      }
+    },
+    "cards": {
+      "hszg": {
+        "title": "Hochschule Zittau/Görlitz (HSZG)",
+        "meta": "Deutschland · 2023 — Heute",
+        "text": "Studiengang: Wirtschaft & Informatik (Betriebswirtschaft + Informatik). Ich verbinde technische Fächer mit betriebswirtschaftlichen Grundlagen.",
+        "bullets": {
+          "modules": "Module: Wirtschaftsinformatik, BWL/VWL Grundlagen, Netzwerke und IT-/Security-Themen",
+          "handsOn": "Praxis: Entwicklung von GloboSense parallel zum Studium"
+        }
+      },
+      "school": {
+        "title": "Schule / Sekundarstufe",
+        "meta": "Lwiw · 2015 — 2022",
+        "bullets": {
+          "economics": "Allgemeinbildung mit Schwerpunkt Wirtschaft",
+          "skills": "Strukturiertes Lernen und Präsentationsfähigkeiten entwickelt"
+        }
+      },
+      "selfLearning": {
+        "title": "Selbststudium",
+        "meta": "Laufend",
+        "bullets": {
+          "swift": "Swift & SwiftUI durch Projekte und Tutorials",
+          "video": "Integration und Debugging von Realtime-Video-SDKs",
+          "backend": "Backend-Grundlagen (Node/Express) für Token-Server und APIs"
+        }
+      },
+      "improving": {
+        "title": "Woran ich aktuell arbeite",
+        "text": "Tiefere iOS-Architektur, saubere UI-Systeme und skalierbare Features für langfristiges Wachstum."
+      }
+    }
+  },
+"blender": {
+  "head": {
+    "title": "Blender Projekte — Sasha",
+    "description": "Blender-Renderings und 3D-Hobbyprojekte von Sasha."
+  },
+  "hero": {
+    "title": "Meine Blender-Projekte",
+    "subtitle": "3D-Modellierung und Rendering ist mein Hobby — hier sind einige meiner Lieblings-Renderings.",
+    "chips": {
+      "blender": "Blender",
+      "modeling": "Modellierung",
+      "materialsLighting": "Materialien & Beleuchtung",
+      "renders": "Renderings"
+    }
+  },
+  "sections": {
+    "gallery": {
+      "title": "Galerie",
+      "meta": "Hover-Effekte kommen aus Animations.css"
+    },
+    "animations": {
+      "title": "Animationen",
+      "meta": "Gerenderte Animations-Vorschauen"
+    }
   },
   "footer": {
-    "thats_it": "Das war’s 🙂",
+    "thatIsIt": "Das war’s 🙂"
+  }
+},
+
+  "footer": {
+    "closing": "Das war’s 🙂",
+    "copyright": "© 2026 Sasha. Alle Rechte vorbehalten.",
     "contact": "Kontakt",
-    "email": "E-Mail",
-    "tel": "Tel."
+    "email_label": "E‑Mail:",
+    "tel_label": "Tel.:"
   }
 }

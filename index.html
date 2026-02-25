@@ -6,25 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Sasha — iOS / SwiftUI Developer</title>
+  <title data-i18n="meta.title">Sasha — iOS / SwiftUI Developer</title>
   <meta name="description"
-    content="Sasha — iOS / SwiftUI developer building GloboSense, a video interpreting platform. Student of Wirtschaft & Informatik in Germany." />
+        data-i18n="meta.description"
+        data-i18n-attr="content"
+        content="Sasha — iOS / SwiftUI developer building GloboSense, a video interpreting platform. Student of Wirtschaft & Informatik in Germany." />
   <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
   <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
   <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
-  <link rel="stylesheet" href="style.css" />
-<script src="i18n.js"></script>
-  <style>
 
-  </style>
+
+
+  <link rel="stylesheet" href="style.css" />
+
+
+  <script src="i18n.js"></script>
 </head>
 
 <body>
   <header>
     <div class="page topbar">
       <div class="brand">
-        <strong>Sasha</strong>
-        <span>iOS / SwiftUI • Xcode • Video apps</span>
+        <strong data-i18n="brand.name">Sasha</strong>
+        <span data-i18n="brand.tagline">iOS / SwiftUI • Xcode • Video apps</span>
       </div>
 
       <div class="lang-pill">
@@ -36,10 +40,10 @@
 
       <nav aria-label="Primary">
         <div class="nav">
-          <a href="homePage.html" class="active">🏠 <span data-i18n="nav.home"></span></a>
-          <a href="Experience.html" class="primary">💼 <span data-i18n="nav.experience"></span></a>
-          <a href="Education.html" class="primary">🎓 <span data-i18n="nav.education"></span></a>
-          <a href="Blender-projects.html">🧊 <span data-i18n="nav.blender"></span></a>
+          <a href="index.html" class="active">🏠 <span data-i18n="nav.home">Home</span></a>
+          <a href="Experience.html">💼 <span data-i18n="nav.experience">Experience</span></a>
+          <a href="Education.html">🎓 <span data-i18n="nav.education">Education</span></a>
+          <a href="Blender-projects.html">🧊 <span data-i18n="nav.blender">Blender</span></a>
         </div>
       </nav>
     </div>
@@ -50,65 +54,86 @@
       <section class="hero" aria-label="Introduction">
         <div>
           <h1>
-            <span data-i18n="hero.title_line1"></span><br />
-            <span data-i18n="hero.title_line2"></span>
+            <span data-i18n="hero.title_line1">Building clean, scalable</span><br />
+            <span data-i18n="hero.title_line2">iOS applications</span>
           </h1>
-          <p data-i18n="hero.description"></p>
 
-          <div class="meta" aria-label="Highlights">
-            <span class="chip">SwiftUI • Xcode</span>
-            <span class="chip">Realtime video (Daily.co / Twilio experience)</span>
-            <span class="chip">Firebase (Auth / Firestore / Storage / FCM)</span>
-            <span class="chip">Based in Löbau, Germany</span>
+          <p data-i18n="hero.description">
+            iOS / SwiftUI developer building GloboSense — a video interpreting platform.
+
+          </p>
+
+          <div class="meta">
+            <span class="chip" data-i18n="hero.chip1">SwiftUI • Xcode</span>
+            <span class="chip" data-i18n="hero.chip2">Realtime video (Daily.co / Twilio)</span>
+            <span class="chip" data-i18n="hero.chip3">Firebase (Auth / Firestore / Storage / FCM)</span>
+
+            <span class="chip" data-i18n="hero.chip4">Based in Löbau, Germany</span>
           </div>
 
-          <div class="cta-row" aria-label="Primary actions">
-            <a class="cta" href="CV.pdf" download data-i18n="cta.download_cv"></a>
-            <a class="cta" href="Experience.html" data-i18n="cta.see_experience"></a>
-            <a class="cta" href="Education.html" data-i18n="cta.education"></a> 
-          </div>
+          <div class="cta-row">
+            <a class="cta" href="Oleksandr_Stiepanov_Resume.pdf" download data-i18n="cta.download_cv">Download CV</a>
+            <a class="cta" href="Experience.html" data-i18n="cta.see_experience">See Experience</a>
+
+            <a class="cta" href="Education.html" data-i18n="cta.education">Education</a>
+          </div>  
         </div>
 
         <div class="portrait">
-          <img src="Photoes/me.png" alt="Portrait of Sasha" />
+          <img src="Photoes/me.png"
+               alt="Portrait of Sasha"
+               data-i18n="hero.portrait_alt"
+
+               data-i18n-attr="alt" />
         </div>
       </section>
 
-      <section class="grid" aria-label="Profile sections">
-        <article class="card" aria-label="About me">
-          <h2>About me</h2>
-          <p>
-            I like building clean, practical products and iterating fast. I’ve worked hands-on across app UI, backend integration,
-            and realtime calling features.
+      <section class="grid">
+        <article class="card">
+          <h2 data-i18n="about.title">About me</h2>
+
+          <p data-i18n="about.text">
+
+            I like building clean, practical products and iterating fast. I’ve worked hands-on across app UI, backend integration, and realtime calling features.
           </p>
+
+
           <ul>
-            <li>Focus: iOS development, product MVPs, and scalability thinking</li>
-            <li>Also enjoy: Unity prototyping, 3D modeling in Blender</li>
-            <li>Languages: English, Ukrainian/Russian background (German learning)</li>
+            <li data-i18n="about.li1">Focus: iOS development, product MVPs, and scalability thinking</li>
+            <li data-i18n="about.li2">Also enjoy: Unity prototyping, 3D modeling in Blender</li>
+
+            <li data-i18n="about.li3">Languages: English, Ukrainian/Russian background (German learning)</li>
           </ul>
         </article>
 
-        <article class="card" aria-label="What I'm building">
-          <h2>What I’m building now</h2>
-          <p>
-            <strong>GloboSense</strong> — a platform for people who need a translator.
-            The goal is to make it easy to schedule or instantly call an interpreter, and support interpreter agencies too.
+        <article class="card">
+          <h2 data-i18n="building.title">What I’m building now</h2>
+
+          <p data-i18n="building.text">
+
+            GloboSense — a platform for people who need a translator. The goal is to make it easy to schedule or instantly call an interpreter, and support interpreter agencies too.
           </p>
+
+
           <ul>
-            <li>Video calls, chat, notifications</li>
-            <li>Scheduling + calendar-driven workflow</li>
-            <li>Future-proof architecture (easier to migrate away from a single vendor later)</li>
+            <li data-i18n="building.li1">Video calls, chat, notifications</li>
+            <li data-i18n="building.li2">Scheduling + calendar-driven workflow</li>
+
+            <li data-i18n="building.li3">Future-proof architecture</li>
           </ul>
         </article>
 
-        <article class="card wide" aria-label="Skills">
-          <h2>Skills snapshot</h2>
+        <article class="card wide">
+          <h2 data-i18n="skills.title">Skills snapshot</h2>
+
+
           <ul>
-            <li><strong>iOS:</strong> Swift, SwiftUI, UIKit basics, app architecture, performance debugging</li>
-            <li><strong>Backend:</strong> Node/Express, REST APIs, auth tokens (project-based)</li>
-            <li><strong>Cloud:</strong> Firebase (Auth, Firestore, Storage, Functions, FCM)</li>
-            <li><strong>Realtime:</strong> Video call SDK integration and troubleshooting</li>
-            <li><strong>Tools:</strong> Xcode, Git, VS Code</li>
+            <li data-i18n="skills.li1"><strong>iOS:</strong> Swift, SwiftUI, UIKit basics, app architecture, performance debugging</li>
+            <li data-i18n="skills.li2"><strong>Backend:</strong> Node/Express, REST APIs</li>
+            <li data-i18n="skills.li3"><strong>Cloud:</strong> Firebase (Auth, Firestore, Storage, FCM)</li>
+            <li data-i18n="skills.li4"><strong>Realtime:</strong> Video call SDK integration</li>
+
+            <li data-i18n="skills.li5"><strong>Tools:</strong> Xcode, Git, VS Code</li>
           </ul>
         </article>
       </section>
@@ -118,32 +143,40 @@
   <footer>
     <div class="page footer-grid">
       <div>
-        <p style="margin:0 0 6px 0;">That’s it folks 🙂</p>
-        <p style="margin:0;">&copy; 2024 Sasha. All rights reserved.</p>
+        <p data-i18n="footer.closing">That’s it folks 🙂</p>
+
+        <p data-i18n="footer.copyright">© 2026 Sasha. All rights reserved.</p>
       </div>
 
       <div>
-        <p style="margin:0 0 8px 0;">Contact</p>
-        <p style="margin:0 0 6px 0;">
-          Email: <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+        <p data-i18n="footer.contact">Contact</p>
+
+        <p>
+          <span data-i18n="footer.email_label">Email:</span>
+
+          <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
         </p>
-        <p style="margin:0;">
-          Tel: <a href="tel:+491604077249">+49 160 4077249</a>
+
+        <p>
+          <span data-i18n="footer.tel_label">Tel:</span>
+
+          <a href="tel:+491604077249">+49 160 4077249</a>
         </p>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Auto-highlight active link by filename
+
+
+
+<script>
     document.addEventListener("DOMContentLoaded", () => {
-      const current = (window.location.pathname.split("/").pop() || "homePage.html").toLowerCase();
+      const current = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
       document.querySelectorAll(".nav a").forEach(a => {
         const href = (a.getAttribute("href") || "").toLowerCase();
         if (href === current) a.classList.add("active");
       });
     });
   </script>
-</body>
-
+  </body>
 </html>

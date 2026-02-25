@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title>Experience — Sasha</title>
-  <meta name="description" content="Work experience of Sasha — iOS / SwiftUI developer." />
+  <title data-i18n="experience.meta.title">Experience — Sasha</title>
+  <meta name="description"
+        data-i18n="experience.meta.description"
+        data-i18n-attr="content"
+        content="Work experience of Sasha — iOS / SwiftUI developer." />
 
   <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
   <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
@@ -20,8 +23,8 @@
   <header>
     <div class="page topbar">
       <div class="brand">
-        <strong>Sasha</strong>
-        <span>iOS / SwiftUI • Xcode • Video apps</span>
+        <strong data-i18n="brand.name">Sasha</strong>
+        <span data-i18n="brand.tagline">iOS / SwiftUI • Xcode • Video apps</span>
       </div>
 
       <div class="lang-pill">
@@ -33,10 +36,10 @@
 
       <nav aria-label="Primary">
         <div class="nav">
-          <a href="homePage.html">🏠 Home</a>
-          <a href="Experience.html" class="primary active">💼 Experience</a>
-          <a href="Education.html" class="primary">🎓 Education</a>
-          <a href="Blender-projects.html">🧊 Blender</a>
+          <a href="index.html">🏠 <span data-i18n="nav.home">Home</span></a>
+          <a href="Experience.html" class="primary active">💼 <span data-i18n="nav.experience">Experience</span></a>
+          <a href="Education.html" class="primary">🎓 <span data-i18n="nav.education">Education</span></a>
+          <a href="Blender-projects.html">🧊 <span data-i18n="nav.blender">Blender</span></a>
         </div>
       </nav>
     </div>
@@ -48,16 +51,16 @@
       <!-- Hero -->
       <section class="hero">
         <div>
-          <h1>My Work Experience</h1>
-          <p>
+          <h1 data-i18n="experience.hero.title">My Work Experience</h1>
+          <p data-i18n="experience.hero.subtitle">
             A focused overview of projects, roles, and technical contributions I’ve made so far.
           </p>
 
           <div class="meta">
-            <span class="chip">SwiftUI</span>
-            <span class="chip">Realtime Apps</span>
-            <span class="chip">Backend Integration</span>
-            <span class="chip">UI Architecture</span>
+            <span class="chip" data-i18n="experience.hero.chip1">SwiftUI</span>
+            <span class="chip" data-i18n="experience.hero.chip2">Realtime Apps</span>
+            <span class="chip" data-i18n="experience.hero.chip3">Backend Integration</span>
+            <span class="chip" data-i18n="experience.hero.chip4">UI Architecture</span>
           </div>
         </div>
       </section>
@@ -66,40 +69,40 @@
       <section class="grid">
 
         <article class="card wide">
-          <h2>GloboSense — iOS Developer</h2>
-          <p class="meta">2024 — Present · Remote</p>
+          <h2 data-i18n="experience.cards.globosense.title">GloboSense — iOS Developer</h2>
+          <p class="meta" data-i18n="experience.cards.globosense.meta">2024 — Present · Remote</p>
           <ul>
-            <li>Architected SwiftUI interface and navigation structure.</li>
-            <li>Integrated authentication, database logic, and realtime features.</li>
-            <li>Worked with video call SDKs and debugged live media pipelines.</li>
-            <li>Optimized state management and performance for scalability.</li>
+            <li data-i18n="experience.cards.globosense.li1">Architected SwiftUI interface and navigation structure.</li>
+            <li data-i18n="experience.cards.globosense.li2">Integrated authentication, database logic, and realtime features.</li>
+            <li data-i18n="experience.cards.globosense.li3">Worked with video call SDKs and debugged live media pipelines.</li>
+            <li data-i18n="experience.cards.globosense.li4">Optimized state management and performance for scalability.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>Independent Development</h2>
-          <p class="meta">Ongoing</p>
+          <h2 data-i18n="experience.cards.independent.title">Independent Development</h2>
+          <p class="meta" data-i18n="experience.cards.independent.meta">Ongoing</p>
           <ul>
-            <li>Built multiple prototype apps to test UI systems and architectures.</li>
-            <li>Experimented with backend logic and deployment flows.</li>
-            <li>Studied performance, memory usage, and realtime networking behavior.</li>
+            <li data-i18n="experience.cards.independent.li1">Built multiple prototype apps to test UI systems and architectures.</li>
+            <li data-i18n="experience.cards.independent.li2">Experimented with backend logic and deployment flows.</li>
+            <li data-i18n="experience.cards.independent.li3">Studied performance, memory usage, and realtime networking behavior.</li>
           </ul>
         </article>
 
         <article class="card">
-          <h2>Technical Focus</h2>
+          <h2 data-i18n="experience.cards.focus.title">Technical Focus</h2>
           <ul>
-            <li>iOS architecture patterns</li>
-            <li>Realtime systems thinking</li>
-            <li>Scalable backend design awareness</li>
-            <li>Clean UI + UX structure</li>
+            <li data-i18n="experience.cards.focus.li1">iOS architecture patterns</li>
+            <li data-i18n="experience.cards.focus.li2">Realtime systems thinking</li>
+            <li data-i18n="experience.cards.focus.li3">Scalable backend design awareness</li>
+            <li data-i18n="experience.cards.focus.li4">Clean UI + UX structure</li>
           </ul>
         </article>
 
         <article class="card wide">
-          <h2>Current Direction</h2>
-          <p>
-            I’m currently focused on becoming a strong product‑minded iOS engineer who understands both user experience and system architecture. I enjoy building fast, testing ideas quickly, and improving designs iteratively.
+          <h2 data-i18n="experience.cards.direction.title">Current Direction</h2>
+          <p data-i18n="experience.cards.direction.text">
+            I’m currently focused on becoming a strong product-minded iOS engineer who understands both user experience and system architecture. I enjoy building fast, testing ideas quickly, and improving designs iteratively.
           </p>
         </article>
 
@@ -111,17 +114,19 @@
   <footer>
     <div class="page footer-grid">
       <div>
-        <p style="margin:0 0 6px 0;">Thanks for reading</p>
-        <p style="margin:0;">© 2026 Sasha</p>
+        <p style="margin:0 0 6px 0;" data-i18n="footer.closing">Thanks for reading</p>
+        <p style="margin:0;" data-i18n="footer.copyright">© 2026 Sasha</p>
       </div>
 
       <div>
-        <p style="margin:0 0 8px 0;">Contact</p>
+        <p style="margin:0 0 8px 0;" data-i18n="footer.contact">Contact</p>
         <p style="margin:0 0 6px 0;">
-          Email: <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+          <span data-i18n="footer.email_label">Email:</span>
+          <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
         </p>
         <p style="margin:0;">
-          Tel: <a href="tel:+491604077249">+49 160 4077249</a>
+          <span data-i18n="footer.tel_label">Tel:</span>
+          <a href="tel:+491604077249">+49 160 4077249</a>
         </p>
       </div>
     </div>
@@ -129,7 +134,7 @@
 
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const current = (window.location.pathname.split("/").pop() || "homepage.html").toLowerCase();
+      const current = (window.location.pathname.split("/").pop() || "education.html").toLowerCase();
       document.querySelectorAll(".nav a").forEach(a => {
         const href = (a.getAttribute("href") || "").toLowerCase();
         if (href === current) a.classList.add("active");
