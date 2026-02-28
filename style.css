@@ -42,6 +42,26 @@
     }
 
     /* ===== Header ===== */
+    .github-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:20px;
+  height:20px;
+  margin-left:0px;
+  opacity:.75;
+  transition:.2s;
+}
+
+.github-icon svg{
+  width:14px;
+  height:14px;
+}
+
+.github-icon:hover{
+  opacity:1;
+  transform:scale(1.05);
+}
     header {
       position: sticky;
       top: 0;
