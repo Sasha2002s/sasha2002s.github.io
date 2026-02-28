@@ -11,16 +11,18 @@
         data-i18n="meta.description"
         data-i18n-attr="content"
         content="Sasha — iOS / SwiftUI developer building GloboSense, a video interpreting platform. Student of Wirtschaft & Informatik in Germany." />
-  <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
-  <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
-  <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
 
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
 
+  <script defer src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+  <script defer src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
+  <script defer src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
 
   <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#0b0f14" />
 
-
-  <script src="i18n.js"></script>
+  <script defer src="i18n.js"></script>
 </head>
 
 <body>
@@ -60,31 +62,31 @@
 
           <p data-i18n="hero.description">
             iOS / SwiftUI developer building GloboSense — a video interpreting platform.
-
           </p>
 
           <div class="meta">
             <span class="chip" data-i18n="hero.chip1">SwiftUI • Xcode</span>
             <span class="chip" data-i18n="hero.chip2">Realtime video (Daily.co / Twilio)</span>
             <span class="chip" data-i18n="hero.chip3">Firebase (Auth / Firestore / Storage / FCM)</span>
-
             <span class="chip" data-i18n="hero.chip4">Based in Löbau, Germany</span>
           </div>
 
           <div class="cta-row">
             <a class="cta" href="Oleksandr_Stiepanov_Resume.pdf" download data-i18n="cta.download_cv">Download CV</a>
             <a class="cta" href="Experience.html" data-i18n="cta.see_experience">See Experience</a>
-
             <a class="cta" href="Education.html" data-i18n="cta.education">Education</a>
-          </div>  
+          </div>
         </div>
 
         <div class="portrait">
           <img src="Photoes/me.png"
                alt="Portrait of Sasha"
                data-i18n="hero.portrait_alt"
-
-               data-i18n-attr="alt" />
+               data-i18n-attr="alt"
+               loading="lazy"
+               decoding="async"
+               width="520"
+               height="520" />
         </div>
       </section>
 
@@ -93,15 +95,12 @@
           <h2 data-i18n="about.title">About me</h2>
 
           <p data-i18n="about.text">
-
             I like building clean, practical products and iterating fast. I’ve worked hands-on across app UI, backend integration, and realtime calling features.
           </p>
-
 
           <ul>
             <li data-i18n="about.li1">Focus: iOS development, product MVPs, and scalability thinking</li>
             <li data-i18n="about.li2">Also enjoy: Unity prototyping, 3D modeling in Blender</li>
-
             <li data-i18n="about.li3">Languages: English, Ukrainian/Russian background (German learning)</li>
           </ul>
         </article>
@@ -110,15 +109,12 @@
           <h2 data-i18n="building.title">What I’m building now</h2>
 
           <p data-i18n="building.text">
-
             GloboSense — a platform for people who need a translator. The goal is to make it easy to schedule or instantly call an interpreter, and support interpreter agencies too.
           </p>
-
 
           <ul>
             <li data-i18n="building.li1">Video calls, chat, notifications</li>
             <li data-i18n="building.li2">Scheduling + calendar-driven workflow</li>
-
             <li data-i18n="building.li3">Future-proof architecture</li>
           </ul>
         </article>
@@ -126,13 +122,11 @@
         <article class="card wide">
           <h2 data-i18n="skills.title">Skills snapshot</h2>
 
-
           <ul>
             <li data-i18n="skills.li1"><strong>iOS:</strong> Swift, SwiftUI, UIKit basics, app architecture, performance debugging</li>
             <li data-i18n="skills.li2"><strong>Backend:</strong> Node/Express, REST APIs</li>
             <li data-i18n="skills.li3"><strong>Cloud:</strong> Firebase (Auth, Firestore, Storage, FCM)</li>
             <li data-i18n="skills.li4"><strong>Realtime:</strong> Video call SDK integration</li>
-
             <li data-i18n="skills.li5"><strong>Tools:</strong> Xcode, Git, VS Code</li>
           </ul>
         </article>
@@ -144,7 +138,6 @@
     <div class="page footer-grid">
       <div>
         <p data-i18n="footer.closing">That’s it folks 🙂</p>
-
         <p data-i18n="footer.copyright">© 2026 Sasha. All rights reserved.</p>
       </div>
 
@@ -153,30 +146,31 @@
 
         <p>
           <span data-i18n="footer.email_label">Email:</span>
-
           <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
         </p>
 
         <p>
           <span data-i18n="footer.tel_label">Tel:</span>
-
           <a href="tel:+491604077249">+49 160 4077249</a>
         </p>
       </div>
     </div>
   </footer>
 
-
-
-
-<script>
+  <script>
     document.addEventListener("DOMContentLoaded", () => {
       const current = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
       document.querySelectorAll(".nav a").forEach(a => {
         const href = (a.getAttribute("href") || "").toLowerCase();
-        if (href === current) a.classList.add("active");
+        if (href === current) {
+          a.classList.add("active");
+          a.setAttribute("aria-current", "page");
+        } else {
+          a.removeAttribute("aria-current");
+        }
       });
     });
   </script>
-  </body>
+</body>
+
 </html>
