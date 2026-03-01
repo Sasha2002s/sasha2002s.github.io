@@ -8,7 +8,7 @@
   <title data-i18n="experience.meta.title">Experience — Sasha</title>
   <meta name="description"
         data-i18n="experience.meta.description"
-        data-i18n-attr="content"
+        data-i18n-attr="content:experience.meta.description"
         content="Work experience of Sasha — iOS / SwiftUI developer." />
 
   <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
@@ -114,7 +114,7 @@
   <footer>
     <div class="page footer-grid">
       <div>
-        <p style="margin:0 0 6px 0;" data-i18n="footer.closing  ">Thanks for reading</p>
+        <p style="margin:0 0 6px 0;" data-i18n="footer.closing">Thank you for reading.</p>
         <p style="margin:0;" data-i18n="footer.copyright">© 2026 Sasha</p>
       </div>
 
@@ -131,16 +131,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const current = (window.location.pathname.split("/").pop() || "education.html").toLowerCase();
-      document.querySelectorAll(".nav a").forEach(a => {
-        const href = (a.getAttribute("href") || "").toLowerCase();
-        if (href === current) a.classList.add("active");
-      });
-    });
-  </script>
 
 </body>
 </html>

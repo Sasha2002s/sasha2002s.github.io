@@ -10,6 +10,7 @@
     name="description"
     content="Education and learning path of Sasha — iOS / SwiftUI developer."
     data-i18n="education.head.description"
+    data-i18n-attr="content:education.head.description"
   />
 
   <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
@@ -37,10 +38,10 @@
 
       <nav aria-label="Primary">
         <div class="nav">
-          <a href="../">🏠 <span data-i18n="common.nav.home">Home</span></a>
-          <a href="../Experience" class="primary">💼 <span data-i18n="common.nav.experience">Experience</span></a>
-          <a href="../Education" class="primary active">🎓 <span data-i18n="common.nav.education">Education</span></a>
-          <a href="../Blender-projects">🧊 <span data-i18n="common.nav.blender">Blender</span></a>
+          <a href="../">🏠 <span data-i18n="nav.home">Home</span></a>
+          <a href="../Experience" class="primary">💼 <span data-i18n="nav.experience">Experience</span></a>
+          <a href="../Education" class="primary active">🎓 <span data-i18n="nav.education">Education</span></a>
+          <a href="../Blender-projects">🧊 <span data-i18n="nav.blender">Blender</span></a>
         </div>
       </nav>
     </div>
@@ -121,7 +122,7 @@
   <footer>
     <div class="page footer-grid">
       <div>
-        <p style="margin:0 0 6px 0;" data-i18n="common.footer.thanks">Thanks for reading</p>
+        <p style="margin:0 0 6px 0;" data-i18n="common.footer.thanks">Thank you for reading.</p>
         <p style="margin:0;">© 2026 Sasha</p>
       </div>
 
@@ -138,16 +139,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const current = (window.location.pathname.split("/").pop() || "homepage.html").toLowerCase();
-      document.querySelectorAll(".nav a").forEach(a => {
-        const href = (a.getAttribute("href") || "").toLowerCase();
-        if (href === current) a.classList.add("active");
-      });
-    });
-  </script>
 
 </body>
 </html>

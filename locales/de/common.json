@@ -1,23 +1,18 @@
-
-
 {
   "meta": {
     "title": "Sasha — iOS / SwiftUI Entwickler",
     "description": "Sasha — iOS / SwiftUI Entwickler, der GloboSense entwickelt, eine Video-Dolmetschplattform. Student für Wirtschaft & Informatik in Deutschland."
   },
-
   "brand": {
     "name": "Sasha",
     "tagline": "iOS / SwiftUI • Xcode • Video‑Apps"
   },
-
   "nav": {
     "home": "Startseite",
     "experience": "Erfahrung",
     "education": "Ausbildung",
     "blender": "Blender"
   },
-
   "hero": {
     "title_line1": "Hi — ich bin Sasha.",
     "title_line2": "Ich entwickle iOS‑Apps mit SwiftUI.",
@@ -28,13 +23,11 @@
     "chip4": "Standort: Löbau, Deutschland",
     "portrait_alt": "Porträt von Sasha"
   },
-
   "cta": {
     "download_cv": "⬇️ Lebenslauf herunterladen",
     "see_experience": "💼 Erfahrung ansehen",
     "education": "🎓 Ausbildung"
   },
-
   "about": {
     "title": "Über mich",
     "text": "Ich entwickle gern saubere, praktische Produkte und iteriere schnell. Ich habe praktisch an App‑UI, Backend‑Integration und Echtzeit‑Calling‑Features gearbeitet.",
@@ -42,7 +35,6 @@
     "li2": "Außerdem interessant: Unity‑Prototyping, 3D‑Modellierung in Blender",
     "li3": "Sprachen: Englisch, ukrainisch/russischer Hintergrund (Deutsch in Arbeit)"
   },
-
   "building": {
     "title": "Woran ich gerade arbeite",
     "text": "GloboSense — eine Plattform für Menschen, die einen Übersetzer brauchen. Ziel ist es, das Planen oder sofortige Anrufen eines Dolmetschers einfach zu machen und auch Dolmetscheragenturen zu unterstützen.",
@@ -50,7 +42,6 @@
     "li2": "Terminplanung + kalenderbasierter Workflow",
     "li3": "Zukunftssichere Architektur"
   },
-
   "skills": {
     "title": "Kompetenzübersicht",
     "li1": "iOS: Swift, SwiftUI, UIKit‑Grundlagen, App‑Architektur, Performance‑Debugging",
@@ -59,13 +50,11 @@
     "li4": "Echtzeit: Video‑SDK‑Integration",
     "li5": "Tools: Xcode, Git, VS Code"
   },
-
   "experience": {
     "meta": {
       "title": "Erfahrung — Sasha",
       "description": "Berufserfahrung von Sasha — iOS / SwiftUI Entwickler."
     },
-
     "hero": {
       "title": "Meine Berufserfahrung",
       "subtitle": "Ein kompakter Überblick über Projekte, Rollen und technische Beiträge, die ich bisher umgesetzt habe.",
@@ -74,7 +63,6 @@
       "chip3": "Backend‑Integration",
       "chip4": "UI‑Architektur"
     },
-
     "cards": {
       "globosense": {
         "title": "GloboSense — iOS Entwickler",
@@ -84,7 +72,6 @@
         "li3": "Mit Video‑SDKs gearbeitet und Live‑Media‑Pipelines debuggt.",
         "li4": "State‑Management und Performance für Skalierbarkeit optimiert."
       },
-
       "independent": {
         "title": "Eigenständige Entwicklung",
         "meta": "Laufend",
@@ -92,7 +79,6 @@
         "li2": "Backend‑Logik und Deployment‑Abläufe erprobt.",
         "li3": "Performance, Speicherverbrauch und Echtzeit‑Netzwerkverhalten analysiert."
       },
-
       "focus": {
         "title": "Technischer Fokus",
         "li1": "iOS‑Architektur‑Patterns",
@@ -100,7 +86,6 @@
         "li3": "Bewusstsein für skalierbares Backend‑Design",
         "li4": "Saubere UI‑ und UX‑Struktur"
       },
-
       "direction": {
         "title": "Aktuelle Ausrichtung",
         "text": "Ich konzentriere mich derzeit darauf, ein produktorientierter iOS‑Engineer zu werden, der sowohl Nutzererfahrung als auch Systemarchitektur versteht. Ich arbeite gern schnell, teste Ideen zügig und verbessere Designs iterativ."
@@ -111,14 +96,8 @@
     "brand": {
       "tagline": "iOS / SwiftUI • Xcode • Video-Apps"
     },
-    "nav": {
-      "home": "Startseite",
-      "experience": "Erfahrung",
-      "education": "Ausbildung",
-      "blender": "Blender"
-    },
     "footer": {
-      "thanks": "Danke fürs Lesen",
+      "thanks": "Vielen Dank fürs Lesen.",
       "contact": "Kontakt",
       "email": "E-Mail",
       "tel": "Tel"
@@ -172,38 +151,37 @@
       }
     }
   },
-"blender": {
-  "head": {
-    "title": "Blender Projekte — Sasha",
-    "description": "Blender-Renderings und 3D-Hobbyprojekte von Sasha."
-  },
-  "hero": {
-    "title": "Meine Blender-Projekte",
-    "subtitle": "3D-Modellierung und Rendering ist mein Hobby — hier sind einige meiner Lieblings-Renderings.",
-    "chips": {
-      "blender": "Blender",
-      "modeling": "Modellierung",
-      "materialsLighting": "Materialien & Beleuchtung",
-      "renders": "Renderings"
-    }
-  },
-  "sections": {
-    "gallery": {
-      "title": "Galerie",
-      "meta": "Hover-Effekte kommen aus Animations.css"
+  "blender": {
+    "head": {
+      "title": "Blender Projekte — Sasha",
+      "description": "Blender-Renderings und 3D-Hobbyprojekte von Sasha."
     },
-    "animations": {
-      "title": "Animationen",
-      "meta": "Gerenderte Animations-Vorschauen"
+    "hero": {
+      "title": "Meine Blender-Projekte",
+      "subtitle": "3D-Modellierung und Rendering ist mein Hobby — hier sind einige meiner Lieblings-Renderings.",
+      "chips": {
+        "blender": "Blender",
+        "modeling": "Modellierung",
+        "materialsLighting": "Materialien & Beleuchtung",
+        "renders": "Renderings"
+      }
+    },
+    "sections": {
+      "gallery": {
+        "title": "Galerie",
+        "meta": "Hover-Effekte kommen aus Animations.css"
+      },
+      "animations": {
+        "title": "Animationen",
+        "meta": "Gerenderte Animations-Vorschauen"
+      }
+    },
+    "footer": {
+      "thatIsIt": "Vielen Dank für Ihren Besuch."
     }
   },
   "footer": {
-    "thatIsIt": "Das war’s 🙂"
-  }
-},
-
-  "footer": {
-    "closing": "Das war’s 🙂",
+    "closing": "Vielen Dank für Ihren Besuch.",
     "copyright": "© 2026 Sasha. Alle Rechte vorbehalten.",
     "contact": "Kontakt",
     "email_label": "E‑Mail:",

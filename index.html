@@ -9,7 +9,7 @@
   <title data-i18n="meta.title">Sasha — iOS / SwiftUI Developer</title>
   <meta name="description"
         data-i18n="meta.description"
-        data-i18n-attr="content"
+        data-i18n-attr="content:meta.description"
         content="Sasha — iOS / SwiftUI developer building GloboSense, a video interpreting platform. Student of Wirtschaft & Informatik in Germany." />
 
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
@@ -51,10 +51,10 @@
 
       <nav aria-label="Primary">
         <div class="nav">
-          <a href="../" class="active">🏠 <span data-i18n="nav.home">Home</span></a>
-          <a href="../Experience">💼 <span data-i18n="nav.experience">Experience</span></a>
-          <a href="../Education">🎓 <span data-i18n="nav.education">Education</span></a>
-          <a href="../Blender-projects">🧊 <span data-i18n="nav.blender">Blender</span></a>
+          <a href="./" class="active">🏠 <span data-i18n="nav.home">Home</span></a>
+          <a href="Experience/">💼 <span data-i18n="nav.experience">Experience</span></a>
+          <a href="Education/">🎓 <span data-i18n="nav.education">Education</span></a>
+          <a href="Blender-projects/">🧊 <span data-i18n="nav.blender">Blender</span></a>
         </div>
       </nav>
     </div>
@@ -82,13 +82,13 @@
 
           <div class="cta-row">
             <a class="cta" href="Oleksandr_Stiepanov_Resume.pdf" download data-i18n="cta.download_cv">Download CV</a>
-            <a class="cta" href="Experience.html" data-i18n="cta.see_experience">See Experience</a>
-            <a class="cta" href="Education.html" data-i18n="cta.education">Education</a>
+            <a class="cta" href="Experience/" data-i18n="cta.see_experience">See Experience</a>
+            <a class="cta" href="Education/" data-i18n="cta.education">Education</a>
           </div>
         </div>
 
         <div class="portrait">
-          <img src="Photoes/me.png"
+          <img src="Photoes/webp/me.webp"
                alt="Portrait of Sasha"
                data-i18n="hero.portrait_alt"
                data-i18n-attr="alt"
@@ -146,7 +146,7 @@
   <footer>
     <div class="page footer-grid">
       <div>
-        <p data-i18n="footer.closing">That’s it folks 🙂</p>
+        <p data-i18n="footer.closing">Thank you for visiting.</p>
         <p data-i18n="footer.copyright">© 2026 Sasha. All rights reserved.</p>
       </div>
 
@@ -166,20 +166,6 @@
     </div>
   </footer>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const current = (window.location.pathname.split("/").pop() || "index.html").toLowerCase();
-      document.querySelectorAll(".nav a").forEach(a => {
-        const href = (a.getAttribute("href") || "").toLowerCase();
-        if (href === current) {
-          a.classList.add("active");
-          a.setAttribute("aria-current", "page");
-        } else {
-          a.removeAttribute("aria-current");
-        }
-      });
-    });
-  </script>
 </body>
 
 </html>
