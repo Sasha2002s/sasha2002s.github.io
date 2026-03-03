@@ -40,8 +40,8 @@
     }
 
     .logo {
-      width: 84px;
-      height: 84px;
+      width: 94px;
+      height: 94px;
       flex: 0 0 auto;
     }
 
@@ -105,8 +105,8 @@
       }
 
       .logo {
-        width: 72px;
-        height: 72px;
+        width: 78px;
+        height: 78px;
       }
     }
   </style>
@@ -115,28 +115,36 @@
 <body>
   <main class="container">
     <div class="header">
-      <!-- Inline SVG keeps the EchoMind icon available on any hosting without extra asset setup. -->
+      <!-- Refined icon geometry to more closely match the app identity shown in screenshots. -->
       <svg class="logo" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
         <defs>
-          <linearGradient id="bgGradient" x1="0%" x2="100%" y1="0%" y2="100%">
-            <stop offset="0%" stop-color="#152866"></stop>
-            <stop offset="100%" stop-color="#05103f"></stop>
+          <linearGradient id="bgGradient" x1="16%" x2="84%" y1="8%" y2="92%">
+            <stop offset="0%" stop-color="#112a7a"></stop>
+            <stop offset="100%" stop-color="#041241"></stop>
           </linearGradient>
-          <linearGradient id="markGradient" x1="0%" x2="100%" y1="0%" y2="100%">
-            <stop offset="0%" stop-color="#95f5ef"></stop>
-            <stop offset="100%" stop-color="#2f85ff"></stop>
+          <radialGradient id="bgGlow" cx="50%" cy="45%" r="60%">
+            <stop offset="0%" stop-color="#1f3388" stop-opacity="0.8"></stop>
+            <stop offset="100%" stop-color="#1f3388" stop-opacity="0"></stop>
+          </radialGradient>
+          <linearGradient id="markGradient" x1="0%" x2="100%" y1="10%" y2="90%">
+            <stop offset="0%" stop-color="#9ff2eb"></stop>
+            <stop offset="100%" stop-color="#2e82ff"></stop>
           </linearGradient>
         </defs>
         <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGradient)"></rect>
-        <rect x="98" y="246" width="16" height="20" rx="8" fill="url(#markGradient)"></rect>
-        <rect x="132" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
-        <rect x="168" y="198" width="20" height="116" rx="10" fill="url(#markGradient)"></rect>
-        <rect x="204" y="206" width="20" height="100" rx="10" fill="url(#markGradient)"></rect>
-        <path fill="url(#markGradient)" d="M252 180h108c8 0 14 6 14 14v16c0 8-6 14-14 14h-78v34h70c8 0 14 6 14 14v15c0 8-6 14-14 14h-70v10c0 21 17 38 38 38h58c8 0 14 6 14 14v16c0 8-6 14-14 14h-58c-46 0-84-38-84-84V194c0-8 6-14 14-14z"></path>
-        <rect x="332" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
-        <rect x="366" y="198" width="20" height="116" rx="10" fill="url(#markGradient)"></rect>
-        <rect x="402" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
-        <rect x="440" y="246" width="16" height="20" rx="8" fill="url(#markGradient)"></rect>
+        <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGlow)"></rect>
+        <rect x="92" y="249" width="14" height="14" rx="7" fill="url(#markGradient)"></rect>
+        <rect x="122" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
+        <rect x="156" y="196" width="22" height="120" rx="11" fill="url(#markGradient)"></rect>
+        <rect x="192" y="204" width="22" height="104" rx="11" fill="url(#markGradient)"></rect>
+        <rect x="238" y="174" width="36" height="174" rx="18" fill="url(#markGradient)"></rect>
+        <rect x="238" y="174" width="144" height="36" rx="18" fill="url(#markGradient)"></rect>
+        <rect x="238" y="242" width="122" height="34" rx="17" fill="url(#markGradient)"></rect>
+        <rect x="238" y="312" width="160" height="36" rx="18" fill="url(#markGradient)"></rect>
+        <rect x="300" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
+        <rect x="334" y="196" width="22" height="120" rx="11" fill="url(#markGradient)"></rect>
+        <rect x="370" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
+        <rect x="406" y="249" width="14" height="14" rx="7" fill="url(#markGradient)"></rect>
       </svg>
       <div>
         <h1>EchoMind</h1>
@@ -166,7 +174,8 @@
     <div class="status">
       <p><strong>Product status:</strong> this is not the final version.</p>
       <p>UI will keep improving over time, and more functions will be added as the workflow matures.</p>
-      <p>Built by Sasha — iOS / SwiftUI Developer.</p>
+      <!-- Link back to the main portfolio so visitors can discover the full profile from this project page. -->
+      <p><a href="../index.html">Built by Sasha</a> — iOS / SwiftUI Developer.</p>
     </div>
   </main>
 </body>
