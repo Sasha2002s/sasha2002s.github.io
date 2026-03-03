@@ -90,6 +90,11 @@
       "direction": {
         "title": "Aktuelle Ausrichtung",
         "text": "Ich konzentriere mich derzeit darauf, ein produktorientierter iOS‑Engineer zu werden, der sowohl Nutzererfahrung als auch Systemarchitektur versteht. Ich arbeite gern schnell, teste Ideen zügig und verbessere Designs iterativ."
+      },
+      "projects": {
+        "title": "Meine Projekte",
+        "text": "Öffentliche Showcase-Projekte, die ich aktuell teilen kann. Im Moment enthält die Liste EchoMind.",
+        "cta": "🔗 EchoMind-Projektseite öffnen"
       }
     }
   },
@@ -187,5 +192,62 @@
     "contact": "Kontakt",
     "email_label": "E‑Mail:",
     "tel_label": "Tel.:"
+  },
+  "echomind": {
+    "meta": {
+      "title": "EchoMind — Sprachnotizen zu klaren Aktionen",
+      "description": "EchoMind wandelt Sprachaufnahmen in Transkripte, Zusammenfassungen und umsetzbare Notizen um."
+    },
+    "brand": {
+      "name": "EchoMind",
+      "tagline": "Spracherfassung, strukturierte Notizen und klare nächste Schritte"
+    },
+    "nav": {
+      "home": "🏠 Startseite",
+      "experience": "💼 Erfahrung"
+    },
+    "hero": {
+      "logo_alt": "EchoMind App-Icon",
+      "title": "EchoMind",
+      "subtitle": "Nimm einen Gedanken auf. Erhalte eine saubere Notiz.",
+      "intro": "EchoMind ist eine iOS-Notiz-App mit Voice-First-Ansatz in aktiver Entwicklung. Gesprochene Gedanken werden in Transkripte, Zusammenfassungen und klarere nächste Schritte umgewandelt.",
+      "chip1": "Aufnahme mit einem Tippen",
+      "chip2": "On-Device + KI-Workflows",
+      "chip3": "Transkription, Zusammenfassung, Übersetzung",
+      "status_note": "Das ist nicht die finale Version. UI und Funktionsumfang werden aktiv weiterentwickelt."
+    },
+    "sections": {
+      "flow": {
+        "title": "Aktueller Prototyp-Flow",
+        "li1": "Startbildschirm mit Ein-Tap-Aufnahme und Schnellzugriffen für Ideen, Lernen und Aufgaben.",
+        "li2": "Bibliothek mit Aufnahmen, Zeitstempeln und Dauer-Vorschau.",
+        "li3": "Detailansicht der Aufnahme mit Wiedergabe, Transkription und Zusammenfassung.",
+        "li4": "Übersetzungsaktionen für Transkript und Zusammenfassung im selben Screen.",
+        "li5": "Einstellungen für Modellwahl, Sprache, Sounds, Haptik, Speicherung und Export-Standards."
+      },
+      "ai": {
+        "title": "KI-Ausgabe heute",
+        "text": "Die Ausgaben in den Screenshots zeigen bereits strukturierte Interpretation über reine Textumwandlung hinaus.",
+        "li1": "Erkennt wahrscheinliche Referenztypen (z. B. Plan/Zeitplan, Humor/Phrase).",
+        "li2": "Hebt Datums- und Zeit-Hinweise aus freier Sprache hervor.",
+        "li3": "Unterstützt schnelles Re-Transcribe und Re-Summarize.",
+        "li4": "Bietet Übersetzungspunkte, damit Notizen sprachübergreifend nutzbar bleiben."
+      },
+      "roadmap": {
+        "title": "Was als Nächstes kommt",
+        "text": "Kurzfristig soll EchoMind verlässlicher für Tagesplanung und mehrsprachige Notiz-Workflows werden.",
+        "li1": "Sauberere Aufnahme-Organisation und schnellere Suche.",
+        "li2": "Robustere Extraktion von Aufgaben, Daten und Erinnerungen.",
+        "li3": "Stärkere Sharing/Export-Kombinationen für Audio + Text-Zusammenfassungen.",
+        "li4": "Laufende UI-Verbesserungen auf Basis realer Nutzung."
+      }
+    },
+    "footer": {
+      "built_by": "Erstellt von Sasha",
+      "built_suffix": "— iOS / SwiftUI Entwickler.",
+      "note": "EchoMind ist in aktiver Entwicklung und diese Seite entwickelt sich zusammen mit der App weiter.",
+      "email_label": "E-Mail:",
+      "tel_label": "Tel.:"
+    }
   }
 }

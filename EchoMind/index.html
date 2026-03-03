@@ -3,179 +3,457 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EchoMind — Voice to Structured Thinking</title>
+  <title data-i18n="echomind.meta.title">EchoMind — Voice Notes to Clear Actions</title>
   <meta
     name="description"
-    content="EchoMind turns voice thoughts into clean notes with transcription, summary, and translation workflows."
+    data-i18n="echomind.meta.description"
+    data-i18n-attr="content:echomind.meta.description"
+    content="EchoMind transforms voice recordings into transcriptions, summaries, and actionable notes."
   />
-  <!-- Keep this page self-contained so the project card works without external stylesheet dependencies. -->
+
+  <script defer src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+  <script defer src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
+  <script defer src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+  <script defer src="../i18n.js"></script>
+
+  <!-- EchoMind page is intentionally self-contained to keep visual branding independent from global pages. -->
   <style>
+    :root {
+      --bg: #070d23;
+      --bg2: #060a1d;
+      --panel: rgba(8, 14, 36, 0.88);
+      --panel-soft: rgba(255, 255, 255, 0.04);
+      --border: rgba(139, 170, 255, 0.2);
+      --text: #edf3ff;
+      --muted: #b5c4ef;
+      --accent: #5fd5ff;
+      --accent2: #3e7dff;
+      --max: 1040px;
+      --radius: 22px;
+      --shadow: 0 28px 56px rgba(0, 0, 0, 0.36);
+    }
+
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #162252 0%, #0b0f14 62%);
-      color: #f2f4f8;
       min-height: 100vh;
-      display: flex;
-      justify-content: center;
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(1200px 700px at 20% 0%, rgba(87, 138, 255, 0.2), transparent 60%),
+        radial-gradient(1000px 620px at 88% 8%, rgba(63, 215, 255, 0.14), transparent 56%),
+        linear-gradient(180deg, var(--bg), var(--bg2));
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(var(--max), calc(100% - 28px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(5, 10, 28, 0.72);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .topbar {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        "brand lang"
+        "nav nav";
+      gap: 10px;
+      padding: 14px 0;
       align-items: center;
-      padding: 28px 20px;
-      box-sizing: border-box;
     }
 
-    .container {
-      width: min(860px, 100%);
-      background: rgba(11, 15, 20, 0.74);
-      border: 1px solid rgba(140, 170, 255, 0.16);
-      border-radius: 22px;
-      padding: 30px 24px;
-      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+    .brand {
+      grid-area: brand;
+      line-height: 1.1;
     }
 
-    .header {
+    .brand strong {
+      font-size: 16px;
+      display: block;
+    }
+
+    .brand span {
+      font-size: 12px;
+      color: var(--muted);
+      display: block;
+      margin-top: 4px;
+    }
+
+    .lang-pill {
+      grid-area: lang;
+      justify-self: end;
+      display: inline-flex;
+      gap: 6px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .lang-pill button {
+      border: 0;
+      border-radius: 8px;
+      padding: 4px 7px;
+      color: #eaf1ff;
+      background: transparent;
+      cursor: pointer;
+      font-size: 12px;
+    }
+
+    .lang-pill button:hover {
+      background: rgba(255, 255, 255, 0.14);
+    }
+
+    nav {
+      grid-area: nav;
       display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 8px;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: flex-end;
     }
 
+    .nav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.08);
+      text-decoration: none;
+      color: #e7eeff;
+      font-size: 13px;
+      line-height: 1;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    main {
+      padding: 26px 0 30px;
+    }
+
+    .panel {
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      padding: 26px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+
+    /* Use the uploaded icon file directly so brand shape/colors stay exact. */
     .logo {
-      width: 94px;
-      height: 94px;
-      flex: 0 0 auto;
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 30px;
+      border: 1px solid rgba(155, 183, 255, 0.22);
+      box-shadow: 0 14px 26px rgba(0, 0, 0, 0.35);
+      background: #091646;
     }
 
     h1 {
       margin: 0;
-      font-size: clamp(34px, 4vw, 44px);
+      font-size: clamp(34px, 4vw, 46px);
       line-height: 1.08;
+      letter-spacing: -0.4px;
     }
 
     .subtitle {
-      margin: 0;
-      color: #b8c5ef;
-      font-size: 18px;
-      opacity: 0.95;
+      margin: 4px 0 0;
+      color: #c8d6ff;
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: -0.2px;
     }
 
-    .text {
-      margin: 18px 0 20px;
-      color: #d9e2ff;
-      line-height: 1.56;
+    .lead {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.62;
       max-width: 74ch;
     }
 
-    h2 {
-      margin: 0 0 10px;
-      font-size: 20px;
-      color: #d7e8ff;
+    .chips {
+      margin-top: 16px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
     }
 
-    ul {
-      margin: 0;
-      padding-left: 22px;
-      color: #d9e2ff;
+    .chip {
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.06);
+      color: #d4e1ff;
+    }
+
+    .status-note {
+      margin-top: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(95, 213, 255, 0.28);
+      background: rgba(95, 213, 255, 0.08);
+      color: #d9ecff;
+      padding: 12px 14px;
+      font-size: 14px;
       line-height: 1.5;
     }
 
-    li {
+    .grid {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+    }
+
+    .card {
+      grid-column: span 6;
+      border-radius: 18px;
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      background: var(--panel-soft);
+      padding: 18px;
+    }
+
+    .card.wide {
+      grid-column: span 12;
+    }
+
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 1.2;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.62;
+      font-size: 15px;
+    }
+
+    .card ul {
+      margin: 10px 0 0 18px;
+      padding: 0;
+      color: #d3defc;
+    }
+
+    .card li {
       margin-bottom: 8px;
+      line-height: 1.5;
+      font-size: 15px;
     }
 
-    .status {
-      margin-top: 22px;
-      padding-top: 18px;
-      border-top: 1px solid rgba(140, 170, 255, 0.18);
-      color: #9fb2eb;
+    .footer {
+      margin-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.14);
+      padding-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: center;
+      color: var(--muted);
       font-size: 14px;
-      line-height: 1.45;
     }
 
-    .status strong {
-      color: #dbe7ff;
+    .footer a {
+      color: #d6e3ff;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(214, 227, 255, 0.36);
     }
 
-    @media (max-width: 620px) {
-      .container {
-        padding: 22px 18px;
+    .footer a:hover {
+      color: #ffffff;
+      border-bottom-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .footer-contact {
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 900px) {
+      .card { grid-column: span 12; }
+    }
+
+    @media (max-width: 680px) {
+      .topbar {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "brand"
+          "lang"
+          "nav";
       }
 
-      .header {
-        align-items: flex-start;
+      .lang-pill,
+      nav {
+        justify-self: start;
+      }
+
+      .panel {
+        padding: 20px;
+      }
+
+      .hero {
+        grid-template-columns: 1fr;
       }
 
       .logo {
-        width: 78px;
-        height: 78px;
+        width: 96px;
+        height: 96px;
+      }
+
+      .subtitle {
+        font-size: 20px;
+      }
+
+      .footer {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-contact {
+        text-align: left;
       }
     }
   </style>
 </head>
 
 <body>
-  <main class="container">
-    <div class="header">
-      <!-- Refined icon geometry to more closely match the app identity shown in screenshots. -->
-      <svg class="logo" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
-        <defs>
-          <linearGradient id="bgGradient" x1="16%" x2="84%" y1="8%" y2="92%">
-            <stop offset="0%" stop-color="#112a7a"></stop>
-            <stop offset="100%" stop-color="#041241"></stop>
-          </linearGradient>
-          <radialGradient id="bgGlow" cx="50%" cy="45%" r="60%">
-            <stop offset="0%" stop-color="#1f3388" stop-opacity="0.8"></stop>
-            <stop offset="100%" stop-color="#1f3388" stop-opacity="0"></stop>
-          </radialGradient>
-          <linearGradient id="markGradient" x1="0%" x2="100%" y1="10%" y2="90%">
-            <stop offset="0%" stop-color="#9ff2eb"></stop>
-            <stop offset="100%" stop-color="#2e82ff"></stop>
-          </linearGradient>
-        </defs>
-        <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGradient)"></rect>
-        <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGlow)"></rect>
-        <rect x="92" y="249" width="14" height="14" rx="7" fill="url(#markGradient)"></rect>
-        <rect x="122" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
-        <rect x="156" y="196" width="22" height="120" rx="11" fill="url(#markGradient)"></rect>
-        <rect x="192" y="204" width="22" height="104" rx="11" fill="url(#markGradient)"></rect>
-        <rect x="238" y="174" width="36" height="174" rx="18" fill="url(#markGradient)"></rect>
-        <rect x="238" y="174" width="144" height="36" rx="18" fill="url(#markGradient)"></rect>
-        <rect x="238" y="242" width="122" height="34" rx="17" fill="url(#markGradient)"></rect>
-        <rect x="238" y="312" width="160" height="36" rx="18" fill="url(#markGradient)"></rect>
-        <rect x="300" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
-        <rect x="334" y="196" width="22" height="120" rx="11" fill="url(#markGradient)"></rect>
-        <rect x="370" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
-        <rect x="406" y="249" width="14" height="14" rx="7" fill="url(#markGradient)"></rect>
-      </svg>
-      <div>
-        <h1>EchoMind</h1>
-        <p class="subtitle">Record a thought. Get a clean note.</p>
+  <header>
+    <div class="page topbar">
+      <div class="brand">
+        <strong data-i18n="echomind.brand.name">EchoMind</strong>
+        <span data-i18n="echomind.brand.tagline">Voice capture, structured notes, and follow-up clarity</span>
       </div>
+
+      <div class="lang-pill" aria-label="Language switcher">
+        <button data-set-lang="en">EN</button>
+        <button data-set-lang="de">DE</button>
+        <button data-set-lang="ru">RU</button>
+        <button data-set-lang="uk">UK</button>
+      </div>
+
+      <nav aria-label="Project navigation">
+        <a class="nav-link" href="../" data-i18n="echomind.nav.home">🏠 Home</a>
+        <a class="nav-link" href="../Experience/" data-i18n="echomind.nav.experience">💼 Experience</a>
+      </nav>
     </div>
+  </header>
 
-    <p class="text">
-      EchoMind is an iOS voice-first notes app in active development. The current prototype already captures thoughts
-      fast and converts speech into structured output you can review and reuse.
-    </p>
+  <main>
+    <div class="page panel">
+      <section class="hero" aria-label="EchoMind overview">
+        <img
+          class="logo"
+          src="./assets/echomind-icon-512.png"
+          alt="EchoMind app icon"
+          loading="eager"
+          decoding="async"
+          data-i18n="echomind.hero.logo_alt"
+          data-i18n-attr="alt"
+        />
 
-    <h2>Current prototype flow</h2>
-    <ul>
-      <li>Home screen with one-tap recording and quick entry points for ideas, study, and tasks.</li>
-      <li>Library screen with saved recordings, timestamps, and duration previews.</li>
-      <li>Recording details with playback, full transcription, summary, and translate actions.</li>
-      <li>Re-transcribe and re-summarize controls for better output after model or language changes.</li>
-      <li>Settings for haptics, sounds, transcription model/language, storage, and export behavior.</li>
-    </ul>
+        <div>
+          <h1 data-i18n="echomind.hero.title">EchoMind</h1>
+          <p class="subtitle" data-i18n="echomind.hero.subtitle">Record a thought. Get a clean note.</p>
+          <p class="lead" data-i18n="echomind.hero.intro">
+            EchoMind is an iOS voice-first notes app in active development. It captures spoken thoughts and turns them into transcripts, summaries, and clearer next actions.
+          </p>
 
-    <p class="text">
-      Early transcript intelligence is already visible in the screenshots: EchoMind can detect likely references and
-      extract time-related cues from spoken text to make follow-up actions easier.
-    </p>
+          <div class="chips">
+            <span class="chip" data-i18n="echomind.hero.chip1">One-tap capture</span>
+            <span class="chip" data-i18n="echomind.hero.chip2">On-device + AI workflows</span>
+            <span class="chip" data-i18n="echomind.hero.chip3">Transcription, summary, translation</span>
+          </div>
 
-    <div class="status">
-      <p><strong>Product status:</strong> this is not the final version.</p>
-      <p>UI will keep improving over time, and more functions will be added as the workflow matures.</p>
-      <!-- Link back to the main portfolio so visitors can discover the full profile from this project page. -->
-      <p><a href="../index.html">Built by Sasha</a> — iOS / SwiftUI Developer.</p>
+          <div class="status-note" data-i18n="echomind.hero.status_note">
+            This is not the final version. UI and feature depth are actively improving over time.
+          </div>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2 data-i18n="echomind.sections.flow.title">Current prototype flow</h2>
+          <ul>
+            <li data-i18n="echomind.sections.flow.li1">Home screen with one-tap recording and quick entry points for ideas, study, and tasks.</li>
+            <li data-i18n="echomind.sections.flow.li2">Library with recordings, timestamps, and duration previews.</li>
+            <li data-i18n="echomind.sections.flow.li3">Recording details with playback, transcription, and summary blocks.</li>
+            <li data-i18n="echomind.sections.flow.li4">Translate actions for transcript and summary from the same screen.</li>
+            <li data-i18n="echomind.sections.flow.li5">Settings for model selection, language, sounds, haptics, storage, and export defaults.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2 data-i18n="echomind.sections.ai.title">AI output today</h2>
+          <p data-i18n="echomind.sections.ai.text">
+            The current output in screenshots already shows structured interpretation beyond plain text conversion.
+          </p>
+          <ul>
+            <li data-i18n="echomind.sections.ai.li1">Detects likely reference types (for example plans/schedule, humor/phrase).</li>
+            <li data-i18n="echomind.sections.ai.li2">Highlights date and time cues found inside free speech.</li>
+            <li data-i18n="echomind.sections.ai.li3">Supports quick re-transcribe and re-summarize iterations.</li>
+            <li data-i18n="echomind.sections.ai.li4">Adds translation hooks to keep notes accessible across languages.</li>
+          </ul>
+        </article>
+
+        <article class="card wide">
+          <h2 data-i18n="echomind.sections.roadmap.title">What is coming next</h2>
+          <p data-i18n="echomind.sections.roadmap.text">
+            The near-term direction is to make EchoMind more dependable for daily planning and multilingual note workflows.
+          </p>
+          <ul>
+            <li data-i18n="echomind.sections.roadmap.li1">Cleaner recording organization and faster search.</li>
+            <li data-i18n="echomind.sections.roadmap.li2">More robust extraction of tasks, dates, and reminders.</li>
+            <li data-i18n="echomind.sections.roadmap.li3">Stronger sharing/export combinations for audio + text summaries.</li>
+            <li data-i18n="echomind.sections.roadmap.li4">Ongoing UI refinements driven by real usage feedback.</li>
+          </ul>
+        </article>
+      </section>
+
+      <footer class="footer">
+        <div>
+          <!-- Link back to portfolio from the project page to keep navigation clear for recruiters/visitors. -->
+          <p>
+            <a href="../index.html" data-i18n="echomind.footer.built_by">Built by Sasha</a>
+            <span data-i18n="echomind.footer.built_suffix">— iOS / SwiftUI Developer.</span>
+          </p>
+          <p data-i18n="echomind.footer.note">EchoMind is in active development and this page will evolve together with the app.</p>
+        </div>
+
+        <div class="footer-contact">
+          <div>
+            <span data-i18n="echomind.footer.email_label">Email:</span>
+            <a href="mailto:alex2017stepanov@gmail.com">alex2017stepanov@gmail.com</a>
+          </div>
+          <div>
+            <span data-i18n="echomind.footer.tel_label">Tel:</span>
+            <a href="tel:+491604077249">+49 160 4077249</a>
+          </div>
+        </div>
+      </footer>
     </div>
   </main>
 </body>
