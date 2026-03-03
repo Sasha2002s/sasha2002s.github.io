@@ -4,72 +4,169 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EchoMind — Voice to Structured Thinking</title>
-  <meta name="description" content="EchoMind helps you turn voice thoughts into structured notes, summaries and tasks." />
-  <!-- This page is self-styled so it does not depend on a missing subfolder stylesheet path. -->
+  <meta
+    name="description"
+    content="EchoMind turns voice thoughts into clean notes with transcription, summary, and translation workflows."
+  />
+  <!-- Keep this page self-contained so the project card works without external stylesheet dependencies. -->
   <style>
     body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #0b0f14;
-  color: #f2f4f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #162252 0%, #0b0f14 62%);
+      color: #f2f4f8;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 28px 20px;
+      box-sizing: border-box;
+    }
 
-.container {
-  text-align: center;
-  max-width: 600px;
-  padding: 20px;
-}
+    .container {
+      width: min(860px, 100%);
+      background: rgba(11, 15, 20, 0.74);
+      border: 1px solid rgba(140, 170, 255, 0.16);
+      border-radius: 22px;
+      padding: 30px 24px;
+      box-shadow: 0 22px 50px rgba(0, 0, 0, 0.35);
+    }
 
-h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
-}
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
 
-.subtitle {
-  font-size: 18px;
-  opacity: 0.8;
-  margin-bottom: 40px;
-}
+    .logo {
+      width: 84px;
+      height: 84px;
+      flex: 0 0 auto;
+    }
 
-.features {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-size: 16px;
-  margin-bottom: 40px;
-}
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 4vw, 44px);
+      line-height: 1.08;
+    }
 
-.status {
-  opacity: 0.6;
-  font-size: 14px;
-}
+    .subtitle {
+      margin: 0;
+      color: #b8c5ef;
+      font-size: 18px;
+      opacity: 0.95;
+    }
 
-.muted {
-  margin-top: 6px;
-}
+    .text {
+      margin: 18px 0 20px;
+      color: #d9e2ff;
+      line-height: 1.56;
+      max-width: 74ch;
+    }
+
+    h2 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #d7e8ff;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 22px;
+      color: #d9e2ff;
+      line-height: 1.5;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .status {
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(140, 170, 255, 0.18);
+      color: #9fb2eb;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .status strong {
+      color: #dbe7ff;
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        padding: 22px 18px;
+      }
+
+      .header {
+        align-items: flex-start;
+      }
+
+      .logo {
+        width: 72px;
+        height: 72px;
+      }
+    }
   </style>
 </head>
 
 <body>
   <main class="container">
-    <h1>EchoMind</h1>
-    <p class="subtitle">
-      Turn voice thoughts into structured clarity.
-    </p>
-
-    <div class="features">
-      <div>🎙️ Speak naturally</div>
-      <div>🧠 AI structures your thoughts</div>
-      <div>📋 Get summaries, tasks, and insights</div>
+    <div class="header">
+      <!-- Inline SVG keeps the EchoMind icon available on any hosting without extra asset setup. -->
+      <svg class="logo" viewBox="0 0 512 512" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="bgGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#152866"></stop>
+            <stop offset="100%" stop-color="#05103f"></stop>
+          </linearGradient>
+          <linearGradient id="markGradient" x1="0%" x2="100%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#95f5ef"></stop>
+            <stop offset="100%" stop-color="#2f85ff"></stop>
+          </linearGradient>
+        </defs>
+        <rect x="16" y="16" width="480" height="480" rx="112" fill="url(#bgGradient)"></rect>
+        <rect x="98" y="246" width="16" height="20" rx="8" fill="url(#markGradient)"></rect>
+        <rect x="132" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
+        <rect x="168" y="198" width="20" height="116" rx="10" fill="url(#markGradient)"></rect>
+        <rect x="204" y="206" width="20" height="100" rx="10" fill="url(#markGradient)"></rect>
+        <path fill="url(#markGradient)" d="M252 180h108c8 0 14 6 14 14v16c0 8-6 14-14 14h-78v34h70c8 0 14 6 14 14v15c0 8-6 14-14 14h-70v10c0 21 17 38 38 38h58c8 0 14 6 14 14v16c0 8-6 14-14 14h-58c-46 0-84-38-84-84V194c0-8 6-14 14-14z"></path>
+        <rect x="332" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
+        <rect x="366" y="198" width="20" height="116" rx="10" fill="url(#markGradient)"></rect>
+        <rect x="402" y="224" width="20" height="64" rx="10" fill="url(#markGradient)"></rect>
+        <rect x="440" y="246" width="16" height="20" rx="8" fill="url(#markGradient)"></rect>
+      </svg>
+      <div>
+        <h1>EchoMind</h1>
+        <p class="subtitle">Record a thought. Get a clean note.</p>
+      </div>
     </div>
 
+    <p class="text">
+      EchoMind is an iOS voice-first notes app in active development. The current prototype already captures thoughts
+      fast and converts speech into structured output you can review and reuse.
+    </p>
+
+    <h2>Current prototype flow</h2>
+    <ul>
+      <li>Home screen with one-tap recording and quick entry points for ideas, study, and tasks.</li>
+      <li>Library screen with saved recordings, timestamps, and duration previews.</li>
+      <li>Recording details with playback, full transcription, summary, and translate actions.</li>
+      <li>Re-transcribe and re-summarize controls for better output after model or language changes.</li>
+      <li>Settings for haptics, sounds, transcription model/language, storage, and export behavior.</li>
+    </ul>
+
+    <p class="text">
+      Early transcript intelligence is already visible in the screenshots: EchoMind can detect likely references and
+      extract time-related cues from spoken text to make follow-up actions easier.
+    </p>
+
     <div class="status">
-      <p>Currently in development.</p>
-      <p class="muted">Built by Sasha — iOS / SwiftUI Developer</p>
+      <p><strong>Product status:</strong> this is not the final version.</p>
+      <p>UI will keep improving over time, and more functions will be added as the workflow matures.</p>
+      <p>Built by Sasha — iOS / SwiftUI Developer.</p>
     </div>
   </main>
 </body>
