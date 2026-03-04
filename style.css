@@ -20,11 +20,19 @@
 
     * { box-sizing: border-box; }
 
-    html { scroll-behavior: smooth; 
-            overscroll-behavior-y: none;}
+    html {
+      scroll-behavior: smooth;
+      height: 100%;
+      overscroll-behavior-y: none;
+    }
+
+    html, body {
+      width: 100%;
+    }
 
     body {
       margin: 0;
+      overscroll-behavior-y: none;
       min-height: 100vh;
       color: var(--text);
       font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Apple Color Emoji", "Segoe UI Emoji";
