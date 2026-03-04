@@ -35,6 +35,17 @@
 
     * { box-sizing: border-box; }
 
+    html {
+      height: 100%;
+      background: linear-gradient(180deg, var(--bg), var(--bg2));
+      overscroll-behavior-y: none;
+    }
+
+    html, body {
+      width: 100%;
+      background-color: var(--bg2);
+    }
+
     body {
       margin: 0;
       min-height: 100vh;
@@ -158,7 +169,7 @@
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 18px;
-      align-items: center;
+      align-items: start;
     }
 
     /* Use the uploaded icon file directly so brand shape/colors stay exact. */
@@ -170,6 +181,7 @@
       border: 1px solid rgba(155, 183, 255, 0.22);
       box-shadow: 0 14px 26px rgba(0, 0, 0, 0.35);
       background: #091646;
+      align-self: start;
     }
 
     h1 {
@@ -354,11 +366,6 @@
         <button data-set-lang="ru">RU</button>
         <button data-set-lang="uk">UK</button>
       </div>
-
-      <nav aria-label="Project navigation">
-        <a class="nav-link" href="../" data-i18n="echomind.nav.home">🏠 Home</a>
-        <a class="nav-link" href="../Experience/" data-i18n="echomind.nav.experience">💼 Experience</a>
-      </nav>
     </div>
   </header>
 
@@ -367,7 +374,7 @@
       <section class="hero" aria-label="EchoMind overview">
         <img
           class="logo"
-          src="./assets/echomind-icon-512.png"
+          src="./assets/EchoMind-iOS-Default-1024x1024@1x.png"
           alt="EchoMind app icon"
           loading="eager"
           decoding="async"
@@ -394,6 +401,10 @@
         </div>
       </section>
 
+
+
+
+      
       <section class="grid">
         <article class="card">
           <h2 data-i18n="echomind.sections.flow.title">Current prototype flow</h2>
