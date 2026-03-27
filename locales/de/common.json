@@ -15,8 +15,8 @@
   },
   "hero": {
     "title_line1": "Hi — ich bin Sasha.",
-    "title_line2": "Ich entwickle iOS‑Apps mit SwiftUI.",
-    "description": "Ich bin Entwickler und Student für Wirtschaft & Informatik in Deutschland. Zurzeit arbeite ich an GloboSense — einer Video‑Dolmetsch‑App, die Menschen hilft, menschliche Übersetzer zu finden (einschließlich Gebärdensprachdolmetscher).",
+    "title_line2": "Ich bin ein Student/Entwickler, der an Erfahrung in IT und Softwareentwicklung interessiert ist.",
+    "description": "Ich bin Entwickler und Wirtschaft & Informatik Student in Deutschland. Ich habe an iOS-Apps mit Echtzeit-Video-Funktionen gearbeitet, einer Plattform für Video-Dolmetschen. Ich baue gern saubere, praktische Produkte und iteriere schnell.",
     "chip1": "SwiftUI • Xcode",
     "chip2": "Echtzeit‑Video (Daily.co / Twilio)",
     "chip3": "Firebase (Auth / Firestore / Storage / FCM)",

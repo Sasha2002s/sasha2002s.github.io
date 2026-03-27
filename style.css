@@ -278,8 +278,8 @@
     }
 
     .portrait img {
-      width: min(280px, 100%);
-      aspect-ratio: 1 / 1;
+      width: min(300px, 100%);
+      aspect-ratio: 10 / 18;
       object-fit: cover;
       border-radius: 22px;
       border: 1px solid rgba(255, 255, 255, 0.18);

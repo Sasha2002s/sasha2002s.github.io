@@ -15,8 +15,8 @@
   },
   "hero": {
     "title_line1": "Hi — I’m Sasha.",
-    "title_line2": "I build iOS apps with SwiftUI.",
-    "description": "I’m a developer and a Wirtschaft & Informatik student in Germany. Right now I’m working on GloboSense — a video interpreting app that helps people find human translators (including sign-language interpreters).",
+    "title_line2": "I am a student/developer interested in experience in IT and software development.",
+    "description": "I’m a developer and a Wirtschaft & Informatik student in Germany. I have worked on iOS apps with realtime video features, a platform for video interpreting. I enjoy building clean, practical products and iterating fast.",
     "chip1": "SwiftUI • Xcode",
     "chip2": "Realtime video (Daily.co / Twilio)",
     "chip3": "Firebase (Auth / Firestore / Storage / FCM)",
