@@ -2,6 +2,9 @@
 // Requires i18next + i18next-http-backend + i18next-browser-languagedetector loaded before this file.
 
 function getLocalesLoadPath() {
+  // Bump this marker when locale content changes so returning visitors receive new translations.
+  const localeVersion = "20260920-profile-refresh";
+
   // Build the locales path from i18n.js URL so translations work both on root domains
   // and when this site is deployed under a subpath (for example GitHub project pages).
   const i18nScript = Array.from(document.scripts).find(script =>
@@ -11,10 +14,10 @@ function getLocalesLoadPath() {
   if (i18nScript && i18nScript.src) {
     // Keep "{{lng}}" literal so i18next can interpolate it; URL() would percent-encode braces.
     const base = new URL(".", i18nScript.src).toString();
-    return base.replace(/\/+$/, "/") + "locales/{{lng}}/common.json";
+    return base.replace(/\/+$/, "/") + `locales/{{lng}}/common.json?v=${localeVersion}`;
   }
 
-  return "./locales/{{lng}}/common.json";
+  return `./locales/{{lng}}/common.json?v=${localeVersion}`;
 }
 
 function normalizePathname(pathname) {
@@ -50,6 +53,25 @@ function initActiveNav() {
   });
 }
 
+function updateLanguageControls(language) {
+  const activeLanguage = (language || "en").split("-")[0];
+  const languageNames = {
+    en: "English",
+    de: "Deutsch",
+    ru: "Русский",
+    uk: "Українська"
+  };
+
+  // Expose the current language visually and to assistive technology.
+  document.querySelectorAll("[data-set-lang]").forEach(button => {
+    const buttonLanguage = button.getAttribute("data-set-lang");
+    const isActive = buttonLanguage === activeLanguage;
+    button.classList.toggle("active", isActive);
+    button.setAttribute("aria-pressed", String(isActive));
+    button.setAttribute("aria-label", languageNames[buttonLanguage] || buttonLanguage || "Language");
+  });
+}
+
 async function initI18n() {
   if (!window.i18next || !window.i18nextHttpBackend || !window.i18nextBrowserLanguageDetector) {
     return;
@@ -78,8 +100,9 @@ async function initI18n() {
     });
 
   applyTranslations();
-  document.documentElement.lang = i18next.language;
+  document.documentElement.lang = i18next.resolvedLanguage || i18next.language;
   initActiveNav();
+  updateLanguageControls(i18next.resolvedLanguage || i18next.language);
 
   document.querySelectorAll("[data-set-lang]").forEach(btn => {
     btn.addEventListener("click", async () => {
@@ -88,8 +111,9 @@ async function initI18n() {
 
       await i18next.changeLanguage(lng);
       localStorage.setItem("i18nextLng", lng);
-      document.documentElement.lang = lng;
+      document.documentElement.lang = i18next.resolvedLanguage || lng;
       applyTranslations();
+      updateLanguageControls(i18next.resolvedLanguage || lng);
     });
   });
 }

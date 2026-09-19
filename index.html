@@ -6,11 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-  <title data-i18n="meta.title">Sasha — iOS / SwiftUI Developer</title>
+  <title data-i18n="meta.title">Sasha — Software Developer</title>
   <meta name="description"
         data-i18n="meta.description"
         data-i18n-attr="content:meta.description"
-        content="Sasha — iOS / SwiftUI developer building GloboSense, a video interpreting platform. Student of Wirtschaft & Informatik in Germany." />
+        content="Portfolio of Sasha, a software developer and Wirtschaft & Informatik student at Hochschule Zittau/Görlitz." />
 
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="dns-prefetch" href="https://unpkg.com">
@@ -21,11 +21,14 @@
 
   <link rel="stylesheet" href="style.css" />
   <meta name="theme-color" content="#0b0f14" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
-  <script defer src="i18n.js"></script>
+  <script defer src="i18n.js?v=20260920-profile-refresh"></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipToContent">Skip to content</a>
+
   <header>
     <div class="page topbar">
       <div class="brand">
@@ -39,14 +42,14 @@
 <path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 008 10.94c.58.1.79-.25.79-.56v-2.17c-3.26.71-3.95-1.57-3.95-1.57-.53-1.35-1.3-1.71-1.3-1.71-1.06-.72.08-.7.08-.7 1.17.08 1.79 1.2 1.79 1.2 1.04 1.77 2.73 1.26 3.4.96.1-.75.41-1.26.74-1.55-2.6-.3-5.33-1.3-5.33-5.8 0-1.28.46-2.33 1.2-3.15-.12-.3-.52-1.52.12-3.17 0 0 .98-.31 3.2 1.2a11.1 11.1 0 015.82 0c2.22-1.51 3.2-1.2 3.2-1.2.64 1.65.24 2.87.12 3.17.75.82 1.2 1.87 1.2 3.15 0 4.51-2.73 5.5-5.34 5.8.42.36.8 1.1.8 2.23v3.3c0 .31.21.66.8.55A11.5 11.5 0 0023.5 12C23.5 5.73 18.27.5 12 .5z"/>
 </svg>
 </a>
-        <span data-i18n="brand.tagline">iOS / SwiftUI • Xcode • Video apps</span>
+        <span data-i18n="brand.tagline">Software Development • Apps • Games &amp; 3D</span>
       </div>
 
-      <div class="lang-pill">
-        <button data-set-lang="en">EN</button>
-        <button data-set-lang="de">DE</button>
-        <button data-set-lang="ru">RU</button>
-        <button data-set-lang="uk">UK</button>
+      <div class="lang-pill" aria-label="Language selector" data-i18n-attr="aria-label:common.languageSelector">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+        <button type="button" data-set-lang="ru">RU</button>
+        <button type="button" data-set-lang="uk">UK</button>
       </div>
 
       <nav aria-label="Primary">
@@ -60,43 +63,44 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="page">
       <section class="hero" aria-label="Introduction">
         <div>
           <h1>
-            <span data-i18n="hero.title_line1">Building clean, scalable</span><br />
-            <span data-i18n="hero.title_line2">iOS applications</span>
+            <span data-i18n="hero.title_line1">Hi — I’m Sasha.</span><br />
+            <span data-i18n="hero.title_line2">I build practical digital products.</span>
           </h1>
 
           <p data-i18n="hero.description">
-            iOS / SwiftUI developer building GloboSense — a video interpreting platform.
+            I’m a software developer and Wirtschaft &amp; Informatik student at Hochschule Zittau/Görlitz. I work across Apple platforms, web technologies, game development, and 3D workflows.
           </p>
 
           <div class="meta">
-            <span class="chip" data-i18n="hero.chip1">SwiftUI • Xcode</span>
-            <span class="chip" data-i18n="hero.chip2">Realtime video (Twilio)</span>
-            <span class="chip" data-i18n="hero.chip3">Firebase (Auth / Firestore / Storage / FCM)</span>
-            <span class="chip" data-i18n="hero.chip4">Based in Löbau, Germany</span>
+            <span class="chip" data-i18n="hero.chip1">Swift • SwiftUI • Xcode</span>
+            <span class="chip" data-i18n="hero.chip2">Unity • C#</span>
+            <span class="chip" data-i18n="hero.chip3">Blender • 3D assets</span>
+            <span class="chip" data-i18n="hero.chip4">HSZG • Germany</span>
           </div>
 
           <div class="cta-row">
-            <!-- Keep this href aligned with the checked-in PDF filename so the CV download works on GitHub Pages. -->
-            <a class="cta" href="./Stiepanov_Oleksandr.pdf" download="Stiepanov_Oleksandr_CV.pdf" data-i18n="cta.download_cv"> Download CV </a>
+            <!-- Keep this href aligned with the verified PDF output so the CV download works on GitHub Pages. -->
+            <a class="cta primary" href="./output/pdf/Stiepanov_Oleksandr.pdf" download="Stiepanov_Oleksandr_CV.pdf" data-i18n="cta.download_cv"> Download CV </a>
             <a class="cta" href="Experience/" data-i18n="cta.see_experience">See Experience</a>
             <a class="cta" href="Education/" data-i18n="cta.education">Education</a>
           </div>
         </div>
 
         <div class="portrait">
-          <img src="Photoes/webp/menext.webp"
+          <img src="Photoes/webp/menext-portrait.webp"
                alt="Portrait of Sasha"
                data-i18n="hero.portrait_alt"
                data-i18n-attr="alt"
-               loading="lazy"
+               loading="eager"
+               fetchpriority="high"
                decoding="async"
-               width="900"
-               height="2000" />
+               width="680"
+               height="1242" />
         </div>
       </section>
 
@@ -105,13 +109,13 @@
           <h2 data-i18n="about.title">About me</h2>
 
           <p data-i18n="about.text">
-            I like building clean, practical products and iterating fast. I’ve worked hands-on across app UI, backend integration, and realtime calling features.
+            I enjoy taking ideas from early prototypes to functional, polished products. I started with iOS and SwiftUI and have expanded into web and backend development, Unity, and original 3D asset creation in Blender.
           </p>
 
           <ul>
-            <li data-i18n="about.li1">Focus: iOS development, product MVPs, and scalability thinking</li>
-            <li data-i18n="about.li2">Also enjoy: Unity prototyping, 3D modeling in Blender</li>
-            <li data-i18n="about.li3">Languages: English, Ukrainian/Russian background (German learning)</li>
+            <li data-i18n="about.li1">Approach: practical solutions, rapid prototyping, and careful iteration</li>
+            <li data-i18n="about.li2">Interests: Apple platforms, game systems, and 3D workflows</li>
+            <li data-i18n="about.li3">Languages: English, Ukrainian, Russian, and German</li>
           </ul>
         </article>
 
@@ -119,13 +123,13 @@
           <h2 data-i18n="building.title">What I’m building now</h2>
 
           <p data-i18n="building.text">
-            GloboSense — a platform for people who need a translator. The goal is to make it easy to schedule or instantly call an interpreter, and support interpreter agencies too.
+            I’m currently developing a 3D survival-game prototype in Unity, creating its supporting assets in Blender, and continuing smaller software and web projects alongside my studies.
           </p>
 
           <ul>
-            <li data-i18n="building.li1">Video calls, chat, notifications</li>
-            <li data-i18n="building.li2">Scheduling + calendar-driven workflow</li>
-            <li data-i18n="building.li3">Future-proof architecture</li>
+            <li data-i18n="building.li1">Gameplay systems: interaction, inventory, crafting, and environments</li>
+            <li data-i18n="building.li2">Original game-ready models, materials, animation, and FBX workflows</li>
+            <li data-i18n="building.li3">A growing library of free downloadable Blender assets</li>
           </ul>
         </article>
 
@@ -133,13 +137,47 @@
           <h2 data-i18n="skills.title">Skills snapshot</h2>
 
           <ul>
-            <li data-i18n="skills.li1"><strong>iOS:</strong> Swift, SwiftUI, UIKit basics, app architecture, performance debugging</li>
-            <li data-i18n="skills.li2"><strong>Backend:</strong> Node/Express, REST APIs</li>
-            <li data-i18n="skills.li3"><strong>Cloud:</strong> Firebase (Auth, Firestore, Storage, FCM)</li>
-            <li data-i18n="skills.li4"><strong>Realtime:</strong> Video call SDK integration</li>
-            <li data-i18n="skills.li5"><strong>Tools:</strong> Xcode, Git, VS Code</li>
+            <li data-i18n="skills.li1"><strong>Apple development:</strong> Swift, SwiftUI, Xcode, UIKit fundamentals</li>
+            <li data-i18n="skills.li2"><strong>Web &amp; backend:</strong> JavaScript, React, Node.js, REST APIs</li>
+            <li data-i18n="skills.li3"><strong>Cloud &amp; realtime:</strong> Firebase, Firestore, APNs, video SDK integration</li>
+            <li data-i18n="skills.li4"><strong>Game &amp; 3D:</strong> Unity, C#, Blender, modeling, materials, and animation</li>
+            <li data-i18n="skills.li5"><strong>Tools:</strong> Git, GitHub, VS Code, Xcode</li>
           </ul>
         </article>
+      </section>
+
+      <section class="featured-section" aria-labelledby="featured-title">
+        <div class="section-heading">
+          <span class="eyebrow" data-i18n="featured.eyebrow">Selected work</span>
+          <h2 id="featured-title" data-i18n="featured.title">Projects you can explore</h2>
+          <p data-i18n="featured.subtitle">A closer look at the products and creative work I can share publicly.</p>
+        </div>
+
+        <div class="grid">
+          <article class="card project-card">
+            <div class="project-icon" aria-hidden="true">🎙️</div>
+            <span class="project-kicker" data-i18n="featured.echomind.kicker">iOS product</span>
+            <h3 data-i18n="featured.echomind.title">EchoMind</h3>
+            <p data-i18n="featured.echomind.text">
+              A voice-first notes app that turns recordings into transcripts, summaries, and clearer next actions.
+            </p>
+            <div class="cta-row">
+              <a class="cta primary" href="EchoMind/" data-i18n="featured.echomind.cta">Explore EchoMind</a>
+            </div>
+          </article>
+
+          <article class="card project-card">
+            <div class="project-icon" aria-hidden="true">🧊</div>
+            <span class="project-kicker" data-i18n="featured.blender.kicker">3D asset library</span>
+            <h3 data-i18n="featured.blender.title">Free Blender Assets</h3>
+            <p data-i18n="featured.blender.text">
+              Downloadable BLEND and FBX models, including a chest, backpack, anvil, robots, and toy vehicles.
+            </p>
+            <div class="cta-row">
+              <a class="cta primary" href="Blender-projects/#assets" data-i18n="featured.blender.cta">Browse free assets</a>
+            </div>
+          </article>
+        </div>
       </section>
     </div>
   </main>

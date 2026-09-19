@@ -13,16 +13,237 @@
     data-i18n-attr="content:blender.head.description"
   />
 
-  <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
-  <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
-  <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <script defer src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+  <script defer src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
+  <script defer src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
 
   <link rel="stylesheet" href="../style.css" />
   <link rel="stylesheet" href="../Animations.css" />
-  <script src="../i18n.js"></script>
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <script defer src="../i18n.js?v=20260920-profile-refresh"></script>
+  <script src="../blender.js" defer></script>
 
   <style>
-    /* Local gallery layout (kept here so you don't have to touch style.css) */
+    /* Keep the Blender library self-contained so other pages retain their current layout. */
+    .blender-tabs {
+      display: inline-flex;
+      gap: 8px;
+      margin: 18px 0 0;
+      padding: 6px;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .tab-button {
+      padding: 10px 16px;
+      border: 1px solid transparent;
+      border-radius: 11px;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background var(--trans) ease, border-color var(--trans) ease, color var(--trans) ease;
+    }
+
+    .tab-button:hover {
+      color: var(--text);
+      background: rgba(255,255,255,0.07);
+    }
+
+    .tab-button[aria-selected="true"] {
+      color: var(--text);
+      border-color: rgba(94, 234, 212, 0.38);
+      background: linear-gradient(135deg, rgba(94, 234, 212, 0.17), rgba(99, 102, 241, 0.18));
+      box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+    }
+
+    .tab-button:focus-visible,
+    .asset-search:focus-visible,
+    .download-button:focus-visible {
+      outline: 2px solid var(--ring);
+      outline-offset: 3px;
+    }
+
+    .tab-panel[hidden] { display: none; }
+
+    .library-panel {
+      margin-top: 16px;
+      padding: clamp(18px, 3vw, 28px);
+    }
+
+    .library-heading {
+      display: flex;
+      justify-content: space-between;
+      gap: 24px;
+      align-items: end;
+      margin-bottom: 20px;
+    }
+
+    .library-heading h2 { margin-bottom: 6px; }
+
+    .search-area {
+      width: min(100%, 420px);
+      flex: 0 1 420px;
+    }
+
+    .search-label {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .search-wrap { position: relative; }
+
+    .search-icon {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+    }
+
+    .asset-search {
+      width: 100%;
+      min-height: 48px;
+      padding: 11px 14px 11px 44px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 13px;
+      background: rgba(5, 10, 20, 0.58);
+      color: var(--text);
+      font: inherit;
+    }
+
+    .asset-search::placeholder { color: rgba(255,255,255,0.46); }
+
+    .search-status {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .asset-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 310px), 1fr));
+      gap: 16px;
+    }
+
+    .asset-card {
+      grid-column: auto;
+      width: 100%;
+      max-width: 390px;
+      overflow: hidden;
+      padding: 0;
+      background: rgba(255,255,255,0.075);
+    }
+
+    .asset-placeholder {
+      min-height: 230px;
+      display: grid;
+      place-items: center;
+      align-content: center;
+      gap: 10px;
+      padding: 24px;
+      border-bottom: 1px solid var(--border);
+      background:
+        radial-gradient(circle at 50% 30%, rgba(94, 234, 212, 0.20), transparent 36%),
+        linear-gradient(135deg, rgba(99, 102, 241, 0.20), rgba(8, 15, 27, 0.55));
+      text-align: center;
+    }
+
+    .placeholder-icon {
+      font-size: 68px;
+      filter: drop-shadow(0 14px 16px rgba(0,0,0,0.32));
+    }
+
+    .asset-placeholder span:last-child {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .asset-preview {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-bottom: 1px solid var(--border);
+      border-radius: 0 !important;
+      background: rgba(5, 10, 20, 0.58);
+    }
+
+    .asset-info { padding: 20px; }
+
+    .asset-info h3 {
+      margin: 0 0 8px;
+      font-size: 21px;
+    }
+
+    .asset-description { min-height: 48px; }
+
+    .asset-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0;
+    }
+
+    .asset-meta span {
+      padding: 5px 9px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.05);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .asset-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .download-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7px;
+      min-height: 44px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 11px;
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform var(--trans) ease, background var(--trans) ease;
+    }
+
+    .download-button:hover {
+      transform: translateY(-1px);
+      background: rgba(255,255,255,0.14);
+    }
+
+    .download-button.primary {
+      border-color: rgba(94, 234, 212, 0.38);
+      background: rgba(94, 234, 212, 0.14);
+    }
+
+    .empty-state {
+      padding: 34px 20px;
+      border: 1px dashed var(--border);
+      border-radius: 14px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    /* Preserve the original renders as the second Blender view. */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -32,7 +253,8 @@
 
     .gallery img {
       width: 100%;
-      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
       border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.10);
     }
@@ -65,15 +287,26 @@
 
     .video-grid video {
       width: 100%;
-      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
       border-radius: 14px;
       border: 1px solid rgba(255,255,255,0.10);
       background: #000;
+    }
+
+    @media (max-width: 680px) {
+      .blender-tabs { display: flex; }
+      .tab-button { flex: 1; padding-inline: 10px; }
+      .library-heading { display: block; }
+      .search-area { width: 100%; margin-top: 18px; }
+      .asset-actions { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipToContent">Skip to content</a>
+
   <header>
     <div class="page topbar">
       <div class="brand">
@@ -81,11 +314,11 @@
         <span data-i18n="common.brand.tagline">iOS / SwiftUI • Xcode • Video apps</span>
       </div>
 
-      <div class="lang-pill">
-        <button data-set-lang="en">EN</button>
-        <button data-set-lang="de">DE</button>
-        <button data-set-lang="ru">RU</button>
-        <button data-set-lang="uk">UK</button>
+      <div class="lang-pill" aria-label="Language selector" data-i18n-attr="aria-label:common.languageSelector">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+        <button type="button" data-set-lang="ru">RU</button>
+        <button type="button" data-set-lang="uk">UK</button>
       </div>
 
       <nav aria-label="Primary">
@@ -99,7 +332,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="page">
 
       <!-- Hero -->
@@ -119,8 +352,408 @@
         </div>
       </section>
 
+      <div class="blender-tabs" role="tablist" aria-label="Blender content">
+        <button
+          class="tab-button"
+          id="assets-tab"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="assets-panel"
+          data-tab-target="assets-panel"
+          data-i18n="blender.tabs.assets"
+        >Free Assets</button>
+        <button
+          class="tab-button"
+          id="photos-tab"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="photos-panel"
+          data-tab-target="photos-panel"
+          data-i18n="blender.tabs.photos"
+        >Blender Photos</button>
+      </div>
+
+      <section
+        class="card wide library-panel tab-panel"
+        id="assets-panel"
+        role="tabpanel"
+        aria-labelledby="assets-tab"
+      >
+        <div class="library-heading">
+          <div>
+            <h2 data-i18n="blender.assets.title">Free Blender Assets</h2>
+            <p data-i18n="blender.assets.subtitle">Search the library and download the format that works best for you.</p>
+          </div>
+
+          <div class="search-area">
+            <label class="search-label" for="asset-search" data-i18n="blender.assets.searchLabel">Search assets</label>
+            <div class="search-wrap">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input
+                class="asset-search"
+                id="asset-search"
+                type="search"
+                autocomplete="off"
+                data-i18n="blender.assets.searchPlaceholder"
+                data-i18n-attr="placeholder:blender.assets.searchPlaceholder"
+                placeholder="Search by name or file type…"
+              />
+            </div>
+          </div>
+        </div>
+
+        <p class="search-status" aria-live="polite">
+          <span data-i18n="blender.assets.resultsLabel">Results</span>:
+          <span data-result-count>8</span>
+        </p>
+
+        <div class="asset-grid" id="asset-grid">
+          <article
+            class="card asset-card"
+            data-asset-card
+            data-search="wooden chest treasure storage box blend fbx truhe kiste holz скриня скринька сундук деревянный"
+          >
+            <img
+              class="asset-preview"
+              src="assets/images/wooden-chest.webp"
+              alt="Rendered wooden chest"
+              loading="lazy"
+              decoding="async"
+              data-i18n="blender.assets.chest.alt"
+              data-i18n-attr="alt:blender.assets.chest.alt"
+            />
+
+            <div class="asset-info">
+              <h3 data-i18n="blender.assets.chest.title">Wooden Chest</h3>
+              <p class="asset-description" data-i18n="blender.assets.chest.description">
+                A finished 3D chest model, ready to download for your Blender scenes and projects.
+              </p>
+
+              <div class="asset-meta" aria-label="Asset details">
+                <span data-i18n="blender.assets.chest.free">Free download</span>
+                <span>BLEND · 118 KB</span>
+                <span>FBX · 36 KB</span>
+              </div>
+
+              <div class="asset-actions">
+                <a
+                  class="download-button primary"
+                  href="assets/downloads/sasha-wooden-chest.blend"
+                  download="Sasha-Wooden-Chest.blend"
+                >
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadBlend">Download .blend</span>
+                </a>
+                <a
+                  class="download-button"
+                  href="assets/downloads/sasha-wooden-chest.fbx"
+                  download="Sasha-Wooden-Chest.fbx"
+                >
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadFbx">Download .fbx</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card asset-card"
+            data-asset-card
+            data-search="backpack bag rucksack school travel blend fbx rucksack tasche наплічник рюкзак"
+          >
+            <img
+              class="asset-preview"
+              src="assets/images/backpack.webp"
+              alt="Rendered stylized backpack"
+              loading="lazy"
+              decoding="async"
+              data-i18n="blender.assets.backpack.alt"
+              data-i18n-attr="alt:blender.assets.backpack.alt"
+            />
+
+            <div class="asset-info">
+              <h3 data-i18n="blender.assets.backpack.title">Stylized Backpack</h3>
+              <p class="asset-description" data-i18n="blender.assets.backpack.description">
+                A warm, stylized backpack with a front pocket, side pockets, straps, and buckle details.
+              </p>
+
+              <div class="asset-meta" aria-label="Asset details">
+                <span data-i18n="blender.assets.chest.free">Free download</span>
+                <span>BLEND · 140 KB</span>
+                <span>FBX · 539 KB</span>
+              </div>
+
+              <div class="asset-actions">
+                <a class="download-button primary" href="assets/downloads/sasha-backpack.blend" download="Sasha-Backpack.blend">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadBlend">Download .blend</span>
+                </a>
+                <a class="download-button" href="assets/downloads/sasha-backpack.fbx" download="Sasha-Backpack.fbx">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadFbx">Download .fbx</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card asset-card"
+            data-asset-card
+            data-search="anvil blacksmith forge metal workshop blend fbx amboss ковадло наковальня"
+          >
+            <img
+              class="asset-preview"
+              src="assets/images/anvil.webp"
+              alt="Rendered worn metal anvil"
+              loading="lazy"
+              decoding="async"
+              data-i18n="blender.assets.anvil.alt"
+              data-i18n-attr="alt:blender.assets.anvil.alt"
+            />
+
+            <div class="asset-info">
+              <h3 data-i18n="blender.assets.anvil.title">Worn Metal Anvil</h3>
+              <p class="asset-description" data-i18n="blender.assets.anvil.description">
+                A detailed worn anvil for blacksmith workshops, forge scenes, and industrial environments.
+              </p>
+
+              <div class="asset-meta" aria-label="Asset details">
+                <span data-i18n="blender.assets.chest.free">Free download</span>
+                <span>BLEND · 38.6 MB</span>
+                <span>FBX · 10.1 MB</span>
+              </div>
+
+              <div class="asset-actions">
+                <a class="download-button primary" href="assets/downloads/sasha-anvil.blend" download="Sasha-Anvil.blend">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadBlend">Download .blend</span>
+                </a>
+                <a class="download-button" href="assets/downloads/sasha-anvil.fbx" download="Sasha-Anvil.fbx">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadFbx">Download .fbx</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card asset-card"
+            data-asset-card
+            data-search="toy robot robot 1 sci fi rocket launcher blend fbx spielzeug roboter робот іграшковий"
+          >
+            <img
+              class="asset-preview"
+              src="assets/images/robot1.webp"
+              alt="Blender render of Toy Robot 1"
+              loading="lazy"
+              decoding="async"
+              data-i18n="blender.assets.robot1.alt"
+              data-i18n-attr="alt:blender.assets.robot1.alt"
+            />
+
+            <div class="asset-info">
+              <h3 data-i18n="blender.assets.robot1.title">Toy Robot 1</h3>
+              <p class="asset-description" data-i18n="blender.assets.robot1.description">
+                A three-legged sci-fi toy robot with a four-tube rocket launcher.
+              </p>
+
+              <div class="asset-meta" aria-label="Asset details">
+                <span data-i18n="blender.assets.sharedSource">Shared toy source</span>
+                <span>BLEND · 8.0 MB</span>
+                <span>FBX · 60 KB</span>
+              </div>
+
+              <div class="asset-actions">
+                <a class="download-button primary" href="assets/downloads/sasha-toy-collection.blend" download="Sasha-Toy-Collection.blend">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadBlend">Download .blend</span>
+                </a>
+                <a class="download-button" href="assets/downloads/sasha-toy-robot-1.fbx" download="Sasha-Toy-Robot-1.fbx">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadFbx">Download .fbx</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card asset-card"
+            data-asset-card
+            data-search="toy tank 1 car vehicle twin rocket launcher blend fbx spielzeug panzer танк іграшковий"
+          >
+            <img
+              class="asset-preview"
+              src="assets/images/tank1.webp"
+              alt="Blender render of Toy Tank 1"
+              loading="lazy"
+              decoding="async"
+              data-i18n="blender.assets.tank1.alt"
+              data-i18n-attr="alt:blender.assets.tank1.alt"
+            />
+
+            <div class="asset-info">
+              <h3 data-i18n="blender.assets.tank1.title">Toy Tank 1</h3>
+              <p class="asset-description" data-i18n="blender.assets.tank1.description">
+                A four-wheeled toy combat vehicle with a large twin rocket launcher.
+              </p>
+
+              <div class="asset-meta" aria-label="Asset details">
+                <span data-i18n="blender.assets.sharedSource">Shared toy source</span>
+                <span>BLEND · 8.0 MB</span>
+                <span>FBX · 76 KB</span>
+              </div>
+
+              <div class="asset-actions">
+                <a class="download-button primary" href="assets/downloads/sasha-toy-collection.blend" download="Sasha-Toy-Collection.blend">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadBlend">Download .blend</span>
+                </a>
+                <a class="download-button" href="assets/downloads/sasha-toy-tank-1.fbx" download="Sasha-Toy-Tank-1.fbx">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadFbx">Download .fbx</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card asset-card"
+            data-asset-card
+            data-search="toy tank 2 car vehicle eight wheel multi barrel blend fbx spielzeug panzer танк іграшковий"
+          >
+            <img
+              class="asset-preview"
+              src="assets/images/tank2.webp"
+              alt="Blender render of Toy Tank 2"
+              loading="lazy"
+              decoding="async"
+              data-i18n="blender.assets.tank2.alt"
+              data-i18n-attr="alt:blender.assets.tank2.alt"
+            />
+
+            <div class="asset-info">
+              <h3 data-i18n="blender.assets.tank2.title">Toy Tank 2</h3>
+              <p class="asset-description" data-i18n="blender.assets.tank2.description">
+                An eight-wheeled futuristic toy vehicle with a compact multi-barrel weapon.
+              </p>
+
+              <div class="asset-meta" aria-label="Asset details">
+                <span data-i18n="blender.assets.sharedSource">Shared toy source</span>
+                <span>BLEND · 8.0 MB</span>
+                <span>FBX · 114 KB</span>
+              </div>
+
+              <div class="asset-actions">
+                <a class="download-button primary" href="assets/downloads/sasha-toy-collection.blend" download="Sasha-Toy-Collection.blend">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadBlend">Download .blend</span>
+                </a>
+                <a class="download-button" href="assets/downloads/sasha-toy-tank-2.fbx" download="Sasha-Toy-Tank-2.fbx">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadFbx">Download .fbx</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card asset-card"
+            data-asset-card
+            data-search="toy tank 3 tracked green cannon blend fbx spielzeug panzer kettenfahrzeug танк гусеничный іграшковий"
+          >
+            <img
+              class="asset-preview"
+              src="assets/images/tank3.webp"
+              alt="Blender render of Toy Tank 3"
+              loading="lazy"
+              decoding="async"
+              data-i18n="blender.assets.tank3.alt"
+              data-i18n-attr="alt:blender.assets.tank3.alt"
+            />
+
+            <div class="asset-info">
+              <h3 data-i18n="blender.assets.tank3.title">Toy Tank 3</h3>
+              <p class="asset-description" data-i18n="blender.assets.tank3.description">
+                A tracked green toy tank with a classic rounded cannon turret.
+              </p>
+
+              <div class="asset-meta" aria-label="Asset details">
+                <span data-i18n="blender.assets.sharedSource">Shared toy source</span>
+                <span>BLEND · 8.0 MB</span>
+                <span>FBX · 154 KB</span>
+              </div>
+
+              <div class="asset-actions">
+                <a class="download-button primary" href="assets/downloads/sasha-toy-collection.blend" download="Sasha-Toy-Collection.blend">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadBlend">Download .blend</span>
+                </a>
+                <a class="download-button" href="assets/downloads/sasha-toy-tank-3.fbx" download="Sasha-Toy-Tank-3.fbx">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadFbx">Download .fbx</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="card asset-card"
+            data-asset-card
+            data-search="toy tank 4 artillery car vehicle long twin cannon blend fbx spielzeug panzer artillerie танк артиллерия іграшковий"
+          >
+            <img
+              class="asset-preview"
+              src="assets/images/tank4.webp"
+              alt="Blender render of Toy Tank 4"
+              loading="lazy"
+              decoding="async"
+              data-i18n="blender.assets.tank4.alt"
+              data-i18n-attr="alt:blender.assets.tank4.alt"
+            />
+
+            <div class="asset-info">
+              <h3 data-i18n="blender.assets.tank4.title">Toy Tank 4</h3>
+              <p class="asset-description" data-i18n="blender.assets.tank4.description">
+                A six-wheeled toy artillery vehicle with an extra-long twin cannon.
+              </p>
+
+              <div class="asset-meta" aria-label="Asset details">
+                <span data-i18n="blender.assets.sharedSource">Shared toy source</span>
+                <span>BLEND · 8.0 MB</span>
+                <span>FBX · 113 KB</span>
+              </div>
+
+              <div class="asset-actions">
+                <a class="download-button primary" href="assets/downloads/sasha-toy-collection.blend" download="Sasha-Toy-Collection.blend">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadBlend">Download .blend</span>
+                </a>
+                <a class="download-button" href="assets/downloads/sasha-toy-tank-4.fbx" download="Sasha-Toy-Tank-4.fbx">
+                  <span aria-hidden="true">↓</span>
+                  <span data-i18n="blender.assets.downloadFbx">Download .fbx</span>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" id="asset-empty-state" hidden>
+          <strong data-i18n="blender.assets.emptyTitle">No assets found</strong>
+          <p data-i18n="blender.assets.emptyText">Try a different name or file type.</p>
+        </div>
+      </section>
+
       <!-- Gallery -->
-      <section class="grid" aria-label="Blender gallery">
+      <section
+        class="tab-panel"
+        id="photos-panel"
+        role="tabpanel"
+        aria-labelledby="photos-tab"
+        hidden
+      >
+      <div class="grid" aria-label="Blender gallery">
         <article class="card wide">
           <h2 data-i18n="blender.sections.gallery.title">Gallery</h2>
           <p class="meta" data-i18n="blender.sections.gallery.meta">Hover effects come from Animations.css</p>
@@ -210,6 +843,7 @@
             </figure>
           </div>
         </article>
+      </div>
       </section>
 
     </div>

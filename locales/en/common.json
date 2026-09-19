@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Sasha — iOS / SwiftUI Developer",
-    "description": "Sasha — iOS / SwiftUI developer building GloboSense, a video interpreting platform. Student of Wirtschaft & Informatik in Germany."
+    "title": "Sasha — Software Developer",
+    "description": "Portfolio of Sasha, a software developer and Wirtschaft & Informatik student at Hochschule Zittau/Görlitz."
   },
   "brand": {
     "name": "Sasha",
-    "tagline": "iOS / SwiftUI • Xcode • Video apps"
+    "tagline": "Software Development • Apps • Games & 3D"
   },
   "nav": {
     "home": "Home",
@@ -15,12 +15,12 @@
   },
   "hero": {
     "title_line1": "Hi — I’m Sasha.",
-    "title_line2": "I am a student/developer interested in experience in IT and software development.",
-    "description": "I’m a developer and a Wirtschaft & Informatik student in Germany. I have worked on iOS apps with realtime video features, a platform for video interpreting. I enjoy building clean, practical products and iterating fast.",
-    "chip1": "SwiftUI • Xcode",
-    "chip2": "Realtime video (Twilio)",
-    "chip3": "Firebase (Auth / Firestore / Storage / FCM)",
-    "chip4": "Based in Löbau, Germany",
+    "title_line2": "I build practical digital products.",
+    "description": "I’m a software developer and Wirtschaft & Informatik student at Hochschule Zittau/Görlitz. I work across Apple platforms, web technologies, game development, and 3D workflows.",
+    "chip1": "Swift • SwiftUI • Xcode",
+    "chip2": "Unity • C#",
+    "chip3": "Blender • 3D assets",
+    "chip4": "HSZG • Germany",
     "portrait_alt": "Portrait of Sasha"
   },
   "cta": {
@@ -30,44 +30,61 @@
   },
   "about": {
     "title": "About me",
-    "text": "I like building clean, practical products and iterating fast. I’ve worked hands-on across app UI, backend integration, and realtime calling features.",
-    "li1": "Focus: iOS development, product MVPs, and scalability thinking",
-    "li2": "Also enjoy: Unity prototyping, 3D modeling in Blender",
-    "li3": "Languages: English, Ukrainian/Russian background (German learning)"
+    "text": "I enjoy taking ideas from early prototypes to functional, polished products. I started with iOS and SwiftUI and have expanded into web and backend development, Unity, and original 3D asset creation in Blender.",
+    "li1": "Approach: practical solutions, rapid prototyping, and careful iteration",
+    "li2": "Interests: Apple platforms, game systems, and 3D workflows",
+    "li3": "Languages: English, Ukrainian, Russian, and German"
   },
   "building": {
     "title": "What I’m building now",
-    "text": "GloboSense — a platform for people who need a translator. The goal is to make it easy to schedule or instantly call an interpreter, and support interpreter agencies too.",
-    "li1": "Video calls, chat, notifications",
-    "li2": "Scheduling + calendar-driven workflow",
-    "li3": "Future-proof architecture"
+    "text": "I’m currently developing a 3D survival-game prototype in Unity, creating its supporting assets in Blender, and continuing smaller software and web projects alongside my studies.",
+    "li1": "Gameplay systems: interaction, inventory, crafting, and environments",
+    "li2": "Original game-ready models, materials, animation, and FBX workflows",
+    "li3": "A growing library of free downloadable Blender assets"
   },
   "skills": {
     "title": "Skills snapshot",
-    "li1": "iOS: Swift, SwiftUI, UIKit basics, app architecture, performance debugging",
-    "li2": "Backend: Node/Express, REST APIs",
-    "li3": "Cloud: Firebase (Auth, Firestore, Storage, FCM)",
-    "li4": "Realtime: Video call SDK integration",
-    "li5": "Tools: Xcode, Git, VS Code"
+    "li1": "Apple development: Swift, SwiftUI, Xcode, UIKit fundamentals",
+    "li2": "Web & backend: JavaScript, React, Node.js, REST APIs",
+    "li3": "Cloud & realtime: Firebase, Firestore, APNs, video SDK integration",
+    "li4": "Game & 3D: Unity, C#, Blender, modeling, materials, and animation",
+    "li5": "Tools: Git, GitHub, VS Code, Xcode"
+  },
+  "featured": {
+    "eyebrow": "Selected work",
+    "title": "Projects you can explore",
+    "subtitle": "A closer look at the products and creative work I can share publicly.",
+    "echomind": {
+      "kicker": "iOS product",
+      "title": "EchoMind",
+      "text": "A voice-first notes app that turns recordings into transcripts, summaries, and clearer next actions.",
+      "cta": "Explore EchoMind"
+    },
+    "blender": {
+      "kicker": "3D asset library",
+      "title": "Free Blender Assets",
+      "text": "Downloadable BLEND and FBX models, including a chest, backpack, anvil, robots, and toy vehicles.",
+      "cta": "Browse free assets"
+    }
   },
   "experience": {
     "meta": {
       "title": "Experience — Sasha",
-      "description": "Work experience of Sasha — iOS / SwiftUI developer."
+      "description": "Software projects and technical experience across Apple development, web technologies, Unity, and Blender."
     },
     "hero": {
       "title": "My Work Experience",
       "subtitle": "A focused overview of projects, roles, and technical contributions I’ve made so far.",
-      "chip1": "SwiftUI",
-      "chip2": "Realtime Apps",
-      "chip3": "Backend Integration",
-      "chip4": "UI Architecture",
+      "chip1": "Swift & SwiftUI",
+      "chip2": "Unity & C#",
+      "chip3": "Web & Backend",
+      "chip4": "Blender & 3D",
       "projects_cta": "🚀 My projects (for now only this)"
     },
     "cards": {
       "globosense": {
         "title": "GloboSense — iOS Developer",
-        "meta": "2024 — Present · Remote",
+        "meta": "2024 — February 2026 · Remote",
         "li1": "Architected SwiftUI interface and navigation structure.",
         "li2": "Integrated authentication, database logic, and realtime features.",
         "li3": "Worked with video call SDKs and debugged live media pipelines.",
@@ -76,31 +93,47 @@
       "independent": {
         "title": "Independent Development",
         "meta": "Ongoing",
-        "li1": "Built multiple prototype apps to test UI systems and architectures.",
-        "li2": "Experimented with backend logic and deployment flows.",
-        "li3": "Studied performance, memory usage, and realtime networking behavior."
+        "li1": "Built native Apple-platform prototypes, including a macOS PDF utility.",
+        "li2": "Explored web, backend, and deployment workflows through practical projects.",
+        "li3": "Turned product ideas into functional prototypes and iterated through hands-on testing."
       },
       "focus": {
         "title": "Technical Focus",
-        "li1": "iOS architecture patterns",
-        "li2": "Realtime systems thinking",
-        "li3": "Scalable backend design awareness",
-        "li4": "Clean UI + UX structure"
+        "li1": "Apple-platform application development",
+        "li2": "Gameplay systems and C# development",
+        "li3": "Web, backend, and cloud integration",
+        "li4": "3D modeling and game-asset workflows"
       },
       "direction": {
         "title": "Current Direction",
-        "text": "I’m currently focused on becoming a strong product-minded iOS engineer who understands both user experience and system architecture. I enjoy building fast, testing ideas quickly, and improving designs iteratively."
+        "text": "I’m expanding from native app development into game development and 3D production while continuing to build software across Apple platforms and the web. I learn technologies by using them to create real, testable projects."
       },
       "projects": {
         "title": "My projects",
-        "text": "Public showcase projects I can share right now. For now, this list includes EchoMind.",
+        "text": "Selected work includes EchoMind, a Unity survival-game prototype, and a growing library of free Blender assets.",
         "cta": "🔗 Open EchoMind project page"
+      },
+      "unity": {
+        "title": "Unity Survival Game — Game Development",
+        "meta": "Current project",
+        "li1": "Developing player interaction, inventory, and item systems in C#.",
+        "li2": "Building resource gathering, crafting, environmental systems, and enemy behavior.",
+        "li3": "Creating supporting game-ready assets and workflows in Blender."
+      },
+      "blenderLibrary": {
+        "title": "Free Blender Asset Library — 3D Modeling",
+        "meta": "Current project",
+        "li1": "Creating original models with materials, lighting, and presentation renders.",
+        "li2": "Preparing selected assets as reusable .blend and .fbx downloads.",
+        "cta": "Browse free assets"
       }
     }
   },
   "common": {
+    "skipToContent": "Skip to content",
+    "languageSelector": "Language selector",
     "brand": {
-      "tagline": "iOS / SwiftUI • Xcode • Video apps"
+      "tagline": "Software Development • Apps • Games & 3D"
     },
     "footer": {
       "thanks": "Thank you for reading.",
@@ -112,7 +145,7 @@
   "education": {
     "head": {
       "title": "Education — Sasha",
-      "description": "Education and learning path of Sasha — iOS / SwiftUI developer."
+      "description": "Education and practical learning path of Sasha, a Wirtschaft & Informatik student and software developer."
     },
     "hero": {
       "title": "My Education",
@@ -131,7 +164,7 @@
         "text": "Study focus: Wirtschaft & Informatik (business + computer science). I combine technical courses with business fundamentals.",
         "bullets": {
           "modules": "Modules: Business Informatics, BWL/VWL basics, networking, and IT/security topics",
-          "handsOn": "Hands-on work: building GloboSense while studying"
+          "handsOn": "Hands-on work: software, web, Unity, and Blender projects alongside my studies"
         }
       },
       "school": {
@@ -146,14 +179,14 @@
         "title": "Self-Learning",
         "meta": "Ongoing",
         "bullets": {
-          "swift": "Swift & SwiftUI through projects and tutorials",
-          "video": "Realtime video SDK integration and troubleshooting",
-          "backend": "Backend basics (Node/Express) for token servers and APIs"
+          "swift": "Swift & SwiftUI through practical Apple-platform projects",
+          "video": "Unity and C# through gameplay-system development",
+          "backend": "Blender, web, and backend workflows through self-directed projects"
         }
       },
       "improving": {
         "title": "What I’m improving right now",
-        "text": "Deeper iOS architecture, clean UI systems, and building scalable features that can evolve over time."
+        "text": "Connecting software engineering, game development, and 3D production while strengthening the business perspective from my degree."
       }
     }
   },
@@ -164,12 +197,69 @@
     },
     "hero": {
       "title": "My Blender Projects",
-      "subtitle": "3D modeling and rendering is my hobby — here are some of my favorite renders.",
+      "subtitle": "Explore my free 3D assets or browse some of my favorite Blender renders.",
       "chips": {
         "blender": "Blender",
         "modeling": "Modeling",
         "materialsLighting": "Materials & Lighting",
         "renders": "Renders"
+      }
+    },
+    "tabs": {
+      "assets": "Free Assets",
+      "photos": "Blender Photos"
+    },
+    "assets": {
+      "title": "Free Blender Assets",
+      "subtitle": "Search the library and download the format that works best for you.",
+      "searchLabel": "Search assets",
+      "searchPlaceholder": "Search by name or file type…",
+      "resultsLabel": "Results",
+      "downloadBlend": "Download .blend",
+      "downloadFbx": "Download .fbx",
+      "sharedSource": "Shared toy source",
+      "emptyTitle": "No assets found",
+      "emptyText": "Try a different name or file type.",
+      "chest": {
+        "title": "Wooden Chest",
+        "description": "A finished 3D chest model, ready to download for your Blender scenes and projects.",
+        "alt": "Rendered wooden chest",
+        "free": "Free download"
+      },
+      "backpack": {
+        "title": "Stylized Backpack",
+        "description": "A warm, stylized backpack with a front pocket, side pockets, straps, and buckle details.",
+        "alt": "Rendered stylized backpack"
+      },
+      "anvil": {
+        "title": "Worn Metal Anvil",
+        "description": "A detailed worn anvil for blacksmith workshops, forge scenes, and industrial environments.",
+        "alt": "Rendered worn metal anvil"
+      },
+      "robot1": {
+        "title": "Toy Robot 1",
+        "description": "A three-legged sci-fi toy robot with a four-tube rocket launcher.",
+        "alt": "Blender render of Toy Robot 1"
+      },
+      "tank1": {
+        "title": "Toy Tank 1",
+        "description": "A four-wheeled toy combat vehicle with a large twin rocket launcher.",
+        "alt": "Blender render of Toy Tank 1"
+      },
+      "tank2": {
+        "title": "Toy Tank 2",
+        "description": "An eight-wheeled futuristic toy vehicle with a compact multi-barrel weapon.",
+        "alt": "Blender render of Toy Tank 2"
+      },
+      "tank3": {
+        "title": "Toy Tank 3",
+        "description": "A tracked green toy tank with a classic rounded cannon turret.",
+        "alt": "Blender render of Toy Tank 3"
+      },
+      "tank4": {
+        "title": "Toy Tank 4",
+        "description": "A six-wheeled toy artillery vehicle with an extra-long twin cannon.",
+        "alt": "Blender render of Toy Tank 4"
       }
     },
     "sections": {
@@ -244,7 +334,7 @@
     },
     "footer": {
       "built_by": "Built by Sasha",
-      "built_suffix": "— iOS / SwiftUI Developer.",
+      "built_suffix": "— Software Developer.",
       "note": "EchoMind is in active development and this page will evolve together with the app.",
       "email_label": "Email:",
       "tel_label": "Tel:"

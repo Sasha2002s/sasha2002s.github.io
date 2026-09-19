@@ -1,11 +1,11 @@
 {
   "meta": {
-    "title": "Sasha — iOS / SwiftUI Entwickler",
-    "description": "Sasha — iOS / SwiftUI Entwickler, der GloboSense entwickelt, eine Video-Dolmetschplattform. Student für Wirtschaft & Informatik in Deutschland."
+    "title": "Sasha — Softwareentwickler",
+    "description": "Portfolio von Sasha, Softwareentwickler und Student für Wirtschaft & Informatik an der Hochschule Zittau/Görlitz."
   },
   "brand": {
     "name": "Sasha",
-    "tagline": "iOS / SwiftUI • Xcode • Video‑Apps"
+    "tagline": "Softwareentwicklung • Apps • Games & 3D"
   },
   "nav": {
     "home": "Startseite",
@@ -15,12 +15,12 @@
   },
   "hero": {
     "title_line1": "Hi — ich bin Sasha.",
-    "title_line2": "Ich bin ein Student/Entwickler, der an Erfahrung in IT und Softwareentwicklung interessiert ist.",
-    "description": "Ich bin Entwickler und Wirtschaft & Informatik Student in Deutschland. Ich habe an iOS-Apps mit Echtzeit-Video-Funktionen gearbeitet, einer Plattform für Video-Dolmetschen. Ich baue gern saubere, praktische Produkte und iteriere schnell.",
-    "chip1": "SwiftUI • Xcode",
-    "chip2": "Echtzeit‑Video (Twilio)",
-    "chip3": "Firebase (Auth / Firestore / Storage / FCM)",
-    "chip4": "Standort: Löbau, Deutschland",
+    "title_line2": "Ich entwickle praktische digitale Produkte.",
+    "description": "Ich bin Softwareentwickler und studiere Wirtschaft & Informatik an der Hochschule Zittau/Görlitz. Ich arbeite mit Apple-Plattformen, Webtechnologien, Spieleentwicklung und 3D-Workflows.",
+    "chip1": "Swift • SwiftUI • Xcode",
+    "chip2": "Unity • C#",
+    "chip3": "Blender • 3D-Assets",
+    "chip4": "HSZG • Deutschland",
     "portrait_alt": "Porträt von Sasha"
   },
   "cta": {
@@ -30,44 +30,61 @@
   },
   "about": {
     "title": "Über mich",
-    "text": "Ich entwickle gern saubere, praktische Produkte und iteriere schnell. Ich habe praktisch an App‑UI, Backend‑Integration und Echtzeit‑Calling‑Features gearbeitet.",
-    "li1": "Fokus: iOS‑Entwicklung, MVP‑Produkte und Skalierbarkeitsdenken",
-    "li2": "Außerdem interessant: Unity‑Prototyping, 3D‑Modellierung in Blender",
-    "li3": "Sprachen: Englisch, ukrainisch/russischer Hintergrund (Deutsch in Arbeit)"
+    "text": "Ich entwickle Ideen gern von frühen Prototypen zu funktionalen, ausgereiften Produkten. Angefangen habe ich mit iOS und SwiftUI; inzwischen arbeite ich auch mit Web- und Backend-Technologien, Unity und eigenen 3D-Assets in Blender.",
+    "li1": "Arbeitsweise: praktische Lösungen, schnelles Prototyping und sorgfältige Iteration",
+    "li2": "Interessen: Apple-Plattformen, Spielsysteme und 3D-Workflows",
+    "li3": "Sprachen: Englisch, Ukrainisch, Russisch und Deutsch"
   },
   "building": {
     "title": "Woran ich gerade arbeite",
-    "text": "GloboSense — eine Plattform für Menschen, die einen Übersetzer brauchen. Ziel ist es, das Planen oder sofortige Anrufen eines Dolmetschers einfach zu machen und auch Dolmetscheragenturen zu unterstützen.",
-    "li1": "Videoanrufe, Chat, Benachrichtigungen",
-    "li2": "Terminplanung + kalenderbasierter Workflow",
-    "li3": "Zukunftssichere Architektur"
+    "text": "Derzeit entwickle ich einen 3D-Survival-Game-Prototyp in Unity, erstelle die dazugehörigen Assets in Blender und arbeite neben dem Studium an kleineren Software- und Webprojekten.",
+    "li1": "Spielsysteme: Interaktion, Inventar, Crafting und Umgebungen",
+    "li2": "Eigene spielbereite Modelle, Materialien, Animationen und FBX-Workflows",
+    "li3": "Eine wachsende Bibliothek kostenloser Blender-Assets"
   },
   "skills": {
     "title": "Kompetenzübersicht",
-    "li1": "iOS: Swift, SwiftUI, UIKit‑Grundlagen, App‑Architektur, Performance‑Debugging",
-    "li2": "Backend: Node/Express, REST APIs",
-    "li3": "Cloud: Firebase (Auth, Firestore, Storage, FCM)",
-    "li4": "Echtzeit: Video‑SDK‑Integration",
-    "li5": "Tools: Xcode, Git, VS Code"
+    "li1": "Apple-Entwicklung: Swift, SwiftUI, Xcode, UIKit-Grundlagen",
+    "li2": "Web & Backend: JavaScript, React, Node.js, REST APIs",
+    "li3": "Cloud & Echtzeit: Firebase, Firestore, APNs, Video-SDK-Integration",
+    "li4": "Game & 3D: Unity, C#, Blender, Modellierung, Materialien und Animation",
+    "li5": "Tools: Git, GitHub, VS Code, Xcode"
+  },
+  "featured": {
+    "eyebrow": "Ausgewählte Arbeiten",
+    "title": "Projekte zum Entdecken",
+    "subtitle": "Ein genauerer Blick auf Produkte und kreative Arbeiten, die ich öffentlich zeigen kann.",
+    "echomind": {
+      "kicker": "iOS-Produkt",
+      "title": "EchoMind",
+      "text": "Eine Voice-First-Notiz-App, die Aufnahmen in Transkripte, Zusammenfassungen und klare nächste Schritte verwandelt.",
+      "cta": "EchoMind entdecken"
+    },
+    "blender": {
+      "kicker": "3D-Asset-Bibliothek",
+      "title": "Kostenlose Blender-Assets",
+      "text": "Herunterladbare BLEND- und FBX-Modelle, darunter eine Truhe, ein Rucksack, ein Amboss, Roboter und Spielfahrzeuge.",
+      "cta": "Kostenlose Assets ansehen"
+    }
   },
   "experience": {
     "meta": {
       "title": "Erfahrung — Sasha",
-      "description": "Berufserfahrung von Sasha — iOS / SwiftUI Entwickler."
+      "description": "Softwareprojekte und technische Erfahrung mit Apple-Entwicklung, Webtechnologien, Unity und Blender."
     },
     "hero": {
       "title": "Meine Berufserfahrung",
       "subtitle": "Ein kompakter Überblick über Projekte, Rollen und technische Beiträge, die ich bisher umgesetzt habe.",
-      "chip1": "SwiftUI",
-      "chip2": "Realtime‑Apps",
-      "chip3": "Backend‑Integration",
-      "chip4": "UI‑Architektur",
+      "chip1": "Swift & SwiftUI",
+      "chip2": "Unity & C#",
+      "chip3": "Web & Backend",
+      "chip4": "Blender & 3D",
       "projects_cta": "🚀 Meine Projekte (vorerst nur dieses)"
     },
     "cards": {
       "globosense": {
         "title": "GloboSense — iOS Entwickler",
-        "meta": "2024 — Heute · Remote",
+        "meta": "2024 — Februar 2026 · Remote",
         "li1": "SwiftUI‑Interface und Navigationsstruktur entworfen.",
         "li2": "Authentifizierung, Datenbanklogik und Echtzeitfunktionen integriert.",
         "li3": "Mit Video‑SDKs gearbeitet und Live‑Media‑Pipelines debuggt.",
@@ -76,31 +93,47 @@
       "independent": {
         "title": "Eigenständige Entwicklung",
         "meta": "Laufend",
-        "li1": "Mehrere Prototyp‑Apps entwickelt, um UI‑Systeme und Architekturen zu testen.",
-        "li2": "Backend‑Logik und Deployment‑Abläufe erprobt.",
-        "li3": "Performance, Speicherverbrauch und Echtzeit‑Netzwerkverhalten analysiert."
+        "li1": "Native Prototypen für Apple-Plattformen entwickelt, darunter ein macOS-PDF-Werkzeug.",
+        "li2": "Web-, Backend- und Deployment-Workflows in praktischen Projekten erprobt.",
+        "li3": "Produktideen in funktionale Prototypen umgesetzt und durch praktische Tests weiterentwickelt."
       },
       "focus": {
         "title": "Technischer Fokus",
-        "li1": "iOS‑Architektur‑Patterns",
-        "li2": "Realtime‑Systemdenken",
-        "li3": "Bewusstsein für skalierbares Backend‑Design",
-        "li4": "Saubere UI‑ und UX‑Struktur"
+        "li1": "Anwendungsentwicklung für Apple-Plattformen",
+        "li2": "Spielsysteme und C#-Entwicklung",
+        "li3": "Web-, Backend- und Cloud-Integration",
+        "li4": "3D-Modellierung und Game-Asset-Workflows"
       },
       "direction": {
         "title": "Aktuelle Ausrichtung",
-        "text": "Ich konzentriere mich derzeit darauf, ein produktorientierter iOS‑Engineer zu werden, der sowohl Nutzererfahrung als auch Systemarchitektur versteht. Ich arbeite gern schnell, teste Ideen zügig und verbessere Designs iterativ."
+        "text": "Ich erweitere meine Erfahrung von nativer App-Entwicklung in Richtung Spieleentwicklung und 3D-Produktion und entwickle weiterhin Software für Apple-Plattformen und das Web. Neue Technologien lerne ich durch reale, testbare Projekte."
       },
       "projects": {
         "title": "Meine Projekte",
-        "text": "Öffentliche Showcase-Projekte, die ich aktuell teilen kann. Im Moment enthält die Liste EchoMind.",
+        "text": "Zu meinen ausgewählten Arbeiten gehören EchoMind, ein Unity-Survival-Game-Prototyp und eine wachsende Bibliothek kostenloser Blender-Assets.",
         "cta": "🔗 EchoMind-Projektseite öffnen"
+      },
+      "unity": {
+        "title": "Unity Survival Game — Spieleentwicklung",
+        "meta": "Aktuelles Projekt",
+        "li1": "Entwicklung von Spielerinteraktion, Inventar- und Item-Systemen in C#.",
+        "li2": "Aufbau von Ressourcensammlung, Crafting, Umweltsystemen und Gegnerverhalten.",
+        "li3": "Erstellung unterstützender spielbereiter Assets und Workflows in Blender."
+      },
+      "blenderLibrary": {
+        "title": "Kostenlose Blender-Asset-Bibliothek — 3D-Modellierung",
+        "meta": "Aktuelles Projekt",
+        "li1": "Erstellung eigener Modelle mit Materialien, Beleuchtung und Präsentations-Renderings.",
+        "li2": "Aufbereitung ausgewählter Assets als wiederverwendbare .blend- und .fbx-Downloads.",
+        "cta": "Kostenlose Assets ansehen"
       }
     }
   },
   "common": {
+    "skipToContent": "Zum Inhalt springen",
+    "languageSelector": "Sprachauswahl",
     "brand": {
-      "tagline": "iOS / SwiftUI • Xcode • Video-Apps"
+      "tagline": "Softwareentwicklung • Apps • Games & 3D"
     },
     "footer": {
       "thanks": "Vielen Dank fürs Lesen.",
@@ -112,7 +145,7 @@
   "education": {
     "head": {
       "title": "Ausbildung — Sasha",
-      "description": "Ausbildungs- und Lernweg von Sasha — iOS / SwiftUI Entwickler."
+      "description": "Ausbildung und praktischer Lernweg von Sasha, Student für Wirtschaft & Informatik und Softwareentwickler."
     },
     "hero": {
       "title": "Meine Ausbildung",
@@ -131,7 +164,7 @@
         "text": "Studiengang: Wirtschaft & Informatik (Betriebswirtschaft + Informatik). Ich verbinde technische Fächer mit betriebswirtschaftlichen Grundlagen.",
         "bullets": {
           "modules": "Module: Wirtschaftsinformatik, BWL/VWL Grundlagen, Netzwerke und IT-/Security-Themen",
-          "handsOn": "Praxis: Entwicklung von GloboSense parallel zum Studium"
+          "handsOn": "Praxis: Software-, Web-, Unity- und Blender-Projekte parallel zum Studium"
         }
       },
       "school": {
@@ -146,14 +179,14 @@
         "title": "Selbststudium",
         "meta": "Laufend",
         "bullets": {
-          "swift": "Swift & SwiftUI durch Projekte und Tutorials",
-          "video": "Integration und Debugging von Realtime-Video-SDKs",
-          "backend": "Backend-Grundlagen (Node/Express) für Token-Server und APIs"
+          "swift": "Swift & SwiftUI durch praktische Projekte für Apple-Plattformen",
+          "video": "Unity und C# durch die Entwicklung von Spielsystemen",
+          "backend": "Blender-, Web- und Backend-Workflows durch eigenständige Projekte"
         }
       },
       "improving": {
         "title": "Woran ich aktuell arbeite",
-        "text": "Tiefere iOS-Architektur, saubere UI-Systeme und skalierbare Features für langfristiges Wachstum."
+        "text": "Software Engineering, Spieleentwicklung und 3D-Produktion verbinden und dabei die betriebswirtschaftliche Perspektive meines Studiums stärken."
       }
     }
   },
@@ -164,12 +197,69 @@
     },
     "hero": {
       "title": "Meine Blender-Projekte",
-      "subtitle": "3D-Modellierung und Rendering ist mein Hobby — hier sind einige meiner Lieblings-Renderings.",
+      "subtitle": "Entdecke meine kostenlosen 3D-Assets oder stöbere durch einige meiner liebsten Blender-Renderings.",
       "chips": {
         "blender": "Blender",
         "modeling": "Modellierung",
         "materialsLighting": "Materialien & Beleuchtung",
         "renders": "Renderings"
+      }
+    },
+    "tabs": {
+      "assets": "Kostenlose Assets",
+      "photos": "Blender-Bilder"
+    },
+    "assets": {
+      "title": "Kostenlose Blender-Assets",
+      "subtitle": "Durchsuche die Bibliothek und lade das passende Format herunter.",
+      "searchLabel": "Assets durchsuchen",
+      "searchPlaceholder": "Nach Name oder Dateityp suchen…",
+      "resultsLabel": "Ergebnisse",
+      "downloadBlend": ".blend herunterladen",
+      "downloadFbx": ".fbx herunterladen",
+      "sharedSource": "Gemeinsame Spielzeug-Quelldatei",
+      "emptyTitle": "Keine Assets gefunden",
+      "emptyText": "Versuche einen anderen Namen oder Dateityp.",
+      "chest": {
+        "title": "Holztruhe",
+        "description": "Ein fertiges 3D-Truhenmodell zum Herunterladen für deine Blender-Szenen und Projekte.",
+        "alt": "Gerenderte Holztruhe",
+        "free": "Kostenloser Download"
+      },
+      "backpack": {
+        "title": "Stilisierter Rucksack",
+        "description": "Ein warmer, stilisierter Rucksack mit Fronttasche, Seitentaschen, Trägern und Schnallendetails.",
+        "alt": "Gerenderter stilisierter Rucksack"
+      },
+      "anvil": {
+        "title": "Abgenutzter Metallamboss",
+        "description": "Ein detaillierter, abgenutzter Amboss für Schmieden, Werkstätten und industrielle Szenen.",
+        "alt": "Gerenderter abgenutzter Metallamboss"
+      },
+      "robot1": {
+        "title": "Spielzeugroboter 1",
+        "description": "Ein dreibeiniger Sci-Fi-Spielzeugroboter mit vierfachem Raketenwerfer.",
+        "alt": "Blender-Rendering von Spielzeugroboter 1"
+      },
+      "tank1": {
+        "title": "Spielzeugpanzer 1",
+        "description": "Ein vierrädriges Spielzeug-Kampffahrzeug mit großem Doppelraketenwerfer.",
+        "alt": "Blender-Rendering von Spielzeugpanzer 1"
+      },
+      "tank2": {
+        "title": "Spielzeugpanzer 2",
+        "description": "Ein futuristisches achträdriges Spielzeugfahrzeug mit kompakter Mehrlaufwaffe.",
+        "alt": "Blender-Rendering von Spielzeugpanzer 2"
+      },
+      "tank3": {
+        "title": "Spielzeugpanzer 3",
+        "description": "Ein grüner Kettenpanzer als Spielzeug mit klassischem, abgerundetem Kanonenturm.",
+        "alt": "Blender-Rendering von Spielzeugpanzer 3"
+      },
+      "tank4": {
+        "title": "Spielzeugpanzer 4",
+        "description": "Ein sechsrädriges Spielzeug-Artilleriefahrzeug mit extralanger Doppelkanone.",
+        "alt": "Blender-Rendering von Spielzeugpanzer 4"
       }
     },
     "sections": {
@@ -244,7 +334,7 @@
     },
     "footer": {
       "built_by": "Erstellt von Sasha",
-      "built_suffix": "— iOS / SwiftUI Entwickler.",
+      "built_suffix": "— Softwareentwickler.",
       "note": "EchoMind ist in aktiver Entwicklung und diese Seite entwickelt sich zusammen mit der App weiter.",
       "email_label": "E-Mail:",
       "tel_label": "Tel.:"

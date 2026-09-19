@@ -11,10 +11,14 @@
     content="EchoMind transforms voice recordings into transcriptions, summaries, and actionable notes."
   />
 
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
   <script defer src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
   <script defer src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
   <script defer src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
-  <script defer src="../i18n.js"></script>
+  <meta name="theme-color" content="#070d23" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <script defer src="../i18n.js?v=20260920-profile-refresh"></script>
 
   <!-- EchoMind page is intentionally self-contained to keep visual branding independent from global pages. -->
   <style>
@@ -50,6 +54,8 @@
       margin: 0;
       overscroll-behavior-y: none;
       min-height: 100vh;
+      display: flex;
+      flex-direction: column;
       color: var(--text);
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background:
@@ -59,6 +65,23 @@
     }
 
     a { color: inherit; }
+
+    .skip-link {
+      position: fixed;
+      top: 10px;
+      left: 12px;
+      z-index: 100;
+      padding: 9px 13px;
+      border-radius: 10px;
+      background: #ffffff;
+      color: #071022;
+      font-weight: 700;
+      text-decoration: none;
+      transform: translateY(-160%);
+      transition: transform 140ms ease;
+    }
+
+    .skip-link:focus { transform: translateY(0); }
 
     .page {
       width: min(var(--max), calc(100% - 28px));
@@ -128,6 +151,19 @@
       background: rgba(255, 255, 255, 0.14);
     }
 
+    .lang-pill button.active,
+    .lang-pill button[aria-pressed="true"] {
+      background: rgba(95, 213, 255, 0.18);
+      box-shadow: inset 0 0 0 1px rgba(95, 213, 255, 0.36);
+    }
+
+    .lang-pill button:focus-visible,
+    .nav-link:focus-visible,
+    .footer a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
     nav {
       grid-area: nav;
       display: flex;
@@ -154,7 +190,13 @@
       background: rgba(255, 255, 255, 0.15);
     }
 
+    .nav-link.active {
+      border-color: rgba(95, 213, 255, 0.42);
+      background: rgba(95, 213, 255, 0.14);
+    }
+
     main {
+      flex: 1;
       padding: 26px 0 30px;
     }
 
@@ -354,6 +396,8 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipToContent">Skip to content</a>
+
   <header>
     <div class="page topbar">
       <div class="brand">
@@ -361,24 +405,35 @@
         <span data-i18n="echomind.brand.tagline">Voice capture, structured notes, and follow-up clarity</span>
       </div>
 
-      <div class="lang-pill" aria-label="Language switcher">
-        <button data-set-lang="en">EN</button>
-        <button data-set-lang="de">DE</button>
-        <button data-set-lang="ru">RU</button>
-        <button data-set-lang="uk">UK</button>
+      <div class="lang-pill" aria-label="Language selector" data-i18n-attr="aria-label:common.languageSelector">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+        <button type="button" data-set-lang="ru">RU</button>
+        <button type="button" data-set-lang="uk">UK</button>
       </div>
+
+      <!-- Keep project visitors connected to the rest of the portfolio. -->
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="../">🏠 <span data-i18n="nav.home">Home</span></a>
+        <a class="nav-link" href="../Experience/">💼 <span data-i18n="nav.experience">Experience</span></a>
+        <a class="nav-link" href="../Education/">🎓 <span data-i18n="nav.education">Education</span></a>
+        <a class="nav-link" href="../Blender-projects/">🧊 <span data-i18n="nav.blender">Blender</span></a>
+      </nav>
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="page panel">
       <section class="hero" aria-label="EchoMind overview">
         <img
           class="logo"
-          src="./assets/EchoMind-iOS-Default-1024x1024@1x.png"
+          src="./assets/echomind-icon-384.webp"
           alt="EchoMind app icon"
           loading="eager"
+          fetchpriority="high"
           decoding="async"
+          width="384"
+          height="384"
           data-i18n="echomind.hero.logo_alt"
           data-i18n-attr="alt"
         />
@@ -450,7 +505,7 @@
           <!-- Link back to portfolio from the project page to keep navigation clear for recruiters/visitors. -->
           <p>
             <a href="../index.html" data-i18n="echomind.footer.built_by">Built by Sasha</a>
-            <span data-i18n="echomind.footer.built_suffix">— iOS / SwiftUI Developer.</span>
+            <span data-i18n="echomind.footer.built_suffix">— Software Developer.</span>
           </p>
           <p data-i18n="echomind.footer.note">EchoMind is in active development and this page will evolve together with the app.</p>
         </div>

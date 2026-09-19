@@ -8,32 +8,38 @@
   <title data-i18n="education.head.title">Education — Sasha</title>
   <meta
     name="description"
-    content="Education and learning path of Sasha — iOS / SwiftUI developer."
+    content="Education and practical learning path of Sasha, a Wirtschaft & Informatik student and software developer."
     data-i18n="education.head.description"
     data-i18n-attr="content:education.head.description"
   />
 
-  <script src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
-  <script src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
-  <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <script defer src="https://unpkg.com/i18next@23.12.2/i18next.min.js"></script>
+  <script defer src="https://unpkg.com/i18next-http-backend@2.6.2/i18nextHttpBackend.min.js"></script>
+  <script defer src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/i18nextBrowserLanguageDetector.min.js"></script>
 
   <link rel="stylesheet" href="../style.css" />
-  <script src="../i18n.js"></script>
+  <meta name="theme-color" content="#0b1220" />
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml" />
+  <script defer src="../i18n.js?v=20260920-profile-refresh"></script>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content" data-i18n="common.skipToContent">Skip to content</a>
+
   <header>
     <div class="page topbar">
       <div class="brand">
         <strong>Sasha</strong>
-        <span data-i18n="common.brand.tagline">iOS / SwiftUI • Xcode • Video apps</span>
+        <span data-i18n="common.brand.tagline">Software Development • Apps • Games &amp; 3D</span>
       </div>
 
-      <div class="lang-pill">
-        <button data-set-lang="en">EN</button>
-        <button data-set-lang="de">DE</button>
-        <button data-set-lang="ru">RU</button>
-        <button data-set-lang="uk">UK</button>
+      <div class="lang-pill" aria-label="Language selector" data-i18n-attr="aria-label:common.languageSelector">
+        <button type="button" data-set-lang="en">EN</button>
+        <button type="button" data-set-lang="de">DE</button>
+        <button type="button" data-set-lang="ru">RU</button>
+        <button type="button" data-set-lang="uk">UK</button>
       </div>
 
       <nav aria-label="Primary">
@@ -47,7 +53,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <div class="page">
 
       <!-- Hero -->
@@ -83,7 +89,7 @@
               Modules: Business Informatics, BWL/VWL basics, networking, and IT/security topics
             </li>
             <li data-i18n="education.cards.hszg.bullets.handsOn">
-              Hands-on work: building GloboSense while studying
+              Hands-on work: software, web, Unity, and Blender projects alongside my studies
             </li>
           </ul>
         </article>
@@ -101,16 +107,16 @@
           <h2 data-i18n="education.cards.selfLearning.title">Self-Learning</h2>
           <p class="meta" data-i18n="education.cards.selfLearning.meta">Ongoing</p>
           <ul>
-            <li data-i18n="education.cards.selfLearning.bullets.swift">Swift & SwiftUI through projects and tutorials</li>
-            <li data-i18n="education.cards.selfLearning.bullets.video">Realtime video SDK integration and troubleshooting</li>
-            <li data-i18n="education.cards.selfLearning.bullets.backend">Backend basics (Node/Express) for token servers and APIs</li>
+            <li data-i18n="education.cards.selfLearning.bullets.swift">Swift & SwiftUI through practical Apple-platform projects</li>
+            <li data-i18n="education.cards.selfLearning.bullets.video">Unity and C# through gameplay-system development</li>
+            <li data-i18n="education.cards.selfLearning.bullets.backend">Blender, web, and backend workflows through self-directed projects</li>
           </ul>
         </article>
 
         <article class="card wide">
           <h2 data-i18n="education.cards.improving.title">What I’m improving right now</h2>
           <p data-i18n="education.cards.improving.text">
-            Deeper iOS architecture, clean UI systems, and building scalable features that can evolve over time.
+            Connecting software engineering, game development, and 3D production while strengthening the business perspective from my degree.
           </p>
         </article>
 
