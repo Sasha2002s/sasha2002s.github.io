@@ -3,7 +3,7 @@
 
 function getLocalesLoadPath() {
   // Bump this marker when locale content changes so returning visitors receive new translations.
-  const localeVersion = "20260920-profile-refresh";
+  const localeVersion = "20261006-sashastudy-green";
 
   // Build the locales path from i18n.js URL so translations work both on root domains
   // and when this site is deployed under a subpath (for example GitHub project pages).

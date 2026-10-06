@@ -389,6 +389,11 @@
 
     .featured-section .grid { margin-top: 0; }
 
+    /* Three selected projects share a row; retain the existing single-column mobile layout. */
+    @media (min-width: 861px) {
+      .featured-section .project-card { grid-column: span 4; }
+    }
+
     .project-card {
       display: flex;
       flex-direction: column;
