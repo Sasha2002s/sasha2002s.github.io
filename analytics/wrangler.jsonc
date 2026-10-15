@@ -1,0 +1,20 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sasha-portfolio-analytics",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-15",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": { "directory": "public", "binding": "ASSETS", "run_worker_first": true },
+  "vars": { "SITE_ORIGIN": "https://sasha2002s.github.io" },
+  "d1_databases": [
+    { "binding": "DB", "database_name": "sasha-portfolio-analytics", "database_id": "1d16ad30-a075-4719-b69a-fd60eba0e9a4", "migrations_dir": "migrations" }
+  ],
+  "ratelimits": [
+    { "name": "COLLECT_LIMIT", "namespace_id": "1001", "simple": { "limit": 60, "period": 60 } },
+    { "name": "LOGIN_LIMIT", "namespace_id": "1002", "simple": { "limit": 5, "period": 60 } }
+  ],
+  "triggers": { "crons": ["15 0 * * *"] },
+  // Request logs could retain visitor metadata, so the application does not enable them.
+  "observability": { "enabled": false }
+}

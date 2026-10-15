@@ -23,7 +23,9 @@
   <meta name="theme-color" content="#0b0f14" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
-  <script defer src="i18n.js?v=20261006-sashastudy-green"></script>
+  <script defer src="i18n.js?v=20261015-analytics-notice"></script>
+  <!-- Count visits on the published portfolio only; the tracker stores nothing in the visitor browser. -->
+  <script defer src="analytics.js" data-endpoint="https://sasha-portfolio-analytics.sasha2002s.workers.dev/collect"></script>
 </head>
 
 <body>
@@ -196,6 +198,7 @@
       <div>
         <p data-i18n="footer.closing">Thank you for visiting.</p>
         <p data-i18n="footer.copyright">© 2026 Sasha. All rights reserved.</p>
+        <p><a data-i18n="footer.analytics_notice" href="analytics-notice.html">Analytics notice / Datenschutzhinweis</a></p>
       </div>
 
       <div>

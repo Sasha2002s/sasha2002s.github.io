@@ -287,7 +287,8 @@
     "copyright": "© 2026 Sasha. Alle Rechte vorbehalten.",
     "contact": "Kontakt",
     "email_label": "E‑Mail:",
-    "tel_label": "Tel.:"
+    "tel_label": "Tel.:",
+    "analytics_notice": "Hinweis zur Website-Analyse"
   },
   "echomind": {
     "meta": {
@@ -375,7 +376,7 @@
     "step3": "Erkennen, was noch Übung braucht",
     "privacyEyebrow": "Dein Lernen gehört dir",
     "privacyTitle": "Persönlich gestaltet.",
-    "privacyText": "Lernfortschritt und Materialien bleiben standardmäßig lokal. Keine Werbung. Keine Analyse des Nutzungsverhaltens. Exportiere bei Bedarf ein Backup.",
+    "privacyText": "Lernfortschritt und Materialien bleiben standardmäßig lokal. Keine Werbung oder Analyse in der App. Exportiere bei Bedarf ein Backup.",
     "privacyNote": "Backups enthalten Lerndaten und extrahierten Text. Bewahre die importierten Originaldateien zusätzlich separat auf.",
     "platformEyebrow": "Nativ auf Apple-Plattformen",
     "platformTitle": "Am Schreibtisch lernen. Unterwegs wiederholen.",

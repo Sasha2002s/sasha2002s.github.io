@@ -3,7 +3,7 @@
 
 function getLocalesLoadPath() {
   // Bump this marker when locale content changes so returning visitors receive new translations.
-  const localeVersion = "20261006-sashastudy-green";
+  const localeVersion = "20261015-analytics-notice";
 
   // Build the locales path from i18n.js URL so translations work both on root domains
   // and when this site is deployed under a subpath (for example GitHub project pages).
@@ -69,6 +69,13 @@ function updateLanguageControls(language) {
     button.classList.toggle("active", isActive);
     button.setAttribute("aria-pressed", String(isActive));
     button.setAttribute("aria-label", languageNames[buttonLanguage] || buttonLanguage || "Language");
+  });
+
+  // Carry the selected portfolio language to the separate analytics notice page.
+  document.querySelectorAll('a[href*="analytics-notice.html"]').forEach(link => {
+    const url = new URL(link.getAttribute("href"), window.location.href);
+    url.searchParams.set("lang", activeLanguage);
+    link.href = url.toString();
   });
 }
 

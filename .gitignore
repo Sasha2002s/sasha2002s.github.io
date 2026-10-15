@@ -1,0 +1,6 @@
+# Keep local credentials and Cloudflare development data out of the public repository.
+analytics/node_modules/
+analytics/.wrangler/
+analytics/.dev.vars*
+analytics/.env*
+analytics/dist/

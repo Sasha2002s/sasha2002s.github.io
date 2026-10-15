@@ -287,7 +287,8 @@
     "copyright": "© 2026 Sasha. All rights reserved.",
     "contact": "Contact",
     "email_label": "Email:",
-    "tel_label": "Tel:"
+    "tel_label": "Tel:",
+    "analytics_notice": "Analytics notice"
   },
   "echomind": {
     "meta": {
@@ -375,7 +376,7 @@
     "step3": "See what needs another look",
     "privacyEyebrow": "Your learning belongs to you",
     "privacyTitle": "Personal by design.",
-    "privacyText": "Progress and study materials stay local by default. No advertising. No analytics. Export a backup when you need one.",
+    "privacyText": "Progress and study materials stay local by default. No advertising or in-app analytics. Export a backup when you need one.",
     "privacyNote": "Backups include study data and extracted text. Keep a separate copy of your original imported files.",
     "platformEyebrow": "Native on Apple platforms",
     "platformTitle": "Study at your desk. Review on the go.",

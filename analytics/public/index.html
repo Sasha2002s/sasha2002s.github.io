@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#10141c">
+  <title>Sasha · Portfolio analytics</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/dashboard.css">
+  <script src="/dashboard.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/" aria-label="Analytics home"><span class="brand-mark">S</span><span>Sasha<span class="brand-sub">Portfolio analytics</span></span></a><span class="privacy-badge"><span class="dot"></span>Cookie-free measurement</span><button id="logout" class="quiet" hidden>Sign out</button></header>
+  <main>
+    <section id="login-panel" class="login-panel">
+      <span class="eyebrow">YOUR PORTFOLIO, IN NUMBERS</span>
+      <h1>A little more insight.</h1>
+      <p class="intro">See how people discover your work.<br>Private statistics. No visitor cookies.</p>
+      <form id="login-form" class="login-card">
+        <label for="password">Dashboard password</label>
+        <div class="password-row"><input id="password" type="password" autocomplete="current-password" required placeholder="Enter your password"><button class="primary" id="login-button">Sign in <span aria-hidden="true">↗</span></button></div>
+        <p id="login-error" class="error" role="alert"></p>
+        <p class="fine">Your dashboard stays signed in for up to 8 hours in this tab. Reloading signs you out.</p>
+      </form>
+    </section>
+    <section id="dashboard" hidden>
+      <div class="heading-row"><div><span class="eyebrow">SASHA2002S.GITHUB.IO</span><h1>Your audience at a glance.</h1><p class="muted">A clear view of who’s finding your work.</p></div><div class="live-pill"><span class="dot"></span><strong id="active">0</strong> active in the last 5 min</div></div>
+      <form id="range-form" class="toolbar">
+        <div class="presets" aria-label="Date presets"><button type="button" data-days="1">Today</button><button type="button" data-days="7" class="selected" aria-pressed="true">7 days</button><button type="button" data-days="30">30 days</button><button type="button" data-days="90">90 days</button></div>
+        <div class="date-controls"><label>From<input id="start" type="date" required></label><label>To<input id="end" type="date" required></label><button class="quiet bordered" type="submit">Apply</button></div>
+        <div class="toolbar-actions"><button id="refresh" type="button" class="quiet bordered">Refresh</button><button id="export" type="button" class="quiet bordered">Export CSV ↓</button></div>
+      </form>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+      <div class="cards">
+        <article class="stat-card featured"><span id="visitor-label" class="metric-label">Daily unique visitors · sum</span><strong id="visitors">0</strong><span class="metric-note">Estimated; counted separately each UTC day</span></article>
+        <article class="stat-card"><span class="metric-label">Page views</span><strong id="views">0</strong><span class="metric-note">All measured page loads</span></article>
+        <article class="stat-card"><span class="metric-label">Downloads clicked</span><strong id="downloads">0</strong><span class="metric-note">CV, PDF & asset download links</span></article>
+        <article class="stat-card"><span class="metric-label">Outbound clicks</span><strong id="outbound">0</strong><span class="metric-note">Links to other websites</span></article>
+      </div>
+      <section class="panel chart-panel"><div class="panel-heading"><div><h2>Traffic over time</h2><p>Daily estimated visitors and page views</p></div><div class="legend"><span><i class="visitor-key"></i>Visitors</span><span><i class="view-key"></i>Page views</span></div></div><div id="chart" class="chart" role="img" aria-label="Daily traffic chart"></div><details class="chart-details"><summary>View daily numbers</summary><div id="daily-table" class="table-scroll"></div></details></section>
+      <div class="breakdown-grid">
+        <section class="panel"><div class="panel-heading"><h2>Top pages</h2><span>Page views</span></div><div id="page-list"></div></section>
+        <section class="panel"><div class="panel-heading"><h2>Where visitors come from</h2><span>First daily visit</span></div><div class="tabs" role="group" aria-label="Location breakdown"><button data-location="country" class="selected" aria-pressed="true">Countries</button><button data-location="city" aria-pressed="false">Cities</button></div><div id="location-list"></div><p class="panel-footnote">Approximate IP location. VPNs and mobile networks can show a different city.</p></section>
+        <section class="panel"><div class="panel-heading"><h2>Devices & platforms</h2><span>First daily visit</span></div><div class="tabs" role="group" aria-label="Platform breakdown"><button data-platform="device" class="selected" aria-pressed="true">Device</button><button data-platform="os" aria-pressed="false">OS</button><button data-platform="browser" aria-pressed="false">Browser</button></div><div id="platform-list"></div></section>
+        <section class="panel"><div class="panel-heading"><h2>Referring websites</h2><span>First daily visit</span></div><div id="referrer-list"></div><p class="panel-footnote">Only the referring hostname is kept. Some apps and browsers hide referrers.</p></section>
+        <section class="panel"><div class="panel-heading"><h2>Browser languages</h2><span>First daily visit</span></div><div id="language-list"></div></section>
+        <section class="panel"><div class="panel-heading"><h2>Link activity</h2><span>Clicks</span></div><div id="event-list"></div><p class="panel-footnote">A download click does not confirm that a file finished downloading.</p></section>
+      </div>
+      <footer class="dashboard-footer"><p>No cookies or browser storage. No GPS. Daily identifiers are retired after UTC rollover; aggregates are kept for 400 days.</p><p>Unique counts are estimates. The same person can count again on another day, device, or network. Recognized bots, Do Not Track and Global Privacy Control are excluded.</p><span id="updated"></span></footer>
+    </section>
+  </main>
+</body>
+</html>
