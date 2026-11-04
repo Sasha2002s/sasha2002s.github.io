@@ -503,3 +503,6 @@
         scroll-behavior: auto !important;
       }
     }
+
+/* Four featured projects share the row without changing other grids. */
+@media (min-width: 861px) { .featured-section .project-card { grid-column: span 3; } }
