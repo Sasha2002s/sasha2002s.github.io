@@ -73,8 +73,8 @@
       "cta": "Explore Sasha Study"
     },
     "motionbridge": {
-      "kicker": "iPhone · Mac · Windows",
-      "text": "A motion-controlled remote that turns your iPhone into a pointer, touchpad and more for your computer.",
+      "kicker": "iPhone · Android · Mac · Windows",
+      "text": "A motion-controlled remote that turns your iPhone or Android phone into a pointer, touchpad and more for your computer.",
       "cta": "Explore MotionBridge"
     }
   },
@@ -421,7 +421,7 @@
     "eyebrow": "A remote that moves with you",
     "title1": "Your phone. Your computer.",
     "title2": "One smooth connection.",
-    "intro": "Turn your iPhone into a motion-controlled remote for your Mac or Windows PC. Point, swipe, type and present from wherever you are.",
+    "intro": "Turn your iPhone or Android phone into a remote for your Mac or Windows PC. Point, swipe, type and present with a friction-free connection.",
     "explore": "Explore MotionBridge ↗",
     "how": "See how it works",
     "prototype": "IN DEVELOPMENT",
@@ -445,20 +445,29 @@
     "slidesTitle": "Own the room",
     "slidesText": "Move through slides, switch apps and draw on screen while you present.",
     "mediaTitle": "Stay in control",
-    "mediaText": "Use the remote keyboard, manage supported media, or view your computer screen from your phone.",
+    "mediaText": "Use the remote keyboard and control supported media. On iPhone, you can also preview your computer screen.",
     "setupEyebrow": "SIMPLE BY DESIGN",
     "setupTitle": "Ready when you are.",
     "setupIntro": "One phone, one computer, and a connection. Save your devices to reconnect without entering a key each time.",
     "step1Title": "Open both apps",
-    "step1Text": "Start MotionBridge on your iPhone and on your Mac or Windows PC.",
+    "step1Text": "Start MotionBridge on your iPhone or Android phone and on your Mac or Windows PC.",
     "step2Title": "Connect securely",
     "step2Text": "Connect over a reachable local network and pair with your computer.",
     "step3Title": "Make your point",
     "step3Text": "Choose touchpad, pointer or slides. Set the center when using motion control.",
     "statusEyebrow": "A PROJECT IN PROGRESS",
     "statusTitle": "Made to explore. Built to be useful.",
-    "statusText": "MotionBridge is a university prototype in active development. The iPhone app works with companion apps for macOS and Windows; features and compatibility vary by platform.",
+    "statusText": "MotionBridge is a university project in active development. iPhone and Android apps connect to macOS and Windows companions. Features and connection options vary by platform.",
     "statusDetail": "Two-phone UWB and AR pointer modes are experimental on Mac. A public download is not available here yet.",
-    "moreProjects": "Explore more projects ↗"
+    "moreProjects": "Explore more projects ↗",
+    "usesEyebrow": "MADE FOR REAL MOMENTS",
+    "usesTitle": "Your computer, within reach.",
+    "usesIntro": "A friction-free way to stay in control when your computer is across the room.",
+    "usePresentTitle": "Present with confidence",
+    "usePresentText": "Move through slides and point to the details while you speak, without standing next to your computer.",
+    "useSofaTitle": "Relax and watch",
+    "useSofaText": "Pause a video, change the volume or navigate your computer from the sofa.",
+    "useDeskTitle": "Take control anywhere in the room",
+    "useDeskText": "Use your phone as a touchpad or keyboard when your computer is connected to a larger screen."
   }
 }

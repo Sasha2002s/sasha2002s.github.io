@@ -3,7 +3,7 @@
 
 function getLocalesLoadPath() {
   // Bump this marker when locale content changes so returning visitors receive new translations.
-  const localeVersion = "20261104-motionbridge";
+  const localeVersion = "20261115-motionbridge";
 
   // Build the locales path from i18n.js URL so translations work both on root domains
   // and when this site is deployed under a subpath (for example GitHub project pages).

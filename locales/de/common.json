@@ -73,8 +73,8 @@
       "cta": "Sasha Study entdecken"
     },
     "motionbridge": {
-      "kicker": "iPhone · Mac · Windows",
-      "text": "Eine bewegungsgesteuerte Fernbedienung: Dein iPhone wird zum Zeiger, Touchpad und mehr für deinen Computer.",
+      "kicker": "iPhone · Android · Mac · Windows",
+      "text": "Eine bewegungsgesteuerte Fernbedienung, die dein iPhone oder Android-Handy in einen Zeiger, ein Touchpad und mehr verwandelt.",
       "cta": "MotionBridge entdecken"
     }
   },
@@ -421,7 +421,7 @@
     "eyebrow": "Eine Fernbedienung, die sich mit dir bewegt",
     "title1": "Dein Telefon. Dein Computer.",
     "title2": "Eine flüssige Verbindung.",
-    "intro": "Verwandle dein iPhone in eine bewegungsgesteuerte Fernbedienung für Mac oder Windows-PC. Zeigen, wischen, tippen und präsentieren – ganz flexibel.",
+    "intro": "Verwandle dein iPhone oder Android-Handy in eine Fernbedienung für deinen Mac oder Windows-PC. Zeigen, wischen, tippen und präsentieren mit einer unkomplizierten Verbindung.",
     "explore": "MotionBridge entdecken ↗",
     "how": "So funktioniert’s",
     "prototype": "IN ENTWICKLUNG",
@@ -445,20 +445,29 @@
     "slidesTitle": "Sicher präsentieren",
     "slidesText": "Wechsle Folien und Apps und zeichne während der Präsentation auf dem Bildschirm.",
     "mediaTitle": "Alles im Griff",
-    "mediaText": "Nutze die Ferntastatur, steuere unterstützte Medien oder sieh den Computerbildschirm auf deinem Telefon.",
+    "mediaText": "Nutze die Tastatur und steuere unterstützte Medien. Auf dem iPhone kannst du auch deinen Computerbildschirm anzeigen.",
     "setupEyebrow": "EINFACH GEDACHT",
     "setupTitle": "Bereit, wenn du es bist.",
     "setupIntro": "Ein Telefon, ein Computer und eine Verbindung. Speichere deine Geräte, um sie später ohne erneute Codeeingabe zu verbinden.",
     "step1Title": "Beide Apps öffnen",
-    "step1Text": "Starte MotionBridge auf deinem iPhone und auf deinem Mac oder Windows-PC.",
+    "step1Text": "Starte MotionBridge auf deinem iPhone oder Android-Handy und auf deinem Mac oder Windows-PC.",
     "step2Title": "Sicher verbinden",
     "step2Text": "Verbinde beide Geräte über ein erreichbares lokales Netzwerk und kopple sie.",
     "step3Title": "Los geht’s",
     "step3Text": "Wähle Touchpad, Zeiger oder Folien. Lege bei der Bewegungssteuerung die Bildschirmmitte fest.",
     "statusEyebrow": "EIN PROJEKT IN ENTWICKLUNG",
     "statusTitle": "Zum Entdecken gemacht. Für den Alltag entwickelt.",
-    "statusText": "MotionBridge ist ein Hochschulprototyp in aktiver Entwicklung. Die iPhone-App arbeitet mit Apps für macOS und Windows; Funktionen und Kompatibilität unterscheiden sich je nach Plattform.",
+    "statusText": "MotionBridge ist ein Hochschulprojekt in aktiver Entwicklung. iPhone- und Android-Apps verbinden sich mit Anwendungen für macOS und Windows. Funktionen und Verbindungsarten unterscheiden sich je nach Plattform.",
     "statusDetail": "UWB mit zwei Telefonen und der AR-Zeiger sind auf dem Mac experimentell. Ein öffentlicher Download ist hier noch nicht verfügbar.",
-    "moreProjects": "Weitere Projekte entdecken ↗"
+    "moreProjects": "Weitere Projekte entdecken ↗",
+    "usesEyebrow": "FÜR ECHTE MOMENTE",
+    "usesTitle": "Dein Computer in Reichweite.",
+    "usesIntro": "Behalte deinen Computer auch auf Entfernung unkompliziert unter Kontrolle.",
+    "usePresentTitle": "Souverän präsentieren",
+    "usePresentText": "Wechsle Folien und zeige auf Details, während du sprichst und dich frei im Raum bewegst.",
+    "useSofaTitle": "Entspannt ansehen",
+    "useSofaText": "Pausiere ein Video, ändere die Lautstärke oder navigiere vom Sofa aus.",
+    "useDeskTitle": "Im ganzen Raum die Kontrolle behalten",
+    "useDeskText": "Nutze dein Handy als Touchpad oder Tastatur, wenn dein Computer mit einem großen Bildschirm verbunden ist."
   }
 }
